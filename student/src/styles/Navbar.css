@@ -1,0 +1,109 @@
+/* src/styles/Navbar.css */
+
+.navbar-img {
+  height: 30px;
+  width: auto;
+}
+
+.navbar {
+  padding: 10px 0;
+  z-index: 1030;
+}
+
+.custom-navbar {
+  background-color: #08345B !important;
+}
+
+.btn-login {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  transition: 0.3s !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-login:hover {
+  background-color: #3aa3a8 !important;
+  transform: scale(1.05) !important;
+  color: white !important;
+}
+
+.btn-register {
+  background-color: #EBF7F6 !important;
+  color: #08345B !important;
+  border: none !important;
+  padding: 8px 20px !important;
+  border-radius: 20px !important;
+  font-weight: bold !important;
+  transition: 0.3s !important;
+  cursor: pointer;
+}
+
+.btn-register:hover {
+  background-color: #d6f0ee !important;
+  transform: scale(1.05) !important;
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-collapse-custom {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.navbar-collapse-custom.show {
+  max-height: 300px;
+  overflow: visible;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse-custom {
+    max-height: none !important;
+    overflow: visible !important;
+    display: flex !important;
+    flex-basis: auto !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse-custom:not(.show) {
+    display: none !important;
+  }
+
+  .navbar-collapse-custom.show {
+    display: block !important;
+    background-color: #08345B;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  .btn-login,
+  .btn-register {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+  

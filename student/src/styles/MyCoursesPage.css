@@ -1,0 +1,974 @@
+/* src/styles/MyCoursesPage.css */
+/* هذا الكود خاص بتنسيق صفحة كورساتي */
+
+.my-courses-page {
+  padding-top: 70px;
+  /* مسافة من الأعلى لتجنب النافبار */
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  /* خلفية فاتحة للصفحة */
+}
+
+.main-content {
+  margin-right: 250px;
+  /* مسافة للسيبار من اليمين */
+  transition: margin-right 0.3s ease;
+  /* تأثير سلس عند تصغير السايدبار */
+}
+
+/* عندما يكون السايدبار مصغر */
+.sidebar.collapsed~.main-content {
+  margin-right: 70px;
+  /* مسافة أقل عندما السايدبار مصغر */
+}
+
+/* تصميم العنوان الرئيسي */
+.section-title {
+  color: #333;
+  /* لون داكن للعنوان */
+  font-weight: 700;
+  /* نص سميك */
+  font-size: 2rem;
+  /* حجم كبير */
+  margin-bottom: 1.5rem;
+  /* فراغ سفلي */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* ظل خفيف للنص */
+  position: relative;
+  /* تحديد مكان العنصر */
+  padding-bottom: 0.5rem;
+  /* فراغ سفلي */
+}
+
+.section-title::after {
+  content: '';
+  /* محتوى فارغ */
+  position: absolute;
+  /* وضع مطلق */
+  bottom: 0;
+  /* بداية من الأسفل */
+  right: 50%;
+  /* بداية من المنتصف */
+  transform: translateX(50%);
+  /* توسيط أفقي */
+  width: 100px;
+  /* عرض الخط */
+  height: 3px;
+  /* ارتفاع الخط */
+  background: linear-gradient(90deg, #4CACB7, #2E8B8B);
+  /* تدرج لوني */
+  border-radius: 2px;
+  /* زوايا دائرية */
+}
+
+/* إحصائيات سريعة */
+.stats-summary {
+  background: white;
+  /* خلفية بيضاء */
+  padding: 1.5rem;
+  /* فراغ داخلي */
+  border-radius: 12px;
+  /* زوايا دائرية */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف */
+  border: 1px solid #e9ecef;
+  /* حدود فاتحة */
+}
+
+.stat-item {
+  display: flex;
+  /* استخدام flexbox */
+  flex-direction: column;
+  /* ترتيب عمودي */
+  align-items: center;
+  /* توسيط أفقي */
+  justify-content: center;
+  /* توسيط عمودي */
+  padding: 1rem 1.5rem;
+  /* فراغ داخلي */
+  background-color: #f8f9fa;
+  /* خلفية فاتحة */
+  border-radius: 10px;
+  /* زوايا دائرية */
+  min-width: 120px;
+  /* عرض أدنى */
+  transition: all 0.3s ease;
+  /* تأثير سلس */
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+  /* تحريك لأعلى عند المرور */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* ظل عند المرور */
+}
+
+.stat-number {
+  font-size: 2rem;
+  /* حجم كبير للأرقام */
+  font-weight: 800;
+  /* نص سميك جداً */
+  color: #333;
+  /* لون داكن */
+  line-height: 1;
+  /* ارتفاع السطر */
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  /* حجم أصغر للتسمية */
+  color: #6c757d;
+  /* لون رمادي */
+  font-weight: 600;
+  /* نص سمك متوسط */
+  margin-top: 0.5rem;
+  /* فراغ من الأعلى */
+}
+
+/* ألوان الإحصائيات */
+.text-success {
+  color: #28a745 !important;
+  /* لون أخضر */
+}
+
+.text-warning {
+  color: #ffc107 !important;
+  /* لون أصفر */
+}
+
+.text-info {
+  color: #17a2b8 !important;
+  /* لون أزرق فاتح */
+}
+
+/* فلترة الكورسات */
+.courses-filter {
+  background: white;
+  /* خلفية بيضاء */
+  padding: 1rem;
+  /* فراغ داخلي */
+  border-radius: 12px;
+  /* زوايا دائرية */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف */
+  border: 1px solid #e9ecef;
+  /* حدود فاتحة */
+}
+
+.courses-filter .btn {
+  border-radius: 25px;
+  /* زوايا دائرية جداً */
+  padding: 0.5rem 1.5rem;
+  /* فراغ داخلي */
+  font-weight: 600;
+  /* نص سمك متوسط */
+  transition: all 0.3s ease;
+  /* تأثير سلس */
+}
+
+.courses-filter .btn:hover {
+  transform: translateY(-2px);
+  /* تحريك لأعلى عند المرور */
+}
+
+.courses-filter .btn.active {
+  background-color: #4CACB7;
+  /* خلفية زرقاء */
+  border-color: #4CACB7;
+  /* حدود زرقاء */
+  color: white;
+  /* لون أبيض */
+}
+
+.courses-filter .btn.active:hover {
+  background-color: #3a8d94;
+  /* لون أزرق داكن عند المرور */
+  border-color: #3a8d94;
+  /* حدود داكنة عند المرور */
+}
+
+/* تصميم البطاقات في صفحة كورساتي */
+.my-courses-page .card-course {
+  border: 1px solid #e9ecef;
+  /* حدود فاتحة للبطاقات */
+  border-radius: 12px;
+  /* زوايا دائرية */
+  overflow: hidden;
+  /* إخفاء ما يخرج عن حدود البطاقة */
+  transition: all 0.3s ease;
+  /* تأثير سلس */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف */
+  position: relative;
+  /* تحديد مكان العنصر */
+}
+
+.my-courses-page .card-course:hover {
+  transform: translateY(-5px);
+  /* تحريك البطاقة لأعلى عند المرور */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* ظل أكبر عند المرور */
+  border-color: #4CACB7;
+  /* حدود زرقاء عند المرور */
+}
+
+.my-courses-page .card-img-top {
+  height: 180px;
+  /* ارتفاع ثابت لصور البطاقات */
+  object-fit: cover;
+  /* تعديل الصورة لتناسب المساحة */
+  transition: transform 0.3s ease;
+  /* تأثير تكبير سلس */
+}
+
+.my-courses-page .card-course:hover .card-img-top {
+  transform: scale(1.05);
+  /* تكبير الصورة عند المرور */
+}
+
+.my-courses-page .card-body {
+  padding: 1.5rem;
+  /* فراغ داخلي مناسب */
+  position: relative;
+  /* تحديد مكان العنصر */
+}
+
+/* شريط التقدم على البطاقات */
+.progress-indicator {
+  position: absolute;
+  /* وضع مطلق */
+  top: -10px;
+  /* بداية من الأعلى */
+  right: 1rem;
+  /* مسافة من اليمين */
+  left: 1rem;
+  /* مسافة من اليسار */
+  height: 5px;
+  /* ارتفاع صغير */
+  background-color: #e9ecef;
+  /* خلفية رمادية */
+  border-radius: 3px;
+  /* زوايا دائرية */
+  overflow: hidden;
+  /* إخفاء ما يخرج عن الحدود */
+}
+
+.progress-bar {
+  height: 100%;
+  /* ارتفاع كامل */
+  background: linear-gradient(90deg, #4CACB7, #2E8B8B);
+  /* تدرج لوني */
+  border-radius: 3px;
+  /* زوايا دائرية */
+  transition: width 0.5s ease;
+  /* تأثير سلس */
+}
+
+.my-courses-page .card-title-course {
+  color: #333;
+  /* لون داكن للعنوان */
+  font-size: 1.1rem;
+  /* حجم مناسب */
+  line-height: 1.4;
+  /* ارتفاع السطر */
+  min-height: 3em;
+  /* ارتفاع أدنى للعنوان */
+  overflow: hidden;
+  /* إخ
+    <!-- استكمال الكود من حيث توقف -->
+
+.my-courses-page .card-title-course {
+  color: #333; /* لون داكن للعنوان */
+  font-size: 1.1rem;
+  /* حجم مناسب */
+  line-height: 1.4;
+  /* ارتفاع السطر */
+  min-height: 3em;
+  /* ارتفاع أدنى للعنوان */
+  overflow: hidden;
+  /* إخفاء النص الزائد */
+  text-overflow: ellipsis;
+  /* إضافة ثلاث نقاط للنص الطويل */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  /* عدد الأسطر */
+  -webkit-box-orient: vertical;
+  margin-bottom: 0.5rem;
+  /* فراغ سفلي */
+}
+
+.my-courses-page .card-description {
+  color: #6c757d;
+  /* لون رمادي للوصف */
+  font-size: 0.9rem;
+  /* حجم أصغر */
+  line-height: 1.6;
+  /* ارتفاع السطر */
+  min-height: 4.5em;
+  /* ارتفاع أدنى للوصف */
+  overflow: hidden;
+  /* إخفاء النص الزائد */
+  text-overflow: ellipsis;
+  /* إضافة ثلاث نقط للنص الطويل */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  /* عدد الأسطر */
+  -webkit-box-orient: vertical;
+  margin-bottom: 1rem;
+  /* فراغ سفلي */
+}
+
+/* Badge السعر في كورساتي */
+.my-courses-page .badge {
+  font-size: 0.85rem;
+  /* حجم أصغر */
+  padding: 0.35em 0.65em;
+  /* فراغ داخلي مناسب */
+  font-weight: 600;
+  /* نص سمك متوسط */
+  border-radius: 20px;
+  /* زوايا دائرية جداً */
+}
+
+.my-courses-page .badge.bg-success {
+  background-color: #28a745 !important;
+  /* لون أخضر للسعر */
+}
+
+.my-courses-page .badge.bg-primary {
+  background-color: #4CACB7 !important;
+  /* لون أزرق فاتح للسعر */
+}
+
+/* زر الدخول للكورس في صفحة كورساتي */
+.my-courses-page .btn-primary {
+  background-color: #4CACB7;
+  /* لون أزرق فاتح للزر */
+  border-color: #4CACB7;
+  /* حدود بنفس اللون */
+  border-radius: 8px;
+  /* زوايا دائرية */
+  padding: 0.75rem;
+  /* فراغ داخلي */
+  font-weight: 600;
+  /* نص سمك متوسط */
+  transition: all 0.3s ease;
+  /* تأثير سلس */
+  width: 100%;
+  /* عرض كامل */
+}
+
+.my-courses-page .btn-primary:hover {
+  background-color: #3a8d94;
+  /* لون أزرق داكن عند المرور */
+  border-color: #3a8d94;
+  /* حدود داكنة عند المرور */
+  transform: translateY(-2px);
+  /* تحريك الزر لأعلى عند المرور */
+  box-shadow: 0 4px 12px rgba(76, 172, 183, 0.3);
+  /* ظل أزرق */
+}
+
+/* حالة عدم وجود كورسات */
+.empty-state {
+  padding: 3rem 1rem;
+  /* فراغ داخلي */
+  text-align: center;
+  /* توسيط النص */
+}
+
+.empty-state i {
+  color: #dee2e6;
+  /* لون رمادي فاتح للأيقونة */
+  margin-bottom: 1.5rem;
+  /* فراغ سفلي */
+}
+
+.empty-state h5 {
+  color: #6c757d;
+  /* لون رمادي للعنوان */
+  font-weight: 600;
+  /* نص سمك متوسط */
+  margin-bottom: 1rem;
+  /* فراغ سفلي */
+}
+
+.empty-state p {
+  color: #adb5bd;
+  /* لون رمادي أفتح للنص */
+  max-width: 500px;
+  /* أقصى عرض */
+  margin: 0 auto 1.5rem;
+  /* توسيط وتحديد هوامش */
+}
+
+/* نصائح الدراسة */
+.study-tips {
+  border: none;
+  /* إزالة الحدود الافتراضية */
+  border-radius: 12px;
+  /* زوايا دائرية */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* تدرج لوني */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف */
+  margin-top: 2rem;
+  /* فراغ من الأعلى */
+}
+
+.study-tips .card-title {
+  color: #333;
+  /* لون داكن للعنوان */
+  font-size: 1.25rem;
+  /* حجم مناسب */
+  font-weight: 700;
+  /* نص سميك */
+  border-bottom: 2px solid #4CACB7;
+  /* خط سفلي أزرق */
+  padding-bottom: 0.5rem;
+  /* فراغ أسفل النص */
+  display: inline-block;
+  /* عرض على نفس السطر */
+}
+
+.tip-item {
+  display: flex;
+  /* استخدام flexbox */
+  align-items: flex-start;
+  /* توسيط من الأعلى */
+  padding: 0.75rem;
+  /* فراغ داخلي */
+  background-color: white;
+  /* خلفية بيضاء */
+  border-radius: 8px;
+  /* زوايا دائرية */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* ظل خفيف */
+  height: 100%;
+  /* ارتفاع كامل */
+}
+
+.tip-item i {
+  font-size: 1.25rem;
+  /* حجم مناسب للأيقونة */
+  margin-top: 0.25rem;
+  /* مسافة من الأعلى */
+}
+
+.tip-item strong {
+  color: #333;
+  /* لون داكن للنص السميك */
+  display: block;
+  /* عرض كامل للسطر */
+  margin-bottom: 0.25rem;
+  /* فراغ سفلي */
+}
+
+.tip-item span {
+  color: #6c757d;
+  /* لون رمادي للنص */
+  font-size: 0.9rem;
+  /* حجم أصغر */
+  line-height: 1.5;
+  /* ارتفاع السطر */
+}
+
+/* Pagination مخصص لصفحة كورساتي */
+.my-courses-page .pagination {
+  margin-top: 2rem;
+  /* فراغ من الأعلى */
+  margin-bottom: 2rem;
+  /* فراغ سفلي */
+}
+
+.my-courses-page .page-link {
+  color: #4CACB7;
+  /* لون أزرق فاتح للروابط */
+  border: 1px solid #dee2e6;
+  /* حدود فاتحة */
+  padding: 0.5rem 1rem;
+  /* فراغ داخلي */
+  margin: 0 0.25rem;
+  /* فراغ بين الأزرار */
+  border-radius: 6px;
+  /* زوايا دائرية */
+  transition: all 0.3s ease;
+  /* تأثير سلس */
+  font-weight: 600;
+  /* نص سمك متوسط */
+}
+
+.my-courses-page .page-link:hover {
+  color: #2E8B8B;
+  /* لون أزرق داكن عند المرور */
+  background-color: #f8f9fa;
+  /* خلفية فاتحة عند المرور */
+  border-color: #4CACB7;
+  /* حدود زرقاء */
+  transform: translateY(-2px);
+  /* تحريك لأعلى عند المرور */
+}
+
+.my-courses-page .page-item.active .page-link {
+  background-color: #4CACB7;
+  /* خلفية زرقاء للصفحة النشطة */
+  border-color: #4CACB7;
+  /* حدود زرقاء */
+  color: white;
+  /* لون أبيض */
+}
+
+.my-courses-page .page-item.disabled .page-link {
+  color: #adb5bd;
+  /* لون رمادي فاتح */
+  background-color: #f8f9fa;
+  /* خلفية فاتحة */
+  border-color: #dee2e6;
+  /* حدود فاتحة */
+  cursor: not-allowed;
+  /* مؤشر غير مسموح */
+}
+
+/* Spinner التحميل */
+.spinner-border {
+  width: 3rem;
+  /* عرض مناسب */
+  height: 3rem;
+  /* ارتفاع مناسب */
+  border-width: 0.25em;
+  /* سمك الحدود */
+  color: #4CACB7;
+  /* لون أزرق */
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-right: 0 !important;
+    /* إزالة المسافة في الهواتف */
+  }
+
+  .my-courses-page {
+    padding-top: 60px;
+    /* مسافة أقل من الأعلى */
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    /* حجم أصغر للعنوان */
+    margin-bottom: 1rem;
+    /* فراغ أقل */
+  }
+
+  .stats-summary {
+    padding: 1rem;
+    /* فراغ داخلي أقل */
+  }
+
+  .stat-item {
+    min-width: 100px;
+    /* عرض أقل */
+    padding: 0.75rem 1rem;
+    /* فراغ داخلي أقل */
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    /* حجم أصغر للأرقام */
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    /* حجم أصغر للتسمية */
+  }
+
+  .courses-filter .btn {
+    padding: 0.4rem 1rem;
+    /* فراغ داخلي أقل */
+    font-size: 0.9rem;
+    /* حجم أصغر للنص */
+  }
+
+  .my-courses-page .card-img-top {
+    height: 150px;
+    /* ارتفاع أقل للصور */
+  }
+
+  .my-courses-page .card-title-course {
+    font-size: 1rem;
+    /* حجم أصغر للعناوين */
+  }
+
+  .my-courses-page .card-description {
+    font-size: 0.85rem;
+    /* حجم أصغر للوصف */
+  }
+
+  .study-tips .card-title {
+    font-size: 1.1rem;
+    /* حجم أصغر للعنوان */
+  }
+
+  .tip-item {
+    padding: 0.5rem;
+    /* فراغ داخلي أقل */
+    font-size: 0.9rem;
+    /* حجم أصغر للنص */
+  }
+}
+
+/* تصميم للأجهزة الصغيرة جداً */
+@media (max-width: 576px) {
+  .section-title::after {
+    width: 80px;
+    /* عرض أقل للخط */
+  }
+
+  .stats-summary {
+    flex-direction: column;
+    /* ترتيب عمودي للإحصائيات */
+    align-items: center;
+    /* توسيط أفقي */
+  }
+
+  .stat-item {
+    width: 100%;
+    /* عرض كامل */
+    max-width: 200px;
+    /* أقصى عرض */
+    margin-bottom: 0.5rem;
+    /* فراغ سفلي */
+  }
+
+  .courses-filter {
+    flex-direction: column;
+    /* ترتيب عمودي للفلتر */
+    align-items: center;
+    /* توسيط أفقي */
+  }
+
+  .courses-filter .btn {
+    width: 100%;
+    /* عرض كامل */
+    max-width: 200px;
+    /* أقصى عرض */
+    margin-bottom: 0.5rem;
+    /* فراغ سفلي */
+  }
+
+  .empty-state {
+    padding: 2rem 1rem;
+    /* فراغ داخلي أقل */
+  }
+
+  .empty-state h5 {
+    font-size: 1rem;
+    /* حجم أصغر للعنوان */
+  }
+
+  .empty-state p {
+    font-size: 0.9rem;
+    /* حجم أصغر للنص */
+  }
+
+  .study-tips {
+    margin-top: 1rem;
+    /* فراغ أقل من الأعلى */
+  }
+
+  .tip-item {
+    margin-bottom: 0.75rem;
+    /* فراغ سفلي */
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    /* السماح بتكرار الأسطر */
+    justify-content: center;
+    /* توسيط */
+  }
+
+  .page-item {
+    margin: 0.125rem;
+    /* فراغ أقل بين الأزرار */
+  }
+}
+
+/* src/styles/MyCoursesPage.css (إضافة Dark Mode) */
+
+/* ====== Dark Mode للصفحة ====== */
+.my-courses-container.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode-bg {
+  background-color: #121212 !important;
+}
+
+/* ====== Dark Mode للكروت ====== */
+.dark-mode-card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+/* ====== Dark Mode للإحصائيات ====== */
+.stats-summary-dark .stat-item-dark {
+  background-color: #1e1e1e !important;
+  /* تعديل ليتطابق مع طلب المستخدم */
+  border-color: #333 !important;
+}
+
+.stats-summary-dark .stat-number {
+  color: #ffffff !important;
+}
+
+.stats-summary-dark .stat-label {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للفلترة ====== */
+.dark-mode .btn-outline-light {
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: #4CACB7 !important;
+  color: #ffffff !important;
+}
+
+/* ====== Dark Mode للحالة الفارغة ====== */
+.empty-state-dark h5 {
+  color: #ffffff !important;
+}
+
+.empty-state-dark p {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode لنصائح الدراسة ====== */
+.dark-mode-card .card-title {
+  color: #ffffff !important;
+}
+
+.dark-mode-card .tip-item {
+  color: #e0e0e0 !important;
+}
+
+/* ====== Dark Mode للأيقونات ====== */
+.dark-mode .fa-lightbulb {
+  color: #FFC107 !important;
+}
+
+.dark-mode .fa-clock {
+  color: #4CACB7 !important;
+}
+
+.dark-mode .fa-tasks {
+  color: #28a745 !important;
+}
+
+.dark-mode .fa-repeat {
+  color: #17a2b8 !important;
+}
+
+/* ====== Dark Mode للنصوص ====== */
+.dark-mode .text-light {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للـ Pagination ====== */
+.page-link-dark {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+}
+
+.page-link-dark:hover {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
+
+/* ====== Dark Mode للأزرار ====== */
+.dark-mode .btn-primary {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #3a9a9a !important;
+  border-color: #3a9a9a !important;
+}
+
+/* ====== Dark Mode للعنوان ====== */
+.dark-mode .section-title {
+  color: #ffffff !important;
+  border-bottom-color: #4CACB7 !important;
+}
+
+/* src/styles/MyCoursesPage.css (أضف هذه الأنماط) */
+
+/* أنماط عامة للدارك مود */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* أنماط الأزرار في الوضع المظلم */
+.btn-dark-mode-filter {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-dark-mode-filter:hover {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+}
+
+.btn-dark-mode-filter.active {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  border-color: #4CACB7 !important;
+}
+
+/* أنماط الحاويات في الوضع المظلم */
+.dark-mode-card {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #333 !important;
+}
+
+.dark-mode-bg {
+  background-color: #121212 !important;
+}
+
+/* أنماط الإحصائيات في الوضع المظلم */
+.stats-summary-dark .stat-item-dark {
+  background-color: #1e1e1e !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* أنماط النصائح في الوضع المظلم */
+.study-tips.dark-mode-card {
+  background-color: #1e1e1e !important;
+  border-left: 4px solid #4CACB7 !important;
+}
+
+/* Override Course Card Background specifically for MyCoursesPage to indicate #000000 */
+.my-courses-page .course-card.dark-mode,
+body.dark-mode .my-courses-page .course-card {
+  background-color: #000000 !important;
+  border-color: #333 !important;
+}
+
+/* تحسينات للعناوين */
+.section-title {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #4CACB7;
+}
+
+.dark-mode .section-title::after {
+  background-color: #4CACB7;
+}
+
+/* تحسينات للأيقونات */
+.tip-item i {
+  transition: transform 0.3s ease;
+}
+
+.tip-item:hover i {
+  transform: scale(1.2);
+}
+
+/* تحسينات للفلاتر */
+.courses-filter .btn {
+  border-radius: 25px !important;
+  padding: 8px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.courses-filter .btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.dark-mode .courses-filter .btn:hover {
+  box-shadow: 0 4px 8px rgba(76, 172, 183, 0.3) !important;
+}
+
+/* تحسينات للبطاقات */
+.row.justify-content-center {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تحسينات للصفحة الحالية */
+.page-item.active .page-link {
+  font-weight: bold !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* تحسينات للحالة الفارغة */
+.empty-state {
+  transition: all 0.3s ease;
+}
+
+.empty-state:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dark-mode .empty-state:hover {
+  box-shadow: 0 10px 20px rgba(76, 172, 183, 0.2) !important;
+}
+
+/* تحسينات للتحميل */
+.spinner-border {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}

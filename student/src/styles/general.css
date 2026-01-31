@@ -1,0 +1,61 @@
+/* src/styles/general.css */
+/* هذا الكود خاص بالتصميم العام للموقع */
+
+/* تصحيح اتجاه النصوص للغة العربية */
+body {
+    direction: rtl;                     /* اتجاه النص من اليمين لليسار */
+    text-align: right;                  /* محاذاة النصوص لليمين */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط عربي أنيق */
+    margin: 0;                          /* إزالة الهوامش الافتراضية */
+    padding: 0;                         /* إزالة الحشو الداخلي الافتراضي */
+  }
+  
+  /* تحسين شكل الروابط */
+  a {
+    text-decoration: none;              /* إزالة الخط السفلي من الروابط */
+    color: inherit;                     /* استخدام لون العنصر الأصل */
+  }
+  
+  /* تحسين شكل الأزرار */
+  .btn {
+    transition: all 0.3s ease;          /* تأثير سلس عند التغيير */
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);        /* تحريك الزر لأعلى عند المرور */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* إضافة ظل عند المرور */
+  }
+  
+  /* تصميم البطاقات */
+  .card {
+    transition: transform 0.3s ease;    /* تأثير سلس عند تحريك البطاقات */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);        /* تحريك البطاقة لأعلى عند المرور */
+  }
+  /******************/
+  /* في src/styles/general.css أضف */
+
+/* ضمان ظهور أيقونات react-icons */
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* تحسين عرض أيقونات Font Awesome */
+.react-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تنسيق الأيقونات في الأزرار */
+.btn svg {
+  margin-right: 5px;
+}
+
+/* تنسيق الأيقونات في النصوص */
+.text-muted svg {
+  opacity: 0.7;
+}

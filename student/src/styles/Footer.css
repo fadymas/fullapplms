@@ -1,0 +1,18 @@
+/* أضف في نهاية Navbar.css فقط هذه القواعد */
+
+/* جعل الأزرار في أقصى الشمال */
+.navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  /* أو جرب هذا إذا لم يعمل الأول */
+  .custom-navbar .navbar-nav.me-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  
+  /* حل بديل */
+  .navbar-collapse .navbar-nav {
+    margin-left: 0 !important;
+  }

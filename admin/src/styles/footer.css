@@ -1,0 +1,190 @@
+/* src/styles/components/footer.css */
+.footer {
+    background-color: #08345B !important; /* تغيير اللون فقط إلى #08345B */
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+/* إزالة التأثر بالـ Sidebar */
+.footer,
+.sidebar-collapsed .footer {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+    transition: none !important;
+}
+
+/* الحفاظ على كل الأحجام كما هي بدون تغيير */
+.footer .smallText {
+    font-size: 0.9rem; /* نفس الحجم */
+    opacity: 0.9;
+}
+
+.footer .socials a {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color: #f8f9fa; /* نفس اللون */
+    transform: translateY(-3px); /* نفس التأثير */
+}
+
+.linkFooter {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important; /* نفس السماكة */
+}
+
+.linkFooter a {
+    color: #dee2e6; /* نفس اللون */
+    transition: color 0.3s ease; /* نفس التوقيت */
+}
+
+.linkFooter a:hover {
+    color: white; /* نفس اللون */
+    text-decoration: underline; /* نفس التأثير */
+}
+
+/* Responsive بدون تغيير الأحجام */
+@media (max-width: 991px) {
+    /* فقط إعادة الترتيب بدون تغيير الأحجام */
+    .footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer .col-md-6,
+    .footer .col-md-5 {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .socials {
+        justify-content: center !important;
+    }
+    
+    .smallText.mb-2 {
+        text-align: center !important;
+    }
+    
+    .footer .d-flex.justify-content-end {
+        justify-content: center !important;
+    }
+    
+    .linkFooter {
+        text-align: center;
+    }
+    
+    .linkFooter .col-md-5,
+    .linkFooter .col-md-6 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* فقط محاذاة العناصر بدون تغيير الأحجام */
+    .footer .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .footer img[alt="Logo"] {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .footer .smallText {
+        text-align: center;
+    }
+    
+    .socials {
+        margin-top: 0.5rem;
+    }
+    
+    .linkFooter .pt-3 {
+        padding-top: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* فقط تحسين الترتيب في الشاشات الصغيرة جداً */
+    .footer .p-4 {
+        padding: 1.5rem !important; /* نفس التباعد تقريباً */
+    }
+    
+    .footer .pt-4 {
+        padding-top: 1.5rem !important; /* نفس التباعد تقريباً */
+    }
+    
+    .linkFooter .pt-3 {
+        padding-top: 0.75rem !important;
+    }
+    
+    .footer a.text-decoration-none.px-2 {
+        display: inline-block;
+        margin: 0 0.25rem;
+    }
+}
+
+/* إصلاحات خاصة للـ RTL */
+[dir="rtl"] .footer {
+    text-align: right;
+}
+
+[dir="rtl"] .footer .socials {
+    direction: ltr;
+    display: inline-flex;
+}
+
+[dir="rtl"] .footer .socials a {
+    margin: 0 0.25rem;
+}
+
+/* التأكد من عدم وجود أي تأثيرات جانبية */
+.footer * {
+    box-sizing: border-box;
+}
+
+/* الحفاظ على كل الـ padding والـ margins كما هي */
+.footer .p-4 { padding: 1.5rem !important; }
+.footer .pt-4 { padding-top: 1.5rem !important; }
+.footer .px-1 { padding-left: 0.25rem !important; padding-right: 0.25rem !important; }
+.footer .px-2 { padding-left: 0.5rem !important; padding-right: 0.5rem !important; }
+.footer .mb-2 { margin-bottom: 0.5rem !important; }
+.footer .mb-4 { margin-bottom: 1.5rem !important; }
+.footer .mt-4 { margin-top: 1.5rem !important; }
+.footer .pt-3 { padding-top: 1rem !important; }
+.footer .pt-4 { padding-top: 1.5rem !important; }
+.footer .fs-4 { font-size: 1.5rem !important; }
+
+/* إضافة هذه القواعد إلى footer.css */
+
+/* التأكد من أن الـ Footer يظهر فوق الـ Sidebar عند التمرير */
+.footer {
+    position: relative;
+    z-index: 1010; /* أقل من الـ Sidebar (1020) ولكن أعلى من المحتوى */
+    background-color: #08345B !important;
+}
+
+/* إضافة مسافة أمان في الشاشات الكبيرة */
+@media (min-width: 992px) {
+    .main-content {
+        margin-right: 280px;
+        transition: margin-right 0.3s ease;
+    }
+    
+    .sidebar-collapsed ~ .main-content {
+        margin-right: 80px;
+    }
+    
+    /* التأكد من أن الفوتر يأخذ العرض الكامل */
+    .footer {
+        width: 100%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+}
+

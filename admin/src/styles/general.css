@@ -1,0 +1,290 @@
+@font-face {
+    font-family: "Jannet";
+    src: url(../fonts/JannaLTRegular.ttf);
+  }
+  
+  :root {
+    font-size: 16px;
+    font-family: "Jannet";
+    direction: rtl;
+    --color-primary: #67a9b5;
+    --bg-color-primary: #67a9b5;
+    --bg-color-first: #feffff;
+    --bg-color-cards: #edf7f6;
+    --color-primary-hover: #b37c47;
+    --color-on-primary: #ffffff;
+    --color-secondary: #edf7f6;
+    --color-white: #ffffff;
+    --color-links: #d1e3e7;
+    --bg-color-main: #153357;
+    --bs-dropdown-bg: #153357;
+    --color-gray-dark: #6c757d;
+    --color-gray-light: #f8f9fa;
+    --color-table-header: #d6d7d8;
+    --color-table-bodey: #838080;
+    --color-black: #000000;
+    --accent1: #00d4d4;
+    --accent2: #7b5cff;
+    --fab-bg: rgba(255, 255, 255, 0.06);
+    --fab-border: rgba(255, 255, 255, 0.14);
+  }
+  
+  .dark-mode {
+    --bg-color-main: #000000 !important;
+    --bg-color-first: #f7f7f7 !important;
+    --color-links: #ffffff !important;
+    --bg-color-cards: #000000 !important;
+    --color-secondary: #cccccc !important;
+    --color-primary: #67a9b5 !important;
+    --color-on-primary: #000000 !important;
+  }
+  
+  .dark-mode {
+    background-color: var(--color-secondary) !important;
+  }
+  
+  .dark-mode .sidebar .nav-link,
+  .dark-mode .sidebar .btn {
+    color: var(--color-white) !important;
+  }
+  
+  .dark-mode .courses-tabs .nav-link {
+    color: var(--color-white) !important;
+    background-color: var(--bg-color-main) !important;
+  }
+  
+  .dark-mode .sidebar .nav-link:hover,
+  .dark-mode .sidebar .nav-link.active,
+  .dark-mode .sidebar .btn:hover {
+    background-color: var(--color-white) !important;
+    color: var(--bg-color-main) !important;
+  }
+  
+  .dark-mode .card .card-body .card-title,
+  .dark-mode .card .card-body,
+  .dark-mode .card .card-body small,
+  .dark-mode .icon-circle i,
+  .dark-mode .progress-content h3 {
+    color: var(--color-white) !important;
+  }
+  
+  .dark-mode .sidebar {
+    background-color: var(--bg-color-main) !important;
+  }
+  
+  .dark-mode .navbar .theme-switch .switch-label::after {
+    right: unset;
+    left: 8px;
+  }
+  
+  a {
+    color: var(--color-links) !important;
+  }
+  
+  .btn {
+    border-radius: 1rem !important;
+  }
+  
+  .bg-main {
+    background-color: var(--bg-color-first) !important;
+  }
+  
+  .fs-12 {
+    font-size: .75rem;
+  }
+  
+  .fs-14 {
+    font-size: .875rem;
+  }
+  
+  /* Primary Button */
+  .btn-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-on-primary) !important;
+  }
+  
+  /* Outline Primary */
+  .btn-outline-primary {
+    color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    background-color: transparent !important;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-on-primary) !important;
+    border-color: var(--color-primary) !important;
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+    color: var(--bg-color-main) !important;
+  }
+  
+  .dropdown-menu {
+    background-color: var(--bg-color-main) !important;
+  }
+  
+  .dropdown-item {
+    color: var(--color-white) !important;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--color-primary) !important;
+    color: var(--color-on-primary) !important;
+  }
+  
+  .dropdown-item.active {
+    background-color: var(--color-primary) !important;
+    color: var(--color-on-primary) !important;
+  }
+  
+  .bg-secondary {
+    background-color: var(--bg-color-first) !important;
+  }
+  
+  .bg-primary {
+    background-color: var(--color-primary) !important;
+  }
+  
+  .bg-main {
+    background-color: var(--bg-color-main) !important;
+  }
+  
+  .bg-first {
+    background-color: var(--bg-color-first) !important;
+  }
+  
+  body {
+    background-color: var(--bg-color-first);
+  }
+  
+  .text-primary {
+    color: var(--color-primary) !important;
+  }
+  
+  a, button, div, span, p {
+    font-family: "Jannet";
+  }
+  
+  .navbar {
+    background-color: var(--bg-color-main) !important;
+    margin-bottom: 10rem;
+    padding-inline: 1rem;
+  }
+  
+  .navbar .nav-item .nav-link {
+    color: var(--color-white) !important;
+    font-size: 1.1rem;
+  }
+  
+  .navbar .nav-item .nav-link:hover {
+    color: var(--color-primary) !important;
+  }
+  
+  .navbar .nav-item .nav-link.active {
+    color: var(--color-primary) !important;
+    border-bottom: 2px solid var(--color-primary);
+  }
+  
+  .navbar .navbar-img {
+    height: 3rem;
+    object-fit: cover;
+  }
+  
+  .pagination .page-link {
+    color: var(--bg-color-main) !important;
+  }
+  
+  .pagination .page-item.active .page-link {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: var(--color-on-primary) !important;
+  }
+  
+  .linkColor {
+    color: var(--bg-color-main) !important;
+    text-decoration: none;
+  }
+  
+  .dark-mode .linkColor {
+    color: var(--color-white) !important;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .text-titles {
+    color: var(--color-black);
+  }
+  
+  .dark-mode .text-titles {
+    color: var(--color-white) !important;
+  }
+  
+  table th, table td {
+    border-color: var(--color-primary) !important;
+    font-size: .9rem;
+    white-space: nowrap;
+    padding: 1rem !important;
+  }
+  
+  table thead {
+    background-color: var(--bg-color-cards) !important;
+  }
+  
+  table thead th {
+    background-color: var(--color-table-header) !important;
+    white-space: nowrap;
+  }
+  
+  table .min-vw-20 {
+    min-width: 12rem;
+  }
+  
+  table tr:nth-child(even) td {
+    background-color: var(--color-gray-light) !important;
+  }
+  
+  table .min-vw-30 {
+    min-width: 14rem;
+  }
+  
+  .dark-mode table thead th {
+    background-color: var(--bg-color-primary) !important;
+    color: var(--color-white) !important;
+  }
+  
+  .dark-mode table tr td {
+    background-color: var(--color-table-bodey) !important;
+    color: var(--color-white) !important;
+  }
+  
+  /* ================================ Footer =================== */
+  .footer {
+    background-color: var(--bg-color-main);
+    padding-block: 2rem;
+    color: var(--color-white);
+  }
+  
+  .socials a, .footer a {
+    color: var(--color-white);
+  }
+  
+  /* ================================ index.js =================== */
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }

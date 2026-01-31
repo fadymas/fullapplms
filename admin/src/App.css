@@ -1,0 +1,419 @@
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* ================================
+   THEME: DARK MODE
+   ================================ */
+
+/* متغيرات الألوان للوضع الفاتح (الافتراضي) */
+:root {
+  /* الألوان الأساسية - Light Mode */
+  --color-primary: #67a9b5;
+  --bg-color-primary: #67a9b5;
+  --bg-color-first: #feffff;
+  --bg-color-cards: #edf7f6;
+  --color-primary-hover: #b37c47;
+  --color-on-primary: #ffffff;
+  --color-secondary: #edf7f6;
+  --color-white: #ffffff;
+  --color-links: #d1e3e7;
+  --bg-color-main: #153357;
+  --bs-dropdown-bg: #153357;
+  --color-gray-dark: #6c757d;
+  --color-gray-light: #f8f9fa;
+  --color-table-header: #d6d7d8;
+  --color-table-bodey: #838080;
+  --color-black: #000000;
+  --color-text-primary: #212529;
+  --color-text-secondary: #495057;
+  --color-border: #dee2e6;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  --color-hover-light: #f8f9fa;
+  --color-card-bg: #ffffff;
+}
+
+/* متغيرات الألوان للوضع الداكن */
+.dark-mode {
+  /* الألوان الأساسية - Dark Mode */
+  --color-primary: #67a9b5;
+  --bg-color-primary: #67a9b5;
+  --bg-color-first: #121212 !important;
+  --bg-color-cards: #1e1e1e !important;
+  --color-primary-hover: #86c2ce;
+  --color-on-primary: #ffffff;
+  --color-secondary: #2d2d2d;
+  --color-white: #ffffff;
+  --color-links: #67a9b5;
+  --bg-color-main: #0a1929 !important;
+  --bs-dropdown-bg: #0a1929;
+  --color-gray-dark: #adb5bd;
+  --color-gray-light: #343a40;
+  --color-table-header: #2d3748;
+  --color-table-bodey: #4a5568;
+  --color-black: #ffffff;
+  --color-text-primary: #e9ecef !important;
+  --color-text-secondary: #adb5bd !important;
+  --color-border: #495057;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-hover-light: #2d3748;
+  --color-card-bg: #1e1e1e;
+}
+
+/* ================================
+ تطبيقات عامة على Dark Mode
+ ================================ */
+
+/* Body الأساسي */
+.dark-mode body {
+  background-color: var(--bg-color-first) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* النصوص */
+.dark-mode .text-black,
+.dark-mode .text-dark {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .text-secondary {
+  color: var(--color-text-secondary) !important;
+}
+
+/* البطاقات */
+.dark-mode .card {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .card-title,
+.dark-mode .card-text,
+.dark-mode .card-header,
+.dark-mode .card-footer {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .card-body {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .card-header {
+  background-color: var(--bg-color-main) !important;
+  border-bottom-color: var(--color-border) !important;
+}
+
+/* الجداول */
+.dark-mode table {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode thead th {
+  background-color: var(--color-table-header) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.dark-mode tbody td {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.dark-mode table tr:nth-child(even) td {
+  background-color: var(--color-gray-light) !important;
+}
+
+/* النماذج */
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .form-label {
+  color: var(--color-text-primary) !important;
+}
+
+/* الأزرار */
+.dark-mode .btn-light {
+  background-color: var(--color-gray-light) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .btn-outline-light {
+  color: var(--color-text-primary) !important;
+  border-color: var(--color-border) !important;
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: var(--color-gray-light) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* التنبيهات والملاحظات */
+.dark-mode .alert {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* الـ Navbar */
+.dark-mode .navbar {
+  background-color: var(--bg-color-main) !important;
+}
+
+/* الـ Sidebar */
+.dark-mode .sidebar {
+  background-color: var(--bg-color-main) !important;
+  border-left-color: var(--color-border) !important;
+}
+
+.dark-mode .sidebar .nav-link {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .sidebar .nav-link:hover {
+  background-color: var(--color-hover-light) !important;
+  color: var(--color-primary) !important;
+}
+
+.dark-mode .sidebar .nav-link.active {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+
+/* Footer */
+.dark-mode .footer {
+  background-color: var(--bg-color-main) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .footer a {
+  color: var(--color-links) !important;
+}
+
+/* الـ Dropdowns */
+.dark-mode .dropdown-menu {
+  background-color: var(--bg-color-main) !important;
+  border-color: var(--color-border) !important;
+}
+
+.dark-mode .dropdown-item {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .dropdown-item:hover {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+
+/* الـ Pagination */
+.dark-mode .pagination .page-link {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .pagination .page-item.active .page-link {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+
+/* التقدم والأشرطة */
+.dark-mode .progress {
+  background-color: var(--color-gray-light) !important;
+}
+
+/* الـ Badges */
+.dark-mode .badge {
+  color: var(--color-text-primary) !important;
+}
+
+/* الـ Modals */
+.dark-mode .modal-content {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .modal-header,
+.dark-mode .modal-footer {
+  border-color: var(--color-border) !important;
+}
+
+/* الـ List Groups */
+.dark-mode .list-group-item {
+  background-color: var(--color-card-bg) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* الشعارات والأيقونات */
+.dark-mode .navbar-img {
+  filter: brightness(0.9);
+}
+
+/* تأثيرات الظل */
+.dark-mode .shadow-sm,
+.dark-mode .shadow,
+.dark-mode .shadow-lg {
+  box-shadow: 0 0.125rem 0.25rem var(--color-shadow) !important;
+}
+
+/* الروابط العامة */
+.dark-mode a:not(.btn) {
+  color: var(--color-links) !important;
+}
+
+.dark-mode a:hover:not(.btn) {
+  color: var(--color-primary-hover) !important;
+}
+
+/* عناصر الـ Bootstrap العامة */
+.dark-mode .border {
+  border-color: var(--color-border) !important;
+}
+
+.dark-mode .border-bottom {
+  border-bottom-color: var(--color-border) !important;
+}
+
+.dark-mode .border-top {
+  border-top-color: var(--color-border) !important;
+}
+
+.dark-mode .border-start {
+  border-left-color: var(--color-border) !important;
+}
+
+.dark-mode .border-end {
+  border-right-color: var(--color-border) !important;
+}
+
+/* النصوص الخاصة */
+.dark-mode .text-titles {
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .linkColor {
+  color: var(--color-links) !important;
+}
+
+/* التمرير (Scrollbar) */
+.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: var(--color-gray-light);
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--color-gray-dark);
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ================================
+ عناصر خاصة بالمشروع
+ ================================ */
+
+/* Header المخصص */
+.dark-mode .custom-navbar {
+  background-color: var(--bg-color-main) !important;
+}
+
+.dark-mode .custom-badge {
+  background-color: var(--color-primary) !important;
+  color: var(--color-on-primary) !important;
+}
+
+/* Offcanvas للموبايل */
+.dark-mode .mobile-menu-offcanvas {
+  background-color: var(--bg-color-main) !important;
+}
+
+.dark-mode .offcanvas-header {
+  border-bottom-color: var(--color-border) !important;
+}
+
+.dark-mode .hover-mobile-item:hover {
+  background-color: var(--color-hover-light) !important;
+}
+
+/* زر التبديل في الـ Header */
+.dark-mode .theme-switch .switch-label {
+  background-color: var(--color-gray-light) !important;
+}
+
+/* ================================
+ التجاوب مع الطبقات الموجودة
+ ================================ */
+
+/* تنسيق النصوص الصغيرة */
+.dark-mode .fs-12,
+.dark-mode .fs-14,
+.dark-mode .small,
+.dark-mode .smallText {
+  color: var(--color-text-secondary) !important;
+}
+
+/* تنسيق العناصر ذات الخلفية الثانوية */
+.dark-mode .bg-secondary {
+  background-color: var(--color-secondary) !important;
+}
+
+/* تنسيق العناصر ذات الخلفية الأولية */
+.dark-mode .bg-primary {
+  background-color: var(--color-primary) !important;
+}
+
+/* تنسيق الـ Input Groups */
+.dark-mode .input-group-text {
+  background-color: var(--color-gray-light) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* تنسيق الـ Toast */
+.dark-mode .toast {
+  background-color: var(--color-card-bg) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.dark-mode .toast-header {
+  background-color: var(--color-gray-light) !important;
+  color: var(--color-text-primary) !important;
+  border-bottom-color: var(--color-border) !important;
+}

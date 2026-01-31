@@ -1,0 +1,77 @@
+/* src/styles/components/modals.css */
+.users-modal .modal-content {
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.users-modal .modal-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom: none;
+    border-radius: 0.75rem 0.75rem 0 0;
+    padding: 1.5rem;
+}
+
+.users-modal .modal-title {
+    font-weight: 600;
+}
+
+.users-modal .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+.users-modal .btn-close:hover {
+    opacity: 1;
+}
+
+.users-modal .modal-body {
+    padding: 1.5rem;
+}
+
+.users-modal .form-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.users-modal .form-control,
+.users-modal .form-select {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.users-modal .form-control:focus,
+.users-modal .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.users-modal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1.5rem;
+}
+
+.delete-modal .modal-body {
+    text-align: center;
+    padding: 2rem;
+}
+
+.delete-modal .fa-trash-alt {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.delete-modal p {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+#deleteUserName {
+    font-weight: 600;
+    color: #495057;
+    font-size: 1.1rem;
+}

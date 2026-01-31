@@ -1,0 +1,557 @@
+/* src/styles/teacher-requests.css */
+.teacher-requests-page .main-content {
+    margin-right: 250px;
+    transition: margin-right 0.3s ease;
+    background-color: #f8f9fa; /* خلفية فاتحة افتراضية */
+}
+
+.teacher-requests-page .sidebar.collapsed ~ .main-content {
+    margin-right: 80px;
+}
+
+/* تحسين التبويبات */
+.courses-tabs-container {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.courses-tabs .nav-link {
+    color: #495057;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    background-color: transparent;
+    position: relative;
+    opacity: 0.8;
+    filter: brightness(0.95);
+}
+
+.courses-tabs .nav-link:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    transform: translateY(-2px);
+    opacity: 1;
+    filter: brightness(1);
+}
+
+.courses-tabs .nav-link.active {
+    background-color: #007bff;
+    color: white !important; /* التأكد من لون النص */
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+    opacity: 1;
+    filter: brightness(1);
+    font-weight: 600;
+}
+
+.courses-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #007bff;
+}
+
+/* تحسين وضوح البادجات داخل التبويبات */
+.courses-tabs .nav-link .badge {
+    opacity: 0.9;
+    filter: brightness(1.1);
+}
+
+.courses-tabs .nav-link.active .badge {
+    opacity: 1;
+    filter: brightness(1.2);
+}
+
+/* تحسين البطاقات */
+.requests-container .card {
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: white;
+}
+
+.requests-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.requests-container .card-body {
+    padding: 1.5rem;
+    color: #333; /* لون نص واضح للبطاقات */
+}
+
+/* تحسين البادجات */
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.8em;
+    font-weight: 500;
+    border-radius: 20px;
+    color: white; /* لون نص البادجات أبيض */
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+/* تحسين الأزرار */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: white; /* لون نص الأزرار أبيض افتراضي */
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.875rem;
+}
+
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* تحسين التنبيهات */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 0.75rem 1rem;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border-left: 4px solid #dc3545;
+}
+
+/* تحسين الجدولة */
+.pagination {
+    margin-bottom: 0;
+}
+
+.page-link {
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 0.5rem 0.75rem;
+    margin: 0 3px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 992px) {
+    .teacher-requests-page .main-content {
+        margin-right: 0;
+        margin-top: 70px;
+    }
+    
+    .teacher-requests-page .sidebar.collapsed ~ .main-content {
+        margin-right: 0;
+    }
+    
+    .courses-tabs .nav-link {
+        padding: 8px 15px;
+        font-size: 0.875rem;
+        margin: 0 2px;
+    }
+    
+    .requests-container .card-body {
+        padding: 1rem;
+    }
+    
+    .btn-group {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .btn {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .courses-tabs {
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+    
+    .courses-tabs .nav-item {
+        margin-bottom: 10px;
+    }
+    
+    .courses-tabs .nav-link {
+        width: 100%;
+        text-align: center;
+        border-radius: 8px;
+        margin: 2px;
+    }
+    
+    .courses-tabs .nav-link.active::after {
+        display: none;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .page-link {
+        margin: 2px;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-pane.active .card {
+    animation: fadeIn 0.5s ease;
+}
+
+/* تحسين العناوين */
+h2.text-center {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #007bff, #28a745);
+    border-radius: 3px;
+}
+
+/* تحسين محاذاة نص Pagination على الشاشات الكبيرة */
+@media (min-width: 992px) {
+    .teacher-requests-page .text-muted.d-none.d-md-block {
+        margin-right: 20px;
+    }
+}
+
+/* ============ Dark Mode Styles فقط ============ */
+
+/* الخلفية العامة في Dark Mode */
+.teacher-requests-page.dark-mode .main-content,
+body.dark-mode .teacher-requests-page .main-content {
+    background-color: #121212 !important;
+}
+
+/* تحسين نص العنوان الرئيسي في Dark Mode */
+.teacher-requests-page.dark-mode h2.text-dark-mode,
+body.dark-mode .teacher-requests-page h2.text-dark-mode {
+    color: #ffffff !important;
+}
+
+/* تحسين الخط تحت العنوان في Dark Mode */
+.teacher-requests-page.dark-mode h2.text-center::after,
+body.dark-mode .teacher-requests-page h2.text-center::after {
+    background: linear-gradient(to right, #0d6efd, #198754) !important;
+}
+
+/* تحسين التبويبات في Dark Mode */
+.teacher-requests-page.dark-mode .courses-tabs-container,
+body.dark-mode .teacher-requests-page .courses-tabs-container {
+    border-bottom-color: #444 !important;
+}
+
+.teacher-requests-page.dark-mode .courses-tabs .nav-link,
+body.dark-mode .teacher-requests-page .courses-tabs .nav-link {
+    color: #e0e0e0 !important;
+    background-color: transparent !important;
+}
+
+.teacher-requests-page.dark-mode .courses-tabs .nav-link:hover,
+body.dark-mode .teacher-requests-page .courses-tabs .nav-link:hover {
+    background-color: rgba(13, 110, 253, 0.15) !important;
+    color: #86b7fe !important;
+}
+
+.teacher-requests-page.dark-mode .courses-tabs .nav-link.active,
+body.dark-mode .teacher-requests-page .courses-tabs .nav-link.active {
+    background-color: #0d6efd !important;
+    color: white !important;
+    box-shadow: 0 4px 6px rgba(13, 110, 253, 0.3) !important;
+}
+
+.teacher-requests-page.dark-mode .courses-tabs .nav-link.active::after,
+body.dark-mode .teacher-requests-page .courses-tabs .nav-link.active::after {
+    border-bottom-color: #0d6efd !important;
+}
+
+/* تحسين البطاقات في Dark Mode */
+.teacher-requests-page.dark-mode .requests-container .card,
+body.dark-mode .teacher-requests-page .requests-container .card {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+.teacher-requests-page.dark-mode .requests-container .card:hover,
+body.dark-mode .teacher-requests-page .requests-container .card:hover {
+    border-color: #0d6efd !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher-requests-page.dark-mode .requests-container .card-body,
+body.dark-mode .teacher-requests-page .requests-container .card-body {
+    color: #e0e0e0 !important;
+}
+
+/* تحسين نص البطاقات في Dark Mode */
+.teacher-requests-page.dark-mode .card-title,
+body.dark-mode .teacher-requests-page .card-title {
+    color: #ffffff !important;
+}
+
+.teacher-requests-page.dark-mode .card-text,
+body.dark-mode .teacher-requests-page .card-text {
+    color: #d0d0d0 !important;
+}
+
+/* تحسين البادجات في Dark Mode */
+.teacher-requests-page.dark-mode .badge,
+body.dark-mode .teacher-requests-page .badge {
+    color: white !important; /* التأكد من وضوح نص البادجات */
+}
+
+/* تحسين الأزرار في Dark Mode */
+.teacher-requests-page.dark-mode .btn:not(.btn-outline-primary):not(.btn-outline-secondary):not(.btn-outline-success):not(.btn-outline-danger):not(.btn-outline-warning):not(.btn-outline-info):not(.btn-outline-light):not(.btn-outline-dark),
+body.dark-mode .teacher-requests-page .btn:not(.btn-outline-primary):not(.btn-outline-secondary):not(.btn-outline-success):not(.btn-outline-danger):not(.btn-outline-warning):not(.btn-outline-info):not(.btn-outline-light):not(.btn-outline-dark) {
+    color: white !important;
+}
+
+/* تحسين الأزرار المنفوذة في Dark Mode */
+.teacher-requests-page.dark-mode .btn-outline-primary,
+body.dark-mode .teacher-requests-page .btn-outline-primary {
+    color: #86b7fe !important;
+    border-color: #86b7fe !important;
+    background-color: transparent !important;
+}
+
+.teacher-requests-page.dark-mode .btn-outline-primary:hover,
+body.dark-mode .teacher-requests-page .btn-outline-primary:hover {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+
+/* تحسين التنبيهات في Dark Mode */
+.teacher-requests-page.dark-mode .alert-danger,
+body.dark-mode .teacher-requests-page .alert-danger {
+    background-color: rgba(220, 53, 69, 0.15) !important;
+    color: #f8d7da !important;
+    border-left-color: #dc3545 !important;
+}
+
+/* تحسين الباجينيشين في Dark Mode */
+.teacher-requests-page.dark-mode .page-link,
+body.dark-mode .teacher-requests-page .page-link {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+.teacher-requests-page.dark-mode .page-link:hover,
+body.dark-mode .teacher-requests-page .page-link:hover {
+    background-color: #3a3a3a !important;
+    border-color: #555 !important;
+}
+
+.teacher-requests-page.dark-mode .page-item.active .page-link,
+body.dark-mode .teacher-requests-page .page-item.active .page-link {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+    color: white !important;
+}
+
+.teacher-requests-page.dark-mode .page-item.disabled .page-link,
+body.dark-mode .teacher-requests-page .page-item.disabled .page-link {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #666 !important;
+}
+
+/* تحسين نص المعلومات في Pagination */
+.teacher-requests-page.dark-mode .text-muted,
+body.dark-mode .teacher-requests-page .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* تحسين الحقول في Dark Mode */
+.teacher-requests-page.dark-mode .form-control,
+.teacher-requests-page.dark-mode .form-select,
+body.dark-mode .teacher-requests-page .form-control,
+body.dark-mode .teacher-requests-page .form-select {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #ffffff !important;
+}
+
+.teacher-requests-page.dark-mode .form-control:focus,
+.teacher-requests-page.dark-mode .form-select:focus,
+body.dark-mode .teacher-requests-page .form-control:focus,
+body.dark-mode .teacher-requests-page .form-select:focus {
+    background-color: #2d2d2d !important;
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    color: #ffffff !important;
+}
+
+.teacher-requests-page.dark-mode .form-control::placeholder,
+body.dark-mode .teacher-requests-page .form-control::placeholder {
+    color: #999 !important;
+}
+
+/* تحسين الجداول في Dark Mode */
+.teacher-requests-page.dark-mode table,
+body.dark-mode .teacher-requests-page table {
+    color: #e0e0e0 !important;
+}
+
+.teacher-requests-page.dark-mode table th,
+body.dark-mode .teacher-requests-page table th {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+    border-color: #444 !important;
+}
+
+.teacher-requests-page.dark-mode table td,
+body.dark-mode .teacher-requests-page table td {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+}
+
+/* تحسين الروابط العامة في Dark Mode */
+.teacher-requests-page.dark-mode a:not(.btn):not(.page-link):not(.dropdown-item):not(.nav-link),
+body.dark-mode .teacher-requests-page a:not(.btn):not(.page-link):not(.dropdown-item):not(.nav-link) {
+    color: #86b7fe !important;
+}
+
+.teacher-requests-page.dark-mode a:not(.btn):not(.page-link):not(.dropdown-item):not(.nav-link):hover,
+body.dark-mode .teacher-requests-page a:not(.btn):not(.page-link):not(.dropdown-item):not(.nav-link):hover {
+    color: #a6c8fe !important;
+}
+
+/* تحسين النصوص الفرعية في Dark Mode */
+.teacher-requests-page.dark-mode small,
+body.dark-mode .teacher-requests-page small {
+    color: #b0b0b0 !important;
+}
+
+/* تحسين حدود العناصر في Dark Mode */
+.teacher-requests-page.dark-mode .border,
+body.dark-mode .teacher-requests-page .border {
+    border-color: #444 !important;
+}
+
+.teacher-requests-page.dark-mode .border-top,
+body.dark-mode .teacher-requests-page .border-top {
+    border-top-color: #444 !important;
+}
+
+.teacher-requests-page.dark-mode .border-bottom,
+body.dark-mode .teacher-requests-page .border-bottom {
+    border-bottom-color: #444 !important;
+}
+
+/* تحسين Dropdown في Dark Mode */
+.teacher-requests-page.dark-mode .dropdown-menu,
+body.dark-mode .teacher-requests-page .dropdown-menu {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+}
+
+.teacher-requests-page.dark-mode .dropdown-item,
+body.dark-mode .teacher-requests-page .dropdown-item {
+    color: #e0e0e0 !important;
+}
+
+.teacher-requests-page.dark-mode .dropdown-item:hover,
+body.dark-mode .teacher-requests-page .dropdown-item:hover {
+    background-color: #3a3a3a !important;
+    color: #ffffff !important;
+}
+
+/* تحسين Modal في Dark Mode */
+.teacher-requests-page.dark-mode .modal-content,
+body.dark-mode .teacher-requests-page .modal-content {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+.teacher-requests-page.dark-mode .modal-header,
+body.dark-mode .teacher-requests-page .modal-header {
+    background-color: #2d2d2d !important;
+    border-bottom-color: #444 !important;
+    color: #ffffff !important;
+}
+
+.teacher-requests-page.dark-mode .modal-title,
+body.dark-mode .teacher-requests-page .modal-title {
+    color: #ffffff !important;
+}
+
+.teacher-requests-page.dark-mode .modal-footer,
+body.dark-mode .teacher-requests-page .modal-footer {
+    border-top-color: #444 !important;
+}

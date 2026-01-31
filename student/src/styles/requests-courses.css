@@ -1,0 +1,324 @@
+/* src/styles/requests-courses.css */
+
+/* هذا الكود خاص بتنسيق صفحة كورساتنا المقترحة بشكل عام */
+.requests-courses-page {
+  direction: rtl;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* هذا الكود خاص بالجزء الرئيسي من المحتوى */
+.main-content {
+  margin-right: 280px;
+  /* مسافة لعرض القائمة الجانبية */
+  transition: margin-right 0.3s ease;
+  padding-top: 76px;
+  /* لتعويض ارتفاع الـ Navbar الثابت */
+  min-height: calc(100vh - 76px);
+}
+
+/* هذا الكود خاص بحالة القائمة الجانبية عندما تكون مصغرة */
+.sidebar-collapsed .main-content {
+  margin-right: 80px;
+  /* مسافة أقل عندما تكون القائمة مصغرة */
+}
+
+/* هذا الكود خاص بتنسيق القائمة الجانبية */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background: white;
+  transition: width 0.3s ease;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+}
+
+/* هذا الكود خاص بحالة القائمة الجانبية المصغرة */
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* هذا الكود خاص بإخفاء نص القائمة عندما تكون مصغرة */
+.sidebar.collapsed .sidebar-text,
+.sidebar.collapsed .nav-link span {
+  display: none;
+}
+
+/* هذا الكود خاص بتنسيق رابط القائمة النشط */
+.sidebar .nav-link.active {
+  background-color: #e9ecef;
+  border-right: 4px solid #007bff;
+  color: #007bff !important;
+}
+
+/* هذا الكود خاص بتنسيق بطاقات الكورسات */
+.card-course {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* هذا الكود خاص بتأثير رفع البطاقة عند مرور الماوس عليها */
+.card-course:hover {
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+/* هذا الكود خاص بتنسيق صورة البطاقة */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* هذا الكود خاص بتنسيق عنوان البطاقة */
+.card-title-course {
+  font-size: 1.25rem;
+  color: #333;
+  min-height: 3rem;
+  margin-bottom: 0.75rem;
+}
+
+/* هذا الكود خاص بتنسيق وصف البطاقة */
+.card-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  min-height: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* هذا الكود خاص بتنسيق سعر الكورس */
+.badge.bg-success {
+  background-color: #28a745 !important;
+  font-size: 0.85rem;
+  padding: 0.35rem 0.65rem;
+}
+
+/* هذا الكود خاص بتنسيق زر الدخول للكورس */
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* هذا الكود خاص بتنسيق الترقيم الصفحي */
+.pagination {
+  direction: ltr;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+}
+
+.page-link {
+  color: #007bff;
+  border: 1px solid #dee2e6;
+  padding: 0.5rem 0.75rem;
+}
+
+.page-link:hover {
+  background-color: #e9ecef;
+  color: #0056b3;
+}
+
+/* هذا الكود خاص بتنسيق الفوتر */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  margin-top: 2rem;
+}
+
+.smallText {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.socials a {
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #007bff;
+}
+
+.linkFooter {
+  border-top: 1px solid #6c757d !important;
+}
+
+.linkFooter a {
+  color: #666;
+  text-decoration: none;
+}
+
+.linkFooter a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* هذا الكود خاص بالاستجابة للأجهزة المحمولة */
+@media (max-width: 992px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-right: 0 !important;
+    padding-top: 60px;
+  }
+
+  .col-lg-4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* هذا الكود خاص بتنسيق النص العربي */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* هذا الكود خاص بتنسيق الأيقونات */
+.fas,
+.fab,
+.far {
+  color: inherit;
+}
+
+.text-muted-custom {
+  color: #6c757d;
+}
+
+
+/* ========================================= */
+/* =========== DARK MODE STYLES ============ */
+/* ========================================= */
+
+/* 1. Global Page Styles */
+.requests-courses-page.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+body.dark-mode {
+  background-color: #121212 !important;
+}
+
+/* 2. Main Title */
+.dark-mode h2 {
+  color: #e0e0e0 !important;
+}
+
+/* 3. Cards */
+.dark-mode .card-course {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-mode .card-course:hover {
+  box-shadow: 0 10px 25px rgba(76, 172, 183, 0.25) !important;
+  border-color: #4CACB7 !important;
+  transform: translateY(-5px);
+}
+
+.dark-mode .card-course .card-body {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .card-course h5,
+.dark-mode .card-course span,
+.dark-mode .card-course p,
+.dark-mode .card-course small {
+  background-color: transparent !important;
+}
+
+/* 4. Card Content */
+.dark-mode .card-title-course {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .card-description {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .text-muted-custom {
+  color: #a0a0a0 !important;
+}
+
+/* 5. Buttons */
+.dark-mode .btn-primary {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #3a8a94 !important;
+  border-color: #3a8a94 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(76, 172, 183, 0.3);
+}
+
+/* 6. Pagination */
+.dark-mode .page-link {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .page-item.active .page-link {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+.dark-mode .page-link:hover {
+  background-color: #333 !important;
+  color: #4CACB7 !important;
+}
+
+/* 7. Footer Overrides */
+.dark-mode .footer {
+  background-color: #1e1e1e !important;
+  /* Matches card/sidebar */
+  border-top-color: #333 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .smallText,
+.dark-mode .socials a,
+.dark-mode .linkFooter a {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .socials a:hover,
+.dark-mode .linkFooter a:hover {
+  color: #4CACB7 !important;
+}
+
+.dark-mode .linkFooter {
+  border-top-color: #444 !important;
+}

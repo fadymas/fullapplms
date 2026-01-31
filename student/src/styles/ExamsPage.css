@@ -1,0 +1,104 @@
+/* src/styles/ExamsPage.css */
+
+.exams-page {
+  padding-top: 70px;
+  min-height: 100vh;
+  background-color: var(--bg-primary, #f8f9fa);
+  color: var(--text-primary, #333333);
+}
+
+.dark-mode-bg.exams-page {
+  background-color: var(--bg-primary-dark, #0f172a) !important;
+  color: var(--text-primary-dark, #e2e8f0) !important;
+}
+
+.exam-card {
+  border: none;
+  border-radius: 12px;
+  background: var(--bg-card, #ffffff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  padding: 24px;
+}
+
+.dark-mode-card.exam-card {
+  background: var(--bg-card-dark, #1e293b) !important;
+  border: 1px solid var(--border-dark, #334155) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.question-title {
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-primary, #333333);
+}
+
+.dark-mode .question-title {
+  color: var(--text-primary-dark, #e2e8f0) !important;
+}
+
+.exam-textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  resize: vertical;
+  min-height: 120px;
+  background-color: #fff;
+}
+
+.dark-mode .exam-textarea {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dark-mode .option-item {
+  border-color: #334155 !important;
+}
+
+.option-item:hover {
+  background-color: #f1f3f5;
+}
+
+.dark-mode .option-item:hover {
+  background-color: #1e293b !important;
+}
+
+.option-item input[type="radio"] {
+  margin-left: 12px;
+  width: 20px;
+  height: 20px;
+  accent-color: #4CACB7;
+}
+
+.submit-exam-btn {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.submit-exam-btn:hover {
+  background-color: #3b939c !important;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991.98px) {
+  .exams-page {
+    padding-top: 60px;
+  }
+}

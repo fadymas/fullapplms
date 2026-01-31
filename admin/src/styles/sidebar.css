@@ -1,0 +1,400 @@
+/* src/styles/components/sidebar.css */
+.sidebar {
+    width: 280px;
+    /* الارتفاع سيتم تعيينه ديناميكيًا من خلال JavaScript */
+    position: fixed;
+    top: 76px; /* يبدأ من أسفل الـ Header */
+    right: 0;
+    background: white;
+    z-index: 1020; /* أقل من الـ Header (1030) */
+    transition: all 0.3s ease;
+    padding-top: 20px;
+    border-left: 1px solid #e9ecef;
+    
+    /* إضافة scroll بدون التأثير على الفوتر */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* إخفاء أي overflow خارج الـ Sidebar */
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+/* محتوى السايدبار مع حدود للتمرير */
+.sidebar-content {
+    padding: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* overflow-y سيتم تعيينه ديناميكيًا */
+    overflow-x: hidden;
+    height: 100%; /* يشغل كل الارتفاع المتاح */
+}
+
+/* زر التبديل المعدل */
+.toggle-btn {
+    background-color: #08345B !important;
+    color: white !important;
+    border: none;
+    border-radius: 0.5rem;
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem 1rem;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    z-index: 5;
+    min-height: 44px; /* ارتفاع ثابت للزر */
+}
+
+.toggle-btn:hover {
+    background-color: #0a3f6f !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 52, 91, 0.25);
+}
+
+/* النص في الحالة المفتوحة */
+.toggle-text {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+/* السهم في الحالة المفتوحة */
+.toggle-arrow {
+    transition: transform 0.3s ease;
+}
+
+.toggle-btn:hover .toggle-arrow {
+    transform: translateX(3px);
+}
+
+/* الحالة المصغرة */
+.sidebar.collapsed .toggle-text,
+.sidebar.collapsed .toggle-arrow {
+    display: none !important;
+}
+
+/* حاوية الأيقونتين في الحالة المصغرة */
+.toggle-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+}
+
+/* أيقونات الأسهم في الحالة المصغرة */
+.toggle-icon {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* تأثير hover على الأيقونتين */
+.toggle-btn:hover .toggle-icon {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* قائمة الروابط مع حدود للتمرير */
+.sidebar .nav.flex-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    padding-bottom: 15px; /* مسافة من الأسفل */
+}
+
+/* إعدادات الحاوية لكل رابط مع تحسينات للـ hover */
+.sidebar .nav-item {
+    width: 100%;
+    position: relative;
+    margin-bottom: 2px; /* زيادة طفيفة للمسافة بين العناصر */
+}
+
+/* توسيع مساحة الـ hover للروابط */
+.sidebar .nav-link {
+    color: #495057;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 100%;
+    border-radius: 0;
+    min-height: 50px; /* زيادة ارتفاع الحد الأدنى للـ hover */
+}
+
+/* توسيع تأثير الـ hover الممتد */
+.sidebar .nav-link::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f7ff;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: right center;
+    border-radius: 0;
+}
+
+/* تحسين تأثير الـ hover مع توسيع المساحة */
+.sidebar .nav-link:hover {
+    color: #08345B !important;
+    transform: none;
+    z-index: 2; /* رفع مستوى العنصر عند الـ hover */
+}
+
+/* تحسين توسيع تأثير الـ hover */
+.sidebar .nav-link:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+    width: calc(100% + 5px); /* توسيع طفيف للمساحة */
+}
+
+/* توسيع مساحة النص في الـ hover */
+.sidebar .nav-link:hover .ms-2 {
+    position: relative;
+    z-index: 2;
+    padding: 2px 5px; /* إضافة padding طفيف للنص */
+    margin-right: -5px; /* تعويض للـ padding */
+    margin-left: 5px; /* تعويض للـ padding */
+}
+
+/* تغيير لون الرابط النشط */
+.sidebar .nav-link.active {
+    background-color: #08345B !important;
+    color: white !important;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(8, 52, 91, 0.2);
+    position: relative;
+    z-index: 3; /* أعلى مستوى للرابط النشط */
+}
+
+.sidebar .nav-link.active::before {
+    display: none;
+}
+
+/* أيقونة الرابط النشط */
+.sidebar .nav-link.active .icon-wrapper {
+    color: white;
+}
+
+.sidebar .icon-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #08345B;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 2; /* رفع مستوى الأيقونة */
+}
+
+/* تحسين تأثير الـ hover على الأيقونة */
+.sidebar .nav-link:hover .icon-wrapper {
+    color: #08345B;
+    transform: scale(1.05); /* تأثير تكبير طفيف للأيقونة */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* محاذاة الأيقونات في الوضع المصغر */
+.sidebar.collapsed .nav-link {
+    justify-content: center;
+    padding: 0.75rem;
+    position: relative;
+    min-height: 50px; /* الحفاظ على نفس الارتفاع */
+}
+
+.sidebar.collapsed .nav-link span:not(.icon-wrapper) {
+    display: none;
+}
+
+/* تعديل تأثير الـ hover في الوضع المصغر */
+.sidebar.collapsed .nav-link::before {
+    width: 100%;
+}
+
+/* توسيع الـ hover في الوضع المصغر */
+.sidebar.collapsed .nav-link:hover::before {
+    width: calc(100% + 10px); /* توسيع أكبر في الوضع المصغر */
+    right: -5px; /* إزاحة لليمين لتعويض التوسيع */
+}
+
+/* عرض Tooltip عند Hover على الأيقونات في الوضع المصغر */
+.sidebar.collapsed .nav-link::after {
+    content: attr(title);
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #08345B;
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-right: 10px;
+    min-width: 120px; /* توسيع عرض الـ tooltip */
+    text-align: center;
+}
+
+.sidebar.collapsed .nav-link:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* تحسينات للشاشات الصغيرة - كل شيء يبقى كما هو */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        transform: translateX(100%);
+        z-index: 1040;
+        top: 0;
+        height: 100vh !important; /* استخدام !important للتأكد من عدم التأثر بالحسابات الديناميكية */
+        padding-top: 76px;
+    }
+    
+    .sidebar:not(.collapsed) {
+        width: 280px;
+        transform: translateX(0);
+    }
+    
+    .sidebar.collapsed {
+        width: 80px;
+        transform: translateX(0);
+    }
+    
+    /* إعادة تعيين حدود التمرير للشاشات الصغيرة */
+    .sidebar-content,
+    .sidebar .nav.flex-column {
+        overflow-y: visible !important;
+    }
+    
+    /* تحسينات للشاشات الصغيرة جداً */
+    @media (max-width: 480px) {
+        .sidebar:not(.collapsed) {
+            width: 250px;
+        }
+        
+        .sidebar.collapsed {
+            width: 70px;
+        }
+    }
+}
+
+/* تحسينات عامة للـ RTL */
+[dir="rtl"] .sidebar {
+    right: auto;
+    left: 0;
+    border-left: none;
+    border-right: 1px solid #e9ecef;
+}
+
+[dir="rtl"] .sidebar .nav-link:hover::before {
+    transform-origin: left center;
+}
+
+[dir="rtl"] .sidebar.collapsed .nav-link::after {
+    right: auto;
+    left: 100%;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* تحسينات scrollbar للـ Sidebar */
+.sidebar-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* قاعدة التأكد من عدم تداخل الـ Sidebar مع الـ Footer */
+@media (min-width: 992px) {
+    .sidebar {
+        /* تم تعيين الارتفاع ديناميكيًا من خلال JavaScript */
+        transition: height 0.3s ease;
+    }
+    
+    /* مسافة أمان تحت الـ Sidebar */
+    .sidebar:after {
+        content: '';
+        display: block;
+        height: 40px;
+        flex-shrink: 0;
+    }
+}
+
+/* إضافة هذه القاعدة */
+.sidebar {
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        display: none !important;
+    }
+}
+/* src/styles/components/sidebar.css */
+
+/* إضافة هذه القواعد الجديدة في نهاية الملف */
+
+/* قواعد لدفع المحتوى الرئيسي بعيدًا عن الـ Sidebar */
+.main-content {
+    transition: margin-right 0.3s ease, margin-left 0.3s ease;
+    min-height: calc(100vh - 76px);
+    margin-top: 76px;
+    position: relative;
+}
+
+/* عندما يكون الـ Sidebar مفتوحاً (غير مصغر) */
+.sidebar:not(.collapsed) ~ .main-content {
+    margin-right: 280px;
+}
+
+/* عندما يكون الـ Sidebar مصغراً */
+.sidebar.collapsed ~ .main-content {
+    margin-right: 80px;
+}
+
+/* للاتجاه RTL (إذا كان التطبيق يستخدم RTL) */
+[dir="rtl"] .sidebar:not(.collapsed) ~ .main-content {
+    margin-right: 0;
+    margin-left: 280px;
+}
+
+[dir="rtl"] .sidebar.collapsed ~ .main-content {
+    margin-right: 0;
+    margin-left: 80px;
+}
+
+/* للشاشات الصغيرة - إزالة الهوامش */
+@media (max-width: 991px) {
+    .sidebar ~ .main-content {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}

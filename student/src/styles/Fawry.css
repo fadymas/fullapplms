@@ -1,0 +1,271 @@
+/* src/styles/fawry.css */
+
+/* هذا الكود خاص بتنسيق صفحة فوري بشكل عام */
+.fawry-page {
+    direction: rtl;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  /* هذا الكود خاص بالجزء الرئيسي من المحتوى */
+  .main-content {
+    margin-right: 280px; /* مسافة لعرض القائمة الجانبية */
+    transition: margin-right 0.3s ease;
+    padding-top: 76px; /* لتعويض ارتفاع الـ Navbar الثابت */
+  }
+  
+  /* هذا الكود خاص بحالة القائمة الجانبية عندما تكون مصغرة */
+  .sidebar-collapsed .main-content {
+    margin-right: 80px; /* مسافة أقل عندما تكون القائمة مصغرة */
+  }
+  
+  /* هذا الكود خاص بتنسيق القائمة الجانبية */
+  .sidebar {
+    width: 280px;
+    height: 100vh;
+    background: white;
+    transition: width 0.3s ease;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+  }
+  
+  /* هذا الكود خاص بحالة القائمة الجانبية المصغرة */
+  .sidebar.collapsed {
+    width: 80px;
+  }
+  
+  /* هذا الكود خاص بإخفاء نص القائمة عندما تكون مصغرة */
+  .sidebar.collapsed .sidebar-text,
+  .sidebar.collapsed .nav-link span {
+    display: none;
+  }
+  
+  /* هذا الكود خاص بتنسيق بطاقة الفاتورة */
+  .card-border-danger {
+    border: 2px solid #dc3545; /* لون أحمر لحدود البطاقة */
+  }
+  
+  /* هذا الكود خاص بتنسيق جدول الفاتورة */
+  .table-responsive {
+    overflow-x: auto;
+  }
+  
+  .table-bordered {
+    border: 1px solid #dee2e6;
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    vertical-align: middle;
+  }
+  
+  /* هذا الكود خاص بتنسيق زر شحن الرصيد */
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* هذا الكود خاص بتنسيق صورة الفوري */
+  .card-header img {
+    vertical-align: middle;
+  }
+  
+  /* هذا الكود خاص بتنسيق زر الدفع */
+  .btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+  }
+  /* src/styles/Fawry.css (أضف هذه القواعد في النهاية) */
+
+/* ====== Dark Mode لصفحة فوري ====== */
+.fawry-page.dark-mode {
+  background-color: #0f172a !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode-bg {
+  background-color: #0f172a !important;
+}
+
+/* ====== Dark Mode للكروت ====== */
+.dark-mode-card {
+  background-color: #1a1a2e !important;
+  border-color: #2d2d44 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode-card .card-header {
+  background-color: #2d2d44 !important;
+  border-bottom-color: #4CACB7 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode-card .card-title {
+  color: #ffffff !important;
+}
+
+.dark-mode-card .card-text {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للجداول ====== */
+.dark-mode .table {
+  color: #e0e0e0 !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .table thead th {
+  background-color: #2d2d44 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .table tbody td {
+  border-color: #2d2d44 !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .table tbody tr:hover {
+  background-color: #2d2d44 !important;
+}
+
+/* ====== Dark Mode للأزرار ====== */
+.dark-mode .btn-outline-light {
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .btn-outline-light:hover {
+  background-color: #4CACB7 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .btn-warning {
+  background-color: #FFC107 !important;
+  border-color: #FFC107 !important;
+  color: #212529 !important;
+}
+
+.dark-mode .btn-warning:hover {
+  background-color: #e0a800 !important;
+  border-color: #e0a800 !important;
+}
+
+.dark-mode .btn-primary {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: #3a9a9a !important;
+  border-color: #3a9a9a !important;
+}
+
+/* ====== Dark Mode للنماذج ====== */
+.dark-mode .form-control {
+  background-color: #2d2d44 !important;
+  border-color: #4CACB7 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .form-control:focus {
+  background-color: #3a3a5e !important;
+  border-color: #5bc0de !important;
+  box-shadow: 0 0 0 0.25rem rgba(76, 172, 183, 0.25) !important;
+}
+
+.dark-mode .form-label {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .form-text {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للنصوص ====== */
+.dark-mode .text-light {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .text-danger {
+  color: #ff6b6b !important;
+}
+
+/* ====== Dark Mode للشعارات ====== */
+.dark-mode .card-header img {
+  filter: brightness(0.9);
+}
+
+/* ====== Dark Mode لبطاقات الخيارات ====== */
+.dark-mode .card-border-danger {
+  border-color: #ff6b6b !important;
+}
+
+.dark-mode .border-danger {
+  border-color: #ff6b6b !important;
+}
+
+/* ====== Dark Mode للتأكيدات ====== */
+.dark-mode .alert-info {
+  background-color: rgba(76, 172, 183, 0.2) !important;
+  border-color: #4CACB7 !important;
+  color: #b0e0e6 !important;
+}
+
+/* ====== Dark Mode للراديو والأشكال ====== */
+.dark-mode .form-check-input {
+  background-color: #2d2d44 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .form-check-input:checked {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+}
+
+.dark-mode .form-check-label {
+  color: #e0e0e0 !important;
+}
+
+/* ====== Dark Mode للعنواين ====== */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+  color: #ffffff !important;
+}
+
+/* ====== Dark Mode للأيقونات ====== */
+.dark-mode .fa-barcode {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .btn-outline-light .fa-barcode {
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .btn-outline-light:hover .fa-barcode {
+  color: #ffffff !important;
+}

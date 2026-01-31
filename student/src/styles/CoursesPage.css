@@ -1,0 +1,845 @@
+/* src/styles/CoursesPage.css */
+/* هذا الكود خاص بتنسيق صفحة الكورسات */
+
+.courses-page {
+  padding-top: 70px;
+  /* مسافة من الأعلى لتجنب النافبار */
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  /* خلفية فاتحة للصفحة */
+}
+
+.main-content {
+  margin-right: 250px;
+  /* مسافة للسيبار من اليمين */
+  transition: margin-right 0.3s ease;
+  /* تأثير سلس عند تصغير السايدبار */
+}
+
+/* عندما يكون السايدبار مصغر */
+.sidebar.collapsed~.main-content {
+  margin-right: 70px;
+  /* مسافة أقل عندما السايدبار مصغر */
+}
+
+/* تصميم العنوان الرئيسي */
+.courses-page h2 {
+  color: #08345B;
+  /* لون أزرق داكن للعنوان */
+  font-weight: 700;
+  /* نص سميك */
+  font-size: 2rem;
+  /* حجم كبير */
+  margin-bottom: 1.5rem;
+  /* فراغ سفلي */
+}
+
+/* تصميم التبويبات */
+.courses-tabs-container {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border: 1px solid #e0e0e0;
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+
+.nav-tabs .nav-item {
+  margin: 0 5px;
+}
+
+.nav-tabs .nav-link {
+  color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #4CACB7;
+  background-color: #f0f9f8;
+}
+
+.nav-tabs .nav-link.active {
+  color: #4CACB7;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-tabs .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #4CACB7;
+  border-radius: 2px;
+}
+
+/* تصميم حاوية البطاقات */
+.course-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* تصميم البطاقات */
+.courses .card-course {
+  border: none !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+  width: 370px !important;
+  /* العرض المطلوب */
+  height: 486px !important;
+  /* الارتفاع المطلوب */
+  background-color: #EBF7F6 !important;
+  /* لون الخلفية المطلوب */
+  display: flex !important;
+  flex-direction: column !important;
+  margin: 0 auto !important;
+}
+
+.courses .card-course:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* تصميم الصورة داخل البطاقة */
+.courses .card-img-top {
+  width: 369px !important;
+  /* عرض الصورة المطلوب */
+  height: 161px !important;
+  /* ارتفاع الصورة المطلوب */
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.courses .card-course:hover .card-img-top {
+  transform: scale(1.05) !important;
+  transition: transform 0.5s ease !important;
+}
+
+.courses .card-body {
+  padding: 1.5rem !important;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses .card-title-course {
+  color: #08345B !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+  min-height: 3.2em !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  margin-bottom: 10px !important;
+  text-align: center;
+}
+
+.courses .card-date {
+  color: #6c757d !important;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.courses .card-date i {
+  color: #4CACB7;
+  margin-left: 5px;
+}
+
+.courses .card-description {
+  color: #6c757d !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  min-height: 4.5em !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+/* تصميم السعر */
+.courses .price-badge {
+  font-size: 1rem !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  display: inline-block !important;
+  margin: 0 auto 15px auto !important;
+}
+
+.courses .bg-warning {
+  background-color: #FFC107 !important;
+  color: #212529 !important;
+}
+
+.courses .bg-success {
+  background-color: #28a745 !important;
+  color: white !important;
+}
+
+/* تحسين تصميم الأزرار مع الأيقونات */
+.courses .btn i {
+  font-size: 1.1rem;
+}
+
+.courses .btn-primary i {
+  color: white;
+}
+
+.courses .btn-outline-primary i {
+  color: #4CACB7;
+}
+
+.courses .btn-outline-primary:hover i {
+  color: white;
+}
+
+.courses .btn-warning i {
+  color: #212529;
+}
+
+.courses .btn-warning:hover i {
+  color: #212529;
+}
+
+/* تصميم زر الدخول للكورس */
+.courses .btn-primary {
+  background: #00AAB4 !important;
+  border: none !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  color: white !important;
+  box-shadow: 0 4px 6px rgba(76, 172, 183, 0.2) !important;
+}
+
+.courses .btn-primary:hover {
+  background: linear-gradient(135deg, #3A8B94, #2A6B73) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(76, 172, 183, 0.3) !important;
+}
+
+/* تصميم زر الاشتراك في الكورس */
+.courses .btn-outline-primary {
+  border: 2px solid #00AAB4 !important;
+  color: #00AAB4 !important;
+  background-color: transparent !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.courses .btn-outline-primary:hover {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(76, 172, 183, 0.25) !important;
+}
+
+/* تحسين توزيع الأزرار في البطاقة */
+.courses .buttons-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  margin-top: auto !important;
+  width: 100% !important;
+}
+
+/* تصميم زر ابدأ الدورة عندما يكون المستخدم مشترك */
+.courses .btn-success {
+  background: linear-gradient(135deg, #28a745, #218838) !important;
+  border: none !important;
+  color: white !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.courses .btn-success:hover {
+  background: linear-gradient(135deg, #218838, #1e7e34) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4) !important;
+}
+
+/* تصميم زر اشترك الآن للعروض */
+.courses .btn-warning {
+  background: linear-gradient(135deg, #FFC107, #e0a800) !important;
+  border: none !important;
+  color: #212529 !important;
+  padding: 12px 20px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.courses .btn-warning:hover {
+  background: linear-gradient(135deg, #e0a800, #c69500) !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4) !important;
+}
+
+/* تصميم Pagination الجديد */
+.pagination-container {
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.pagination-wrapper {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.pagination {
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  border: none !important;
+  background-color: transparent !important;
+  color: #6c757d !important;
+  font-weight: 600 !important;
+  padding: 8px 15px !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-arrow {
+  background-color: #f8f9fa !important;
+  border: 2px solid #e0e0e0 !important;
+  color: #4CACB7 !important;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-arrow:hover {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  border-color: #4CACB7 !important;
+  transform: translateY(-2px);
+}
+
+.pagination-arrow.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.prev-arrow i {
+  margin-right: 2px;
+}
+
+.next-arrow i {
+  margin-left: 2px;
+}
+
+.pagination-number {
+  background-color: #f8f9fa !important;
+  border: 2px solid #e0e0e0 !important;
+}
+
+.pagination-number:hover {
+  background-color: #e9ecef !important;
+  border-color: #4CACB7 !important;
+  color: #4CACB7 !important;
+  transform: translateY(-2px);
+}
+
+.page-item.active .pagination-number {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8f9fa !important;
+}
+
+/* مؤشر الصفحة الحالية */
+.current-page-indicator {
+  margin-top: 10px;
+}
+
+.page-indicator-badge {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 991.98px) {
+  .main-content {
+    margin-right: 0 !important;
+  }
+
+  .courses-page {
+    padding-top: 60px;
+  }
+
+  .courses-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .courses-tabs-container {
+    padding: 12px 15px;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .courses .card-course {
+    width: 320px !important;
+    height: 450px !important;
+  }
+
+  .courses .card-img-top {
+    width: 319px !important;
+    height: 140px !important;
+  }
+
+  .courses .card-title-course {
+    font-size: 1.1rem !important;
+  }
+
+  .courses .card-description {
+    font-size: 0.9rem !important;
+  }
+
+  /* تحسين تنسيق الأزرار في الشاشات الصغيرة */
+  .courses .btn {
+    padding: 10px 15px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .courses .btn i {
+    font-size: 1rem;
+  }
+
+  .pagination-wrapper {
+    padding: 12px 15px;
+  }
+
+  .page-link {
+    padding: 6px 12px !important;
+    min-width: 35px;
+    font-size: 0.9rem;
+  }
+
+  .pagination-arrow {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* تصميم للأجهزة الصغيرة جداً */
+@media (max-width: 768px) {
+  .courses .card-course {
+    width: 300px !important;
+    height: 430px !important;
+  }
+
+  .courses .card-img-top {
+    width: 299px !important;
+    height: 130px !important;
+  }
+
+  .courses .card-title-course {
+    font-size: 1rem !important;
+    min-height: 2.8em !important;
+  }
+
+  .courses .card-description {
+    font-size: 0.85rem !important;
+    min-height: 4em !important;
+  }
+
+  .courses .btn {
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-tabs .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-tabs .nav-link {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .nav-tabs .nav-link.active::after {
+    display: none;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+  }
+
+  .page-item {
+    margin: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  .courses .card-course {
+    width: 280px !important;
+    height: 420px !important;
+  }
+
+  .courses .card-img-top {
+    width: 279px !important;
+    height: 120px !important;
+  }
+
+  .courses .card-body {
+    padding: 1rem !important;
+  }
+}
+
+/* Pagination Styles - تحسين ظهور الأيقونات */
+.pagination-arrow {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 1px solid #4CACB7 !important;
+  background-color: transparent !important;
+  color: #4CACB7 !important;
+  transition: all 0.3s ease !important;
+}
+
+.pagination-arrow:hover:not(:disabled) {
+  background-color: #4CACB7 !important;
+  color: white !important;
+  border-color: #4CACB7 !important;
+}
+
+.pagination-arrow:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.pagination-arrow svg {
+  display: block !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* تحسين أرقام الصفحات */
+.pagination-number {
+  width: 40px !important;
+  height: 40px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 5px !important;
+  border-radius: 50% !important;
+  border: 1px solid #e0e0e0 !important;
+  background-color: white !important;
+  color: #666 !important;
+  transition: all 0.3s ease !important;
+}
+
+.pagination-number:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #4CACB7 !important;
+  color: #4CACB7 !important;
+}
+
+.page-item.active .pagination-number {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+/* مؤشر الصفحة الحالية */
+.page-indicator-badge {
+  background-color: #f8f9fa !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  color: #4CACB7 !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+/* في src/styles/CoursesPage.css */
+
+/* مسافة أكبر بين الكروت */
+.course-card-wrapper {
+  margin-bottom: 5rem !important;
+  /* 32px مسافة */
+}
+
+@media (min-width: 768px) {
+  .course-card-wrapper {
+    margin-bottom: 2.5rem !important;
+    /* 40px مسافة على الشاشات الكبيرة */
+  }
+}
+
+/* مسافة أفقية بين الكروت */
+.row.justify-content-center {
+  --bs-gutter-x: 2rem !important;
+  /* مسافة أفقية 32px */
+}
+
+@media (min-width: 768px) {
+  .row.justify-content-center {
+    --bs-gutter-x: 2.5rem !important;
+    /* مسافة أفقية 40px على الشاشات الكبيرة */
+  }
+}
+
+/* مسافة إضافية حول كل كارت */
+.card.card-course {
+  padding: 0.5rem !important;
+  /* مسافة داخلية */
+  background-color: transparent !important;
+  /* جعل الخلفية شفافة */
+}
+
+.card.card-course .card-body {
+  background-color: #EBF7F6 !important;
+  /* إعادة لون الخلفية للـ card-body */
+  border-radius: 15px !important;
+  /* زوايا دائرية */
+}
+
+/* تأثير hover مع مساحة */
+.course-card-wrapper:hover {
+  transform: translateY(-5px) !important;
+  transition: transform 0.3s ease !important;
+}
+
+
+/* ============================================= */
+/* DARK MODE STYLES FOR COURSES PAGE - الحل النهائي */
+/* ============================================= */
+
+/* خلفية الصفحة في الوضع الليلي */
+.dark-mode.courses-page {
+  background-color: #121212 !important;
+}
+
+/* العناوين في الوضع الليلي */
+.dark-mode .courses-page h2,
+.dark-mode .courses-page .fw-bold {
+  color: #ffffff !important;
+}
+
+/* التبويبات في الوضع الليلي */
+.dark-mode .courses-tabs-container {
+  background-color: #1e1e1e !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .nav-tabs {
+  border-bottom-color: #444 !important;
+}
+
+.dark-mode .nav-tabs .nav-link {
+  color: #adb5bd !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+  color: #4CACB7 !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .nav-tabs .nav-link.active::after {
+  background-color: #4CACB7 !important;
+}
+
+.dark-mode .nav-tabs .nav-link:hover {
+  color: #4CACB7 !important;
+  background-color: rgba(76, 172, 183, 0.1) !important;
+}
+
+/* تعديلات خاصة للـ CourseCard في الوضع الليلي */
+.dark-mode .course-card-wrapper {
+  background-color: transparent !important;
+}
+
+.dark-mode .course-card-wrapper .card-course {
+  background-color: #1e1e1e !important;
+}
+
+.dark-mode .course-card-wrapper .card-title-course {
+  color: #ffffff !important;
+}
+
+.dark-mode .course-card-wrapper .card-date {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .course-card-wrapper .card-description {
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .course-card-wrapper .price-badge {
+  background-color: #333 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .course-card-wrapper .btn-primary {
+  background-color: #00AAB4 !important;
+  border-color: #00AAB4 !important;
+  color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+.dark-mode .course-card-wrapper .btn-primary:hover {
+  background-color: #008890 !important;
+  /* Slightly darker teal for hover */
+  border-color: #008890 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 15px rgba(0, 170, 180, 0.4) !important;
+}
+
+.dark-mode .course-card-wrapper .btn-outline-primary {
+  background-color: #00AAB4 !important;
+  /* Force Solid Teal Background */
+  border-color: #00AAB4 !important;
+  color: white !important;
+}
+
+.dark-mode .course-card-wrapper .btn-outline-primary:hover {
+  background-color: #008890 !important;
+  border-color: #008890 !important;
+  color: white !important;
+  box-shadow: 0 0 12px rgba(0, 170, 180, 0.4) !important;
+}
+
+/* Pagination في الوضع الليلي */
+.dark-mode .pagination-wrapper {
+  background-color: #1e1e1e !important;
+  border-color: #444 !important;
+}
+
+.dark-mode .pagination-number {
+  background-color: #333 !important;
+  border-color: #444 !important;
+  color: #b0b0b0 !important;
+}
+
+.dark-mode .pagination-number:hover {
+  background-color: #444 !important;
+  border-color: #4CACB7 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .page-item.active .pagination-number {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+.dark-mode .pagination-arrow {
+  background-color: #333 !important;
+  border-color: #444 !important;
+  color: #4CACB7 !important;
+}
+
+.dark-mode .pagination-arrow:hover:not(:disabled) {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+  color: white !important;
+}
+
+.dark-mode .page-indicator-badge {
+  background-color: #333 !important;
+  border-color: #444 !important;
+  color: #b0b0b0 !important;
+}
+
+/* التخلص من !important المزعجة في CSS العادي */
+.courses .card-course {
+  background-color: #EBF7F6;
+  /* إزالة !important */
+}
+
+.courses .card-title-course {
+  color: #08345B;
+  /* إزالة !important */
+}
+
+.courses .card-date {
+  color: #6c757d;
+  /* إزالة !important */
+}
+
+.courses .card-description {
+  color: #6c757d;
+  /* إزالة !important */
+}

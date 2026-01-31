@@ -1,0 +1,175 @@
+/* src/styles/HomePage.css */
+/* هذا الكود خاص بتنسيق الصفحة الرئيسية */
+
+.home-section {
+    background: linear-gradient(rgba(1, 1, 1, 0.7), rgba(41, 41, 41, 0.7)), 
+                url('../images/home.webp') center/cover no-repeat;
+    height: 80vh;                         /* ارتفاع القسم 85% من الشاشة */
+    min-height: 600px;                    /* حد أدنى للارتفاع */
+    color: white;                         /* لون النص أبيض */
+    position: relative;                   /* تحديد مكان العنصر */
+  }
+  
+  .home-section .overlay {
+    position: absolute;                   /* وضع العنصر فوق الخلفية */
+    top: 0;                               /* بداية من الأعلى */
+    left: 0;                              /* بداية من اليسار */
+    right: 0;                             /* يمتد حتى اليمين */
+    bottom: 0;                            /* يمتد حتى الأسفل */
+    display: flex;                        /* استخدام Flexbox للترتيب */
+    align-items: center;                  /* توسيط العناصر عمودياً */
+    justify-content: center;              /* توسيط العناصر أفقياً */
+  }
+  
+  .why-choose-section {
+    background-color: #f8f9fa;            /* خلفية فاتحة للقسم */
+  }
+  
+  .card-course {
+    border-radius: 15px;                  /* زوايا دائرية للبطاقات */
+    overflow: hidden;                     /* إخفاء ما يخرج عن حدود البطاقة */
+    border: 1px solid #e9ecef;            /* حدود فاتحة للبطاقات */
+  }
+  
+  .card-img-top {
+    height: 200px;                        /* ارتفاع ثابت لصور البطاقات */
+    object-fit: cover;                    /* تعديل الصورة لتناسب المساحة */
+  }
+  
+  .courses {
+    background-color: #f8f9fa;            /* خلفية فاتحة لقسم الكورسات */
+  }
+  
+  .swiper-course {
+    padding: 20px 0;                      /* فراغ داخلي للسلايدر */
+  }
+  
+  .swiper-button-next, 
+  .swiper-button-prev {
+    color: #4CACB7;                       /* لون أزرق لأزرار التنقل */
+    background: white;                    /* خلفية بيضاء */
+    width: 50px;                          /* عرض ثابت للأزرار */
+    height: 50px;                         /* ارتفاع ثابت للأزرار */
+    border-radius: 50%;                   /* شكل دائري للأزرار */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* ظل خفيف للأزرار */
+  }
+  
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
+    font-size: 20px;                      /* حجم أصغر للأسهم */
+  }
+  /* زرار "إنضم الآن" */
+.join-btn {
+    background-color: #4CACB7;   /* اللون اللي طلبته */
+    color: white;                /* نص أبيض */
+    border: none;                /* إزالة الحدود الافتراضية */
+    border-radius: 17px;         /* حواف دائرية أكثر */
+    padding: 10px 40px;          /* مساحة داخلية أكبر */
+    font-size: 18px;             /* حجم الخط */
+    font-weight: bold;
+    transition: all 0.3s ease;  /* تأثير سلس عند hover */
+    text-decoration: none;       /* إزالة underline لو link */
+  }
+  
+  .join-btn:hover {
+    background-color: #3aa3a8;   /* لون أغمق عند المرور */
+    transform: scale(1.05);      /* تكبير خفيف عند hover */
+  }
+  
+  .icon-color i {
+    color: #4CACB7;  /* اللون اللي طلبته */
+  }
+  .card-course {
+    background-color: #EBF7F6;  /* لون الخلفية للكارت */
+    border-radius: 15px;         /* استدارة الحواف */
+    overflow: hidden;
+    border: none;                /* إزالة الحدود الفاتحة */
+    color: rgb(48, 48, 48);                /* نص أبيض افتراضي داخل الكارت */
+  }
+  .why-choose-section {
+    background-color: #f8f9fa;
+    transform: translateY(-7px);  /* تحريك لفوق */
+  }
+  
+
+
+  /*.الصفوف الدراسيه.*/
+
+  .btn-courses {
+    background-color: #4CACB7 !important;
+    border-color: #4CACB7 !important;
+    color: white !important;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+  
+    display: flex;              /* flex لتوسيط النص والأيقونة */
+    align-items: center;        /* توسيط عمودي */
+    justify-content: center;    /* توسيط أفقي */
+    gap: 0.5rem;                /* فراغ بين النص والأيقونة */
+    width: 100%;         /* عرض الزر حسب المحتوى */
+    margin:  auto;             /* توسيط الزر داخل الكارت */
+  }
+  
+  .btn-courses:hover {
+    background-color: #429ea8 !important;
+    border-color: #429ea8 !important;
+    text-decoration: none;
+  }
+  
+  
+  
+  .btn-courses:hover {
+    background-color: #429ea8 !important;
+    border-color: #429ea8 !important;
+  }
+  
+  /* section */
+  .courses {
+    background-color: #ffffff !important; /* أبيض */
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+/*الكورسات المتاحه*/
+/* الأسهم الخاصة بـ Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #4CACB7;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: ''; /* نخليها فاضية لأننا مستخدمين أيقونات FontAwesome */
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+  font-size: 20px;
+}
+
+/* زر الدورة داخل CourseCard */
+.btn-courses {
+  background-color: #4CACB7;
+  border-color: #4CACB7;
+  color: white;
+}
+
+.btn-courses:hover {
+  background-color: #429ea8;
+  border-color: #429ea8;
+}
+
+
+  
+  

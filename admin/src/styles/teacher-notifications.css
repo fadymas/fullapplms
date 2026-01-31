@@ -1,0 +1,480 @@
+/* src/styles/teacher-notifications.css */
+.teacher-notifications-page .main-content {
+    margin-right: 250px;
+    transition: margin-right 0.3s ease;
+    background-color: #f8f9fa; /* إضافة خلفية فاتحة للوضع العادي */
+}
+
+.teacher-notifications-page .sidebar.collapsed ~ .main-content {
+    margin-right: 80px;
+}
+
+/* تحسين البطاقات */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* بطاقات الإشعارات */
+.notifications-list .card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-right: 4px solid transparent;
+    background-color: white; /* إضافة خلفية بيضاء للبطاقات */
+}
+
+.notification-unread {
+    border-right-color: #007bff;
+    background-color: rgba(0, 123, 255, 0.03);
+}
+
+.notifications-list .card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* أيقونة الإشعار */
+.notification-icon .icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.icon-circle.high-priority {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+.icon-circle.medium-priority {
+    background: linear-gradient(135deg, #feca57, #ff9f43);
+    color: white;
+}
+
+.icon-circle.low-priority {
+    background: linear-gradient(135deg, #48dbfb, #0abde3);
+    color: white;
+}
+
+/* البادجات */
+.badge.priority-high {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+}
+
+.badge.priority-medium {
+    background: linear-gradient(135deg, #feca57, #ff9f43);
+}
+
+.badge.priority-low {
+    background: linear-gradient(135deg, #48dbfb, #0abde3);
+}
+
+/* زر عرض الفلاتر */
+.btn-outline-primary {
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-success {
+    border: 2px solid #28a745;
+    color: #28a745;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-danger {
+    border: 2px solid #dc3545;
+    color: #dc3545;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* أزرار الإجراءات داخل الإشعار */
+.notification-actions {
+    min-width: 100px;
+}
+
+.notification-actions .btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    width: 100%;
+}
+
+/* الفلاتر */
+.filter-card .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: border-color 0.3s ease;
+}
+
+.filter-card .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* الجدولة */
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    border: 1px solid #dee2e6;
+    color: #495057;
+    padding: 0.5rem 0.75rem;
+    margin: 0 3px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.page-link:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+    border-color: #dee2e6;
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 992px) {
+    .teacher-notifications-page .main-content {
+        margin-right: 0;
+        margin-top: 70px;
+    }
+    
+    .teacher-notifications-page .sidebar.collapsed ~ .main-content {
+        margin-right: 0;
+    }
+    
+    .notifications-list .card-body {
+        padding: 1rem;
+    }
+    
+    .notification-icon .icon-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-notifications-page .container {
+        padding: 1rem;
+    }
+    
+    .d-flex.justify-content-between.align-items-center.mb-4 {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .d-flex.gap-2 {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .notifications-list .card .d-flex.align-items-start {
+        flex-direction: column;
+    }
+    
+    .notification-actions {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .notification-actions .btn-sm {
+        width: auto;
+        flex: 1;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .row.mb-4 {
+        margin: 0 -5px;
+    }
+    
+    .col-md-2, .col-6 {
+        padding: 0 5px;
+    }
+    
+    .stat-card .card-body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    .page-link {
+        padding: 0.4rem 0.6rem;
+        margin: 2px;
+    }
+}
+
+/* تأثيرات الحركة */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.notifications-list .card {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 123, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+    }
+}
+
+.notification-unread {
+    animation: pulse 2s infinite;
+}
+
+/* تحسين التمرير */
+.notifications-list {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.notifications-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notifications-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.notifications-list::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+.notifications-list::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* حالة عدم وجود إشعارات */
+.text-center.py-5 {
+    border: 2px dashed #dee2e6;
+    border-radius: 12px;
+    background-color: #f8f9fa;
+}
+
+.text-center.py-5 .fa-3x {
+    opacity: 0.5;
+}
+
+/* ============ إضافة Dark Mode فقط ============ */
+
+/* Dark Mode للصفحة بأكملها */
+body.dark-mode .teacher-notifications-page .main-content {
+    background-color: #121212 !important; /* خلفية سوداء في Dark Mode */
+}
+
+/* Dark Mode للبطاقات */
+body.dark-mode .teacher-notifications-page .card:not(.stat-card) {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .teacher-notifications-page .card:not(.stat-card):hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Dark Mode للإشعارات غير المقروءة */
+body.dark-mode .teacher-notifications-page .notification-unread {
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    border-right-color: #0d6efd !important;
+}
+
+/* Dark Mode للبطاقات الإحصائية (تبقى ملونة) */
+body.dark-mode .teacher-notifications-page .stat-card {
+    color: white !important;
+}
+
+/* Dark Mode للأزرار المنفوذة */
+body.dark-mode .teacher-notifications-page .btn-outline-primary {
+    color: #86b7fe !important;
+    border-color: #86b7fe !important;
+}
+
+body.dark-mode .teacher-notifications-page .btn-outline-primary:hover {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+
+body.dark-mode .teacher-notifications-page .btn-outline-success {
+    color: #75b798 !important;
+    border-color: #75b798 !important;
+}
+
+body.dark-mode .teacher-notifications-page .btn-outline-success:hover {
+    background-color: #198754 !important;
+    color: white !important;
+}
+
+body.dark-mode .teacher-notifications-page .btn-outline-danger {
+    color: #f1aeb5 !important;
+    border-color: #f1aeb5 !important;
+}
+
+body.dark-mode .teacher-notifications-page .btn-outline-danger:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+/* Dark Mode للبادجينيشين */
+body.dark-mode .teacher-notifications-page .page-link {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .teacher-notifications-page .page-link:hover {
+    background-color: #3a3a3a !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode .teacher-notifications-page .page-item.active .page-link {
+    background: linear-gradient(135deg, #4d5bbf 0%, #5a3a7c 100%) !important;
+    border-color: #4d5bbf !important;
+    color: white !important;
+}
+
+/* Dark Mode للحقول */
+body.dark-mode .teacher-notifications-page .form-select {
+    background-color: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #ffffff !important;
+}
+
+body.dark-mode .teacher-notifications-page .form-select:focus {
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+}
+
+/* Dark Mode للعنوان والنصوص */
+body.dark-mode .teacher-notifications-page h2,
+body.dark-mode .teacher-notifications-page .card-title,
+body.dark-mode .teacher-notifications-page .card-text {
+    color: #ffffff !important;
+}
+
+body.dark-mode .teacher-notifications-page .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* Dark Mode لرسالة عدم وجود إشعارات */
+body.dark-mode .teacher-notifications-page .text-center.py-5 {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .teacher-notifications-page .text-center.py-5 .fa-3x {
+    color: #666 !important;
+}
+
+/* Dark Mode للتمرير */
+body.dark-mode .teacher-notifications-page .notifications-list::-webkit-scrollbar-track {
+    background: #2d2d2d !important;
+}
+
+body.dark-mode .teacher-notifications-page .notifications-list::-webkit-scrollbar-thumb {
+    background: #4d5bbf !important;
+}
+
+body.dark-mode .teacher-notifications-page .notifications-list::-webkit-scrollbar-thumb:hover {
+    background: #5a3a7c !important;
+}
+
+/* التأكد من أن نص الأزرار يكون واضحاً في Dark Mode */
+body.dark-mode .teacher-notifications-page .btn {
+    color: white !important;
+}
+
+/* التأكد من أن البادجات تكون واضحة */
+body.dark-mode .teacher-notifications-page .badge {
+    color: white !important;
+}
+/* خلفية الصفحة بالكامل في Dark Mode فقط */
+body.dark-mode,
+body.dark-mode html {
+    background-color: #121212 !important;
+    min-height: 100vh;
+}

@@ -1,0 +1,421 @@
+/* src/styles/RegisterPage.css */
+/* هذا الكود خاص بتنسيق صفحة إنشاء حساب جديد */
+
+/* إعادة ضبط الخطوط */
+* {
+    font-family: Arial, sans-serif !important;
+  }
+  
+  body {
+    font-family: Arial, sans-serif !important;
+    direction: rtl;
+    text-align: right;
+  }
+  
+  /* تحسينات عامة */
+  .register-section {
+    padding-top: 70px;
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+  }
+  
+  /* العنوان خارج البوردر */
+  .register-header {
+    max-width: 1483px;
+    margin: 0 auto 30px;
+    margin: 0 auto 50px; 
+    margin-top: 50px;
+    padding-right: 10px;
+  }
+  
+  .welcome-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 0;
+  }
+  
+  /* الحاوية الرئيسية */
+  .main-register-container {
+    width: 100%;
+    max-width: 1483px; /* 748 + 735 = 1483 */
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex-direction: row-reverse; /* تغيير الترتيب: الصورة من اليسار والنموذج من اليمين */
+  }
+  
+  /* جانب الصورة من اليسار (مصغر) */
+  .register-image-side {
+    width: 900px; /* تصغير العرض */
+    height: 750px; /* تصغير الارتفاع */
+    background-color: #f0f0f0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 1; /* الصورة تأتي أولاً (اليسار) */
+  }
+  
+  .register-image-side .image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .register-image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* تغيير إلى contain بدلاً من cover */
+    padding: 20px;
+  }
+  
+  /* جانب النموذج من اليمين */
+  .register-form-side {
+    width: 748px;
+    height: 720px;
+    padding: 0;
+    order: 2; /* النموذج يأتي ثانياً (اليمين) */
+  }
+  
+  /* كارت النموذج */
+  .form-card {
+    width: 100%;
+    height: 100%;
+    background-color: #EBF7F6;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* رأس النموذج */
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  /* مؤشر الخطوات بدون أرقام */
+  .step-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    margin: 0 15px;
+  }
+  
+  .step-circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0; /* إخفاء النص */
+    transition: all 0.3s ease;
+  }
+  
+  .step.active .step-circle {
+    background-color: #4CACB7;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(76, 172, 183, 0.2);
+  }
+  
+  .step.completed .step-circle {
+    background-color: #4CACB7;
+    color: white;
+  }
+  
+  .step-divider {
+    width: 100px;
+    height: 2px;
+    background-color: #dee2e6;
+  }
+  
+  /* جسم النموذج */
+  .form-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  .form-body::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .form-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .form-body::-webkit-scrollbar-thumb {
+    background: #4CACB7;
+    border-radius: 10px;
+  }
+  
+  /* تحسين شكل حقول الإدخال - النص من اليمين */
+  .form-control, .form-select {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    text-align: right; /* النص من اليمين */
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+  }
+  
+  .form-control::placeholder {
+    text-align: right; /* النص في placeholder من اليمين */
+    direction: rtl;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: #4CACB7 !important;
+    box-shadow: 0 0 0 0.2rem rgba(76, 172, 183, 0.25) !important;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #495057;
+    font-size: 0.95rem;
+    text-align: right; /* التسميات من اليمين */
+    display: block;
+  }
+  
+  /* تحسين خاص لقائمة الاختيارات */
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left 0.75rem center;
+    background-size: 16px 12px;
+    padding-left: 2.25rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* الأزرار */
+  .btn-primary {
+    background-color: #4CACB7 !important;
+    border-color: #4CACB7 !important;
+    border-radius: 6px !important;
+    font-weight: 500;
+    padding: 0.75rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3B9AA6 !important;
+    border-color: #3B9AA6 !important;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    border-radius: 6px !important;
+    font-weight: 500;
+    padding: 0.75rem;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+  }
+  
+  /* رابط تسجيل الدخول */
+  .login-link {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
+  
+  .linkColor {
+    color: #4CACB7 !important;
+  }
+  
+  .linkColor:hover {
+    color: #3B9AA6 !important;
+  }
+  
+  /* رسائل الخطأ */
+  .form-text.text-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+    text-align: right;
+  }
+  
+  /* تحسينات للأجهزة الصغيرة */
+  @media (max-width: 991.98px) {
+    .register-section {
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+    
+    .register-header {
+      padding: 0 15px;
+      text-align: center;
+    }
+    
+    .welcome-title {
+      font-size: 1.5rem;
+    }
+    
+    .welcome-subtitle {
+      font-size: 1rem;
+    }
+    
+    .main-register-container {
+      flex-direction: column;
+      max-width: 100%;
+      margin: 0 15px;
+      flex-direction: column; /* في الهواتف يعود للترتيب العمودي الطبيعي */
+    }
+    
+    .register-image-side {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      order: 1; /* في الهواتف الصورة تأتي أولاً */
+    }
+    
+    .register-form-side {
+      width: 100%;
+      height: auto;
+      order: 2; /* في الهواتف النموذج يأتي ثانياً */
+    }
+    
+    .form-card {
+      padding: 25px 20px;
+      height: auto;
+    }
+    
+    .step-divider {
+      width: 60px;
+    }
+    
+    /* في الهواتف، النص يبقى من اليمين */
+    .form-control, .form-select {
+      text-align: right;
+      direction: rtl;
+    }
+    
+    .form-control::placeholder {
+      text-align: right;
+      direction: rtl;
+    }
+    
+    .form-select {
+      background-position: right 0.75rem center;
+      padding-right: 2.25rem;
+      padding-left: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .register-section {
+      padding-top: 50px;
+    }
+    
+    .register-header {
+      margin-bottom: 20px;
+    }
+    
+    .welcome-title {
+      font-size: 1.3rem;
+    }
+    
+    .welcome-subtitle {
+      font-size: 0.9rem;
+    }
+    
+    .form-card {
+      padding: 20px 15px;
+    }
+    
+    .form-title {
+      font-size: 1.3rem;
+    }
+    
+    .step-circle {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .step-divider {
+      width: 40px;
+    }
+    
+    .d-flex.gap-2 {
+      flex-direction: column;
+      gap: 0.5rem !important;
+    }
+  }
+  
+  /* Modal تعليمات المنصة */
+  .modal-body-scroll {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  
+  .modal-body .card {
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1) !important;
+  }
+  
+  .modal-body .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+  }
+  
+  .modal-body .card-title {
+    font-size: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+  }
+  
+  .modal-body .card-text {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* تحسين الـ Modal */
+  .modal-content {
+    border-radius: 12px;
+    border: none;
+  }
+  
+  .modal-header {
+    background-color: #f8f9fa;
+    border-radius: 12px 12px 0 0 !important;
+  }
+  
+  /* تحسين الأيقونات */
+  .fa-check-circle, .fa-times-circle, .fa-exclamation-triangle {
+    min-width: 20px;
+  }

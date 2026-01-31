@@ -1,0 +1,506 @@
+/* src/styles/ProfilePage.css */
+/* هذا الكود خاص بتنسيق صفحة الملف الشخصي */
+
+.profile-page {
+    padding-top: 70px; /* مسافة من الأعلى لتجنب النافبار */
+    min-height: 100vh;
+    background-color: #f8f9fa; /* خلفية فاتحة للصفحة */
+  }
+  
+  .main-content {
+    margin-right: 250px; /* مسافة للسيبار من اليمين */
+    transition: margin-right 0.3s ease; /* تأثير سلس عند تصغير السايدبار */
+  }
+  
+  /* عندما يكون السايدبار مصغر */
+  .sidebar.collapsed ~ .main-content {
+    margin-right: 70px; /* مسافة أقل عندما السايدبار مصغر */
+  }
+  
+  /* تصميم بطاقة الملف الشخصي */
+  .card-profile {
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 12px; /* زوايا دائرية */
+    background: white; /* خلفية بيضاء */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ظل خفيف */
+    overflow: hidden; /* إخفاء ما يخرج عن الحدود */
+  }
+  
+  .card-profile .fa-user-circle {
+    color: #4CACB7 !important; /* لون أزرق للأيقونة */
+    font-size: 4rem; /* حجم كبير */
+  }
+  
+  .card-profile .card-title {
+    color: #333; /* لون داكن للاسم */
+    font-size: 1.25rem; /* حجم مناسب */
+    font-weight: 700; /* نص سميك */
+    margin-top: 1rem; /* فراغ من الأعلى */
+  }
+  
+  .card-profile .fs-12 {
+    font-size: 0.85rem; /* حجم صغير للنصوص */
+  }
+  
+  .card-profile .text-secondary {
+    color: #6c757d !important; /* لون رمادي للنصوص الثانوية */
+  }
+  
+  .card-profile .border-bottom {
+    border-bottom: 1px solid #dee2e6 !important; /* خط فاصل */
+  }
+  
+  /* تبويبات الملف الشخصي */
+  .card-profile .nav-tabs {
+    border: none !important; /* إزالة الحدود */
+    gap: 0.75rem; /* فراغ بين التبويبات */
+  }
+  
+  .card-profile .nav-link {
+    color: #6c757d; /* لون رمادي */
+    border: 1px solid #e9ecef; /* حدود فاتحة */
+    border-radius: 8px; /* زوايا دائرية */
+    padding: 0.75rem 1rem; /* فراغ داخلي */
+    font-size: 0.9rem; /* حجم صغير */
+    font-weight: 600; /* نص سمك متوسط */
+    transition: all 0.3s ease; /* تأثير سلس */
+    background-color: #f8f9fa; /* خلفية فاتحة */
+  }
+  
+  .card-profile .nav-link:hover {
+    color: #007bff; /* لون أزرق عند المرور */
+    background-color: #e9ecef; /* خلفية أغمق عند المرور */
+    border-color: #dee2e6; /* حدود أغمق */
+  }
+  
+  .card-profile .nav-link.active {
+    color: #007bff; /* لون أزرق للتبويب النشط */
+    background-color: #e7f1ff; /* خلفية زرقاء فاتحة */
+    border-color: #007bff; /* حدود زرقاء */
+    font-weight: 700; /* نص سميك أكثر */
+  }
+  
+  .card-profile .nav-link i:first-child {
+    width: 20px; /* عرض ثابت للأيقونة */
+    text-align: center; /* توسيط الأيقونة */
+  }
+  
+  .card-profile .nav-link .fa-chevron-left {
+    font-size: 0.8rem; /* حجم أصغر للسهم */
+    opacity: 0.7; /* شفافية */
+  }
+  
+  /* تبويبات المحتوى الرئيسي */
+  .tabs-profile {
+    min-height: 500px; /* ارتفاع أدنى للمحتوى */
+  }
+  
+  /* تبويبات فوري */
+  .nav-fatora {
+    border-bottom: 2px solid #dee2e6; /* خط سفلي فاتح */
+  }
+  
+  .nav-fatora .nav-item {
+    margin: 0 0.25rem; /* فراغ بين التبويبات */
+  }
+  
+  .nav-fatora .nav-link {
+    color: #6c757d; /* لون رمادي */
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 8px 8px 0 0; /* زوايا دائرية أعلى فقط */
+    padding: 0.75rem 1.5rem; /* فراغ داخلي مناسب */
+    font-weight: 600; /* نص سمك متوسط */
+    transition: all 0.3s ease; /* تأثير سلس عند التغيير */
+    background-color: transparent; /* خلفية شفافة */
+  }
+  
+  .nav-fatora .nav-link:hover {
+    color: #007bff; /* لون أزرق عند المرور */
+  }
+  
+  .nav-fatora .nav-link.active {
+    color: #007bff; /* لون أزرق للتبويب النشط */
+    background-color: transparent; /* خلفية شفافة */
+    border-bottom: 3px solid #007bff; /* خط سفلي أزرق */
+  }
+  
+  /* بطاقة المحفظة */
+  .balance-card {
+    background: linear-gradient(135deg, #4CACB7 0%, #2E8B8B 100%) !important; /* تدرج لوني */
+    color: white !important; /* لون أبيض للنص */
+  }
+  
+  .balance-card .title {
+    color: rgba(255, 255, 255, 0.9) !important; /* لون أبيض شفاف */
+    font-size: 0.9rem; /* حجم أصغر */
+    font-weight: 600; /* نص سمك متوسط */
+  }
+  
+  .balance-card h4 {
+    color: white !important; /* لون أبيض للأرقام */
+    font-size: 2rem !important; /* حجم كبير */
+  }
+  
+  .balance-card .bg-badge {
+    background-color: rgba(255, 255, 255, 0.2) !important; /* خلفية شفافة بيضاء */
+  }
+  
+  /* أزرار الشحن */
+  .btn-primary {
+    background-color: #4CACB7; /* لون أزرق فاتح */
+    border-color: #4CACB7; /* حدود بنفس اللون */
+    border-radius: 8px; /* زوايا دائرية */
+    font-weight: 600; /* نص سمك متوسط */
+    transition: all 0.3s ease; /* تأثير سلس */
+  }
+  
+  .btn-primary:hover {
+    background-color: #3a8d94; /* لون أزرق داكن عند المرور */
+    border-color: #3a8d94; /* حدود داكنة عند المرور */
+    transform: translateY(-2px); /* تحريك الزر لأعلى عند المرور */
+    box-shadow: 0 4px 12px rgba(76, 172, 183, 0.3); /* ظل أزرق */
+  }
+  
+  .btn-outline-primary {
+    color: #4CACB7; /* لون أزرق للنص */
+    border-color: #4CACB7; /* حدود زرقاء */
+    border-radius: 8px; /* زوايا دائرية */
+    font-weight: 600; /* نص سمك متوسط */
+    transition: all 0.3s ease; /* تأثير سلس */
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #4CACB7; /* خلفية زرقاء عند المرور */
+    color: white; /* لون أبيض عند المرور */
+    transform: translateY(-2px); /* تحريك الزر لأعلى عند المرور */
+    box-shadow: 0 4px 12px rgba(76, 172, 183, 0.2); /* ظل أزرق خفيف */
+  }
+  
+  /* تصميم الجداول */
+  .table-responsive {
+    overflow-x: auto; /* إمكانية التمرير الأفقي */
+    border-radius: 8px; /* زوايا دائرية */
+    border: 1px solid #e9ecef; /* حدود فاتحة */
+  }
+  
+  .table {
+    margin-bottom: 0; /* إزالة الفراغ السفلي */
+    min-width: 1200px; /* عرض أدنى للجدول */
+  }
+  
+  .table thead {
+    background-color: #f8f9fa; /* خلفية فاتحة للرأس */
+  }
+  
+  .table th {
+    color: #333; /* لون داكن للعناوين */
+    font-weight: 600; /* نص سمك متوسط */
+    font-size: 0.9rem; /* حجم أصغر */
+    padding: 1rem; /* فراغ داخلي */
+    border-bottom: 2px solid #dee2e6; /* خط سفلي سميك */
+    white-space: nowrap; /* منع تكسير النص */
+  }
+  
+  .table td {
+    color: #666; /* لون رمادي للنص */
+    font-size: 0.85rem; /* حجم أصغر */
+    padding: 0.75rem 1rem; /* فراغ داخلي */
+    border-bottom: 1px solid #e9ecef; /* خط فاصل فاتح */
+    vertical-align: middle; /* توسيط عمودي */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa; /* خلفية فاتحة عند المرور */
+  }
+  
+  .table-borderless {
+    border: none !important; /* إزالة الحدود */
+  }
+  
+  .table-borderless th,
+  .table-borderless td {
+    border: none !important; /* إزالة حدود الخلايا */
+  }
+  
+  .border-bottom {
+    border-bottom: 2px solid #dee2e6 !important; /* خط سفلي */
+  }
+  
+  .table-group-divider {
+    border-top: 1px solid #dee2e6 !important; /* خط فاصل */
+  }
+  
+  /* Badges في الجداول */
+  .badge {
+    font-size: 0.75rem; /* حجم صغير */
+    padding: 0.35em 0.65em; /* فراغ داخلي */
+    font-weight: 600; /* نص سمك متوسط */
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important; /* لون أخضر */
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important; /* لون أصفر */
+    color: #212529 !important; /* لون داكن للنص */
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important; /* لون أحمر */
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-bottom: 0; /* إزالة الفراغ السفلي */
+  }
+  
+  .page-link {
+    color: #4CACB7; /* لون أزرق للروابط */
+    border: 1px solid #dee2e6; /* حدود فاتحة */
+    padding: 0.5rem 0.75rem; /* فراغ داخلي */
+    margin: 0 0.125rem; /* فراغ بين الأزرار */
+    border-radius: 6px; /* زوايا دائرية */
+    font-size: 0.9rem; /* حجم أصغر */
+    transition: all 0.3s ease; /* تأثير سلس */
+  }
+  
+  .page-link:hover {
+    color: #2E8B8B; /* لون أزرق داكن عند المرور */
+    background-color: #f8f9fa; /* خلفية فاتحة عند المرور */
+    border-color: #dee2e6; /* حدود فاتحة */
+  }
+  
+  .page-item.active .page-link {
+    background-color: #4CACB7; /* خلفية زرقاء للصفحة النشطة */
+    border-color: #4CACB7; /* حدود زرقاء */
+    color: white; /* لون أبيض */
+  }
+  
+  .page-item.disabled .page-link {
+    color: #6c757d; /* لون رمادي */
+    background-color: #f8f9fa; /* خلفية فاتحة */
+    border-color: #dee2e6; /* حدود فاتحة */
+    cursor: not-allowed; /* مؤشر غير مسموح */
+    opacity: 0.6; /* شفافية */
+  }
+  
+  .fs-12 {
+    font-size: 0.85rem; /* حجم صغير */
+    color: #6c757d; /* لون رمادي */
+  }
+  
+  /* عرض الأعمدة */
+  .min-vw-20 {
+    min-width: 200px; /* عرض أدنى */
+  }
+  
+  .min-vw-30 {
+    min-width: 300px; /* عرض أدنى أكبر */
+  }
+  
+  /* تصميم متجاوب للهواتف */
+  @media (max-width: 991.98px) {
+    .main-content {
+      margin-right: 0 !important; /* إزالة المسافة في الهواتف */
+    }
+    
+    .profile-page {
+      padding-top: 60px; /* مسافة أقل من الأعلى */
+    }
+    
+    .card-profile {
+      margin-bottom: 1rem; /* فراغ سفلي */
+    }
+    
+    .nav-fatora .nav-link {
+      padding: 0.5rem 1rem; /* فراغ داخلي أقل */
+      font-size: 0.85rem; /* حجم أصغر */
+    }
+    
+    .table {
+      font-size: 0.8rem; /* حجم أصغر للجدول */
+    }
+    
+    .table th,
+    .table td {
+      padding: 0.5rem 0.75rem; /* فراغ داخلي أقل */
+    }
+    
+    .page-link {
+      padding: 0.4rem 0.6rem; /* فراغ داخلي أقل */
+      font-size: 0.85rem; /* حجم أصغر */
+    }
+  }
+  
+  /* تصميم للأجهزة الصغيرة جداً */
+  @media (max-width: 576px) {
+    .card-profile .nav-link {
+      padding: 0.5rem 0.75rem; /* فراغ داخلي أقل */
+      font-size: 0.85rem; /* حجم أصغر */
+    }
+    
+    .btn-primary,
+    .btn-outline-primary {
+      padding: 0.5rem 0.75rem; /* فراغ داخلي أقل */
+      font-size: 0.85rem; /* حجم أصغر */
+    }
+    
+    .table-responsive {
+      border-radius: 6px; /* زوايا دائرية أصغر */
+    }
+    
+    .pagination {
+      flex-wrap: wrap; /* السماح بتكرار الأسطر */
+      justify-content: center; /* توسيط */
+    }
+    
+    .page-item {
+      margin: 0.125rem; /* فراغ أقل بين الأزرار */
+    }
+    
+    .d-none.d-md-flex {
+      display: none !important; /* إخفاء عداد العناصر في الهواتف */
+    }
+  }
+
+  /* src/styles/ProfilePage.css (أضف هذه القواعد في النهاية) */
+
+/* ====== Dark Mode لصفحة الملف الشخصي ====== */
+.profile-container.dark-mode {
+  background-color: #0f172a !important;
+  color: #e0e0e0 !important;
+}
+
+.profile-container.dark-mode .card-profile {
+  background-color: #1a1a2e !important;
+  border-color: #2d2d44 !important;
+}
+
+.profile-container.dark-mode .card-profile .card-title {
+  color: #ffffff !important;
+}
+
+.profile-container.dark-mode .card-profile .card-text {
+  color: #b0b0b0 !important;
+}
+
+.profile-container.dark-mode .nav-link-dark {
+  background-color: #2d2d44 !important;
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .nav-link-dark.active {
+  background-color: #4CACB7 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .nav-link-dark:hover {
+  background-color: #3a3a5e !important;
+  color: #ffffff !important;
+}
+
+/* ====== Dark Mode للكروت ====== */
+.dark-mode-card {
+  background-color: #1a1a2e !important;
+  border-color: #2d2d44 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode-card .card-title {
+  color: #ffffff !important;
+}
+
+.dark-mode-card .card-text {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للجداول ====== */
+.profile-container.dark-mode .table-dark {
+  color: #e0e0e0 !important;
+  background-color: #1a1a2e !important;
+}
+
+.profile-container.dark-mode .table-dark th {
+  background-color: #2d2d44 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .table-dark td {
+  border-color: #2d2d44 !important;
+}
+
+.profile-container.dark-mode .table-dark tbody tr:hover {
+  background-color: #2d2d44 !important;
+}
+
+/* ====== Dark Mode للأزرار ====== */
+.profile-container.dark-mode .btn-outline-light {
+  color: #e0e0e0 !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .btn-outline-light:hover {
+  background-color: #4CACB7 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .btn-primary {
+  background-color: #4CACB7 !important;
+  border-color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .btn-primary:hover {
+  background-color: #3a9a9a !important;
+  border-color: #3a9a9a !important;
+}
+
+/* ====== Dark Mode للتبويبات ====== */
+.profile-container.dark-mode .nav-tabs.nav-fatora {
+  border-bottom-color: #2d2d44 !important;
+}
+
+.profile-container.dark-mode .nav-tabs.nav-fatora .nav-link {
+  color: #e0e0e0 !important;
+}
+
+.profile-container.dark-mode .nav-tabs.nav-fatora .nav-link.active {
+  background-color: #4CACB7 !important;
+  color: #ffffff !important;
+  border-color: #4CACB7 #4CACB7 #1a1a2e !important;
+}
+
+/* ====== Dark Mode للنصوص ====== */
+.profile-container.dark-mode .text-light {
+  color: #e0e0e0 !important;
+}
+
+.profile-container.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+
+.profile-container.dark-mode .text-secondary {
+  color: #b0b0b0 !important;
+}
+
+/* ====== Dark Mode للحدود ====== */
+.profile-container.dark-mode .border-secondary {
+  border-color: #2d2d44 !important;
+}
+
+.profile-container.dark-mode .border-bottom {
+  border-bottom-color: #2d2d44 !important;
+}
+
+/* ====== Dark Mode للأيقونات ====== */
+.profile-container.dark-mode .fa-user-circle {
+  color: #4CACB7 !important;
+}
+
+.profile-container.dark-mode .fa-chevron-left {
+  color: #b0b0b0 !important;
+}

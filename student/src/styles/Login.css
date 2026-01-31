@@ -1,0 +1,385 @@
+/* ===============================
+   إعدادات عامة لمنع السكرول
+================================ */
+html, body {
+    overflow-x: hidden;
+}
+.page-white-background {
+    background-color: #FFFFFF;
+  }
+  
+.login-container {
+    min-height: calc(100vh - 120px); /* ارتفاع الصفحة بدون النافبار والفوتر */
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* ===============================
+   إعدادات الـ Responsive Container
+================================ */
+@media (min-width: 1470px) {
+    .login-container {
+        max-width: 1470px;
+        height: 518px;
+        margin: 0 auto;
+    }
+}
+
+/* ===============================
+   قسم نموذج الدخول
+================================ */
+.login-form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 687px;
+}
+
+.login-title {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+/* ===============================
+   كارت الفورم
+================================ */
+.login-card {
+    background-color: #EBF7F6;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* محاذاة النصوص لليمين في الفورم */
+.form-group-rtl {
+    text-align: right;
+}
+
+.form-group-rtl .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group-rtl .form-control {
+    text-align: right;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+}
+
+/* ===============================
+   أزرار وروابط
+================================ */
+.btn-login-custom {
+    background-color: #4CACB7;
+    border: none;
+    padding: 0.75rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-login-custom:hover {
+    background-color: #3fa3ad;
+    color: white;
+}
+
+.forget-password-btn {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+.forget-password-btn:hover {
+    text-decoration: underline;
+    color: #4CACB7;
+}
+
+.register-link-custom {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.register-link-custom:hover {
+    text-decoration: underline;
+    color: #4CACB7;
+}
+
+/* ===============================
+   قسم الصورة الجانبية
+================================ */
+.login-image-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-start; /* بدّلها من center ل flex-start */
+    justify-content: center;
+    background-color: #f8f9fa;
+    overflow: hidden;
+    padding-top: 160px; /* المسافة اللي عايزها */
+    margin-left: -200px;
+}
+
+.login-image {
+    width: 471px;
+    height: 405px;
+    object-fit: cover;
+    
+}
+
+/* ===============================
+   إعدادات الـ Modals
+================================ */
+.modal-header .close {
+    margin: -1rem -1rem -1rem auto;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.code-input {
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    font-weight: bold;
+    height: 60px;
+}
+
+/* ===============================
+   Responsive Design
+================================ */
+
+/* للأجهزة اللوحية */
+@media (max-width: 1024px) {
+    .login-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .login-form-section {
+        padding: 1.5rem;
+        min-height: 70vh;
+    }
+    
+    .form-wrapper {
+        max-width: 600px;
+    }
+    
+    .login-image-section {
+        display: none;
+    }
+}
+
+/* للهواتف المحمولة */
+@media (max-width: 768px) {
+    .login-container {
+        min-height: calc(100vh - 100px);
+    }
+    
+    .login-form-section {
+        padding: 1rem;
+    }
+    
+    .form-wrapper {
+        padding: 0;
+    }
+    
+    .login-card {
+        padding: 1.5rem;
+        margin: 0;
+    }
+    
+    .login-title {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-login-custom {
+        padding: 0.6rem;
+    }
+    
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+}
+
+/* للأجهزة الصغيرة جداً */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .login-title {
+        font-size: 1.1rem;
+    }
+    
+    .form-group-rtl .form-control {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-login-custom {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+    
+    .forget-password-btn {
+        font-size: 0.8rem;
+    }
+}
+
+/* لمنع السكرول الأفقي على جميع الشاشات */
+@media (max-width: 1470px) {
+    .login-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* تحسينات إضافية للوضع الافتراضي */
+* {
+    box-sizing: border-box;
+}
+/**********************************back*****/
+/* ===============================
+   إعدادات عامة لمنع السكرول
+================================ */
+html, body {
+    overflow-x: hidden;
+}
+
+/* الخلفية البيضاء للمنطقة بين النافبار والفوتر */
+.login-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    background-color: #FFFFFF; /* خلفية بيضاء للمنطقة كاملة */
+}
+
+/* ===============================
+   قسم نموذج الدخول
+================================ */
+.login-form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #FFFFFF; /* خلفية بيضاء خلف الفورم */
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 687px;
+}
+
+.login-title {
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+/* ===============================
+   كارت الفورم (يظل بلونه الأخضر)
+================================ */
+.login-card {
+    background-color: #EBF7F6; /* لون الكارت كما هو */
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* ===============================
+   قسم الصورة الجانبية
+================================ */
+.login-image-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #FFFFFF; /* خلفية بيضاء خلف الصورة */
+    overflow: hidden;
+    padding-top: 160px;
+    margin-left: -200px;
+}
+
+.login-image {
+    width: 471px;
+    height: 405px;
+    object-fit: cover;
+}
+
+/* ===============================
+   إعدادات الـ Responsive Container
+================================ */
+@media (min-width: 1470px) {
+    .login-container {
+        max-width: 1470px;
+        height: 518px;
+        margin: 0 auto;
+        background-color: #FFFFFF; /* تأكيد الخلفية البيضاء */
+    }
+}
+
+/* الحل الأبسط والأكيد - الأيقونة في أقصى اليمين */
+.modal-header .btn-close {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  /* الحل البديل */
+  .btn-close {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  /* الحل مع flexbox */
+  .modal-header {
+    justify-content: flex-end !important;
+  }
+  
+  .modal-header .btn-close {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+  }
+  
+  /* الحل المباشر */
+  .btn-close {
+    margin: -0.5rem -0.5rem -0.5rem auto !important;
+  }
+  
+  /* الحل الشامل */
+  .modal-header {
+    flex-direction: row-reverse !important;
+  }
+  
+  .modal-header .btn-close {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    order: -1 !important;
+  }

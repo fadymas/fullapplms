@@ -1,0 +1,483 @@
+/* src/styles/course-details.css */
+.course-details-page .main-content {
+    margin-right: 250px;
+    transition: margin-right 0.3s ease;
+    background-color: #f8f9fa; /* خلفية فاتحة افتراضية */
+}
+
+.course-details-page .sidebar.collapsed ~ .main-content {
+    margin-right: 80px;
+}
+
+/* تحسين رأس الكورس */
+.course-header .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white; /* خلفية بيضاء للبطاقة */
+}
+
+.course-header .course-image {
+    height: 300px;
+    object-fit: cover;
+}
+
+.course-header .card-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.course-description {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.course-info {
+    display: flex;
+    align-items: center;
+    color: #34495e;
+    margin-bottom: 0.5rem;
+}
+
+.course-info i {
+    font-size: 1.2rem;
+    width: 24px;
+}
+
+/* تحسين قسم المحاضرات */
+.course-lectures .card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    background-color: white; /* خلفية بيضاء للبطاقة */
+}
+
+.course-lectures .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1.5rem;
+    border: none;
+}
+
+.course-lectures .text-titles {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* تحسين الجدول */
+.lectures-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.lectures-table thead {
+    background-color: #f8f9fa;
+}
+
+.lectures-table th {
+    font-weight: 600;
+    color: #2c3e50;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+    white-space: nowrap;
+}
+
+.lectures-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+    color: #333; /* لون نص واضح */
+}
+
+.lectures-table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+/* تحسين العناصر داخل الجدول */
+.lecture-number {
+    background-color: #667eea;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.lecture-title {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #2c3e50; /* لون نص داكن */
+}
+
+.lecture-title:hover {
+    overflow: visible;
+    white-space: normal;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.download-btn {
+    width: 120px;
+    transition: all 0.3s ease;
+    color: white !important; /* لون نص الأزرار أبيض */
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lecture-score {
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: white !important; /* لون النص أبيض */
+}
+
+.score-exam {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db !important;
+}
+
+.score-homework {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #2ecc71 !important;
+}
+
+/* تحسين الأزرار */
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: white !important; /* لون النص أبيض */
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+    color: white !important; /* التأكد من بقاء النص أبيض */
+}
+
+.btn-outline-primary {
+    color: #667eea;
+    border-color: #667eea;
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    background-color: #667eea;
+    border-color: #667eea;
+    color: white !important;
+}
+
+/* تحسين حالة عدم وجود محاضرات */
+.text-center.py-5 {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 992px) {
+    .course-details-page .main-content {
+        margin-right: 0;
+        margin-top: 70px;
+    }
+    
+    .course-details-page .sidebar.collapsed ~ .main-content {
+        margin-right: 0;
+    }
+    
+    .course-header .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .lectures-table {
+        font-size: 0.85rem;
+    }
+    
+    .lectures-table th,
+    .lectures-table td {
+        padding: 0.75rem;
+    }
+    
+    .download-btn {
+        width: 100px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .course-header .course-image {
+        height: 200px;
+    }
+    
+    .lectures-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .lecture-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* أنيميشن */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.course-header,
+.course-lectures {
+    animation: fadeInUp 0.6s ease;
+}
+
+/* تحسين شريط التمرير */
+.lectures-table::-webkit-scrollbar {
+    height: 6px;
+}
+
+.lectures-table::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.lectures-table::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 3px;
+}
+
+.lectures-table::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* ============ Dark Mode Styles فقط ============ */
+
+/* خلفية الصفحة في Dark Mode */
+body.dark-mode .course-details-page .main-content,
+.course-details-page.dark-mode .main-content {
+    background-color: #121212 !important;
+}
+
+/* بطاقات Dark Mode */
+body.dark-mode .course-details-page .card,
+.course-details-page.dark-mode .card {
+    background-color: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+body.dark-mode .course-details-page .card:hover,
+.course-details-page.dark-mode .card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* عناوين Dark Mode */
+body.dark-mode .course-details-page .card-title,
+.course-details-page.dark-mode .card-title {
+    color: #ffffff !important;
+}
+
+body.dark-mode .course-details-page h1,
+body.dark-mode .course-details-page h2,
+body.dark-mode .course-details-page h3,
+body.dark-mode .course-details-page h4,
+body.dark-mode .course-details-page h5,
+body.dark-mode .course-details-page h6,
+.course-details-page.dark-mode h1,
+.course-details-page.dark-mode h2,
+.course-details-page.dark-mode h3,
+.course-details-page.dark-mode h4,
+.course-details-page.dark-mode h5,
+.course-details-page.dark-mode h6 {
+    color: #ffffff !important;
+}
+
+/* نصوص Dark Mode */
+body.dark-mode .course-details-page .course-description,
+.course-details-page.dark-mode .course-description {
+    color: #d0d0d0 !important;
+}
+
+body.dark-mode .course-details-page .course-info,
+.course-details-page.dark-mode .course-info {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .course-details-page .card-text,
+.course-details-page.dark-mode .card-text {
+    color: #e0e0e0 !important;
+}
+
+/* الجدول في Dark Mode */
+body.dark-mode .course-details-page .lectures-table thead,
+.course-details-page.dark-mode .lectures-table thead {
+    background-color: #2d2d2d !important;
+}
+
+body.dark-mode .course-details-page .lectures-table th,
+.course-details-page.dark-mode .lectures-table th {
+    color: #ffffff !important;
+    border-bottom-color: #444 !important;
+}
+
+body.dark-mode .course-details-page .lectures-table td,
+.course-details-page.dark-mode .lectures-table td {
+    color: #e0e0e0 !important;
+    border-bottom-color: #444 !important;
+}
+
+body.dark-mode .course-details-page .lectures-table tbody tr:hover,
+.course-details-page.dark-mode .lectures-table tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* عناصر الجدول في Dark Mode */
+body.dark-mode .course-details-page .lecture-title,
+.course-details-page.dark-mode .lecture-title {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .course-details-page .lecture-title:hover,
+.course-details-page.dark-mode .lecture-title:hover {
+    background-color: #2d2d2d !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* الأزرار في Dark Mode */
+body.dark-mode .course-details-page .btn:not(.btn-outline-primary):not(.btn-outline-secondary):not(.btn-outline-success):not(.btn-outline-danger):not(.btn-outline-warning):not(.btn-outline-info):not(.btn-outline-light):not(.btn-outline-dark),
+.course-details-page.dark-mode .btn:not(.btn-outline-primary):not(.btn-outline-secondary):not(.btn-outline-success):not(.btn-outline-danger):not(.btn-outline-warning):not(.btn-outline-info):not(.btn-outline-light):not(.btn-outline-dark) {
+    color: white !important;
+}
+
+/* الأزرار المنفوذة في Dark Mode */
+body.dark-mode .course-details-page .btn-outline-primary,
+.course-details-page.dark-mode .btn-outline-primary {
+    color: #86b7fe !important;
+    border-color: #86b7fe !important;
+}
+
+body.dark-mode .course-details-page .btn-outline-primary:hover,
+.course-details-page.dark-mode .btn-outline-primary:hover {
+    background-color: #667eea !important;
+    border-color: #667eea !important;
+    color: white !important;
+}
+
+/* البادجات في Dark Mode */
+body.dark-mode .course-details-page .badge,
+.course-details-page.dark-mode .badge {
+    color: white !important;
+}
+
+/* العناوين في بطاقة المحاضرات */
+body.dark-mode .course-details-page .card-header,
+.course-details-page.dark-mode .card-header {
+    background: linear-gradient(135deg, #4d5bbf 0%, #5a3a7c 100%) !important;
+}
+
+/* حالة عدم وجود محاضرات في Dark Mode */
+body.dark-mode .course-details-page .text-center.py-5,
+.course-details-page.dark-mode .text-center.py-5 {
+    background-color: #1e1e1e !important;
+    border-color: #444 !important;
+}
+
+body.dark-mode .course-details-page .text-muted,
+.course-details-page.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+
+/* تنسيق محدد للدرجات في Dark Mode */
+body.dark-mode .course-details-page .score-exam,
+.course-details-page.dark-mode .score-exam {
+    background-color: rgba(52, 152, 219, 0.2) !important;
+    color: #3498db !important;
+}
+
+body.dark-mode .course-details-page .score-homework,
+.course-details-page.dark-mode .score-homework {
+    background-color: rgba(46, 204, 113, 0.2) !important;
+    color: #2ecc71 !important;
+}
+
+/* شريط التمرير في Dark Mode */
+body.dark-mode .course-details-page .lectures-table::-webkit-scrollbar-track,
+.course-details-page.dark-mode .lectures-table::-webkit-scrollbar-track {
+    background: #2d2d2d !important;
+}
+
+body.dark-mode .course-details-page .lectures-table::-webkit-scrollbar-thumb,
+.course-details-page.dark-mode .lectures-table::-webkit-scrollbar-thumb {
+    background: #4d5bbf !important;
+}
+
+body.dark-mode .course-details-page .lectures-table::-webkit-scrollbar-thumb:hover,
+.course-details-page.dark-mode .lectures-table::-webkit-scrollbar-thumb:hover {
+    background: #5a3a7c !important;
+}
+
+/* حدود العناصر في Dark Mode */
+body.dark-mode .course-details-page .border,
+.course-details-page.dark-mode .border {
+    border-color: #444 !important;
+}
+
+body.dark-mode .course-details-page .border-top,
+.course-details-page.dark-mode .border-top {
+    border-top-color: #444 !important;
+}
+
+body.dark-mode .course-details-page .border-bottom,
+.course-details-page.dark-mode .border-bottom {
+    border-bottom-color: #444 !important;
+}
+
+/* النصوص المساعدة في Dark Mode */
+body.dark-mode .course-details-page .text-dark-mode,
+.course-details-page.dark-mode .text-dark-mode {
+    color: #ffffff !important;
+}
+
+/* التأكد من وضوح النصوص في جميع الحالات */
+body.dark-mode .course-details-page .btn,
+.course-details-page.dark-mode .btn {
+    color: white !important;
+}
+
+/* تصحيح ألوان النص في Dark Mode */
+body.dark-mode .course-details-page,
+.course-details-page.dark-mode {
+    color: #e0e0e0 !important;
+}
