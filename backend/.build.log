@@ -1,0 +1,27 @@
+2026-01-28T02:29:26.813728 Project directory: /root/app
+2026-01-28T02:29:26.814133 Pulling project images
+2026-01-28T02:29:26.814637 ------------------------------
+2026-01-28T02:29:26.864221 time="2026-01-28T02:29:26Z" level=warning msg="/root/app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2026-01-28T02:29:26.916875  web Skipped No image to be pulled
+2026-01-28T02:29:26.916944  Image postgres:15-alpine Pulling 
+2026-01-28T02:29:26.916951  Image nginx:1.25-alpine Pulling 
+2026-01-28T02:29:31.260107  Image nginx:1.25-alpine Pulled 
+2026-01-28T02:29:31.781960  Image postgres:15-alpine Pulled 
+2026-01-28T02:29:31.820050 ------------------------------
+2026-01-28T02:29:31.820161 Deploying project
+2026-01-28T02:29:31.820659 ------------------------------
+2026-01-28T02:29:31.868644 time="2026-01-28T02:29:31Z" level=warning msg="/root/app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+2026-01-28T02:29:31.949627  Container app-db-1 Recreate 
+2026-01-28T02:29:37.677887  Container app-db-1 Recreated 
+2026-01-28T02:29:37.677949  Container app-web-1 Recreate 
+2026-01-28T02:29:50.345292  Container app-web-1 Recreated 
+2026-01-28T02:29:50.345344  Container app-nginx-1 Recreate 
+2026-01-28T02:29:52.634414  Container app-nginx-1 Recreated 
+2026-01-28T02:29:52.652108  Container app-db-1 Starting 
+2026-01-28T02:29:53.519862  Container app-db-1 Started 
+2026-01-28T02:29:53.519910  Container app-web-1 Starting 
+2026-01-28T02:29:54.112678  Container app-web-1 Started 
+2026-01-28T02:29:54.112820  Container app-nginx-1 Starting 
+2026-01-28T02:29:54.806938 Error response from daemon: failed to set up container networking: driver failed programming external connectivity on endpoint app-nginx-1 (6b30a862a9415b0574f0a271ce75b7f2d4a39adaa2e48468f389e06c556a5e43): failed to bind host port 0.0.0.0:80/tcp: address already in use
+2026-01-28T02:29:54.809653 ------------------------------
+2026-01-28T02:29:54.809688 Project deployment failed
