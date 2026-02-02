@@ -16,7 +16,7 @@ class DecimalToStringField(serializers.Field):
     """Custom field to convert Decimal to string."""
     
     def __init__(self, **kwargs):
-        # استقبل min_value و max_value من kwargs واحفظها (حاول تحويلها إلى Decimal)
+        # ?????? min_value ? max_value ?? kwargs ??????? (???? ??????? ??? Decimal)
         min_value = kwargs.pop('min_value', None)
         max_value = kwargs.pop('max_value', None)
         self.min_value = Decimal(str(min_value)) if min_value is not None else None
@@ -31,16 +31,16 @@ class DecimalToStringField(serializers.Field):
             return None
         
         try:
-            # تحويل القيمة إلى Decimal
+            # ????? ?????? ??? Decimal
             decimal_value = Decimal(str(data))
             
-            # التحقق من min_value
+            # ?????? ?? min_value
             if self.min_value is not None and decimal_value < self.min_value:
                 raise serializers.ValidationError(
                     f"Ensure this value is greater than or equal to {self.min_value}."
                 )
             
-            # التحقق من max_value
+            # ?????? ?? max_value
             if self.max_value is not None and decimal_value > self.max_value:
                 raise serializers.ValidationError(
                     f"Ensure this value is less than or equal to {self.max_value}."
@@ -76,11 +76,12 @@ class WalletSerializer(serializers.ModelSerializer):
     balance = DecimalToStringField(read_only=True)
     student_email = serializers.CharField(source='student.email', read_only=True)
     student_name = serializers.CharField(source='student.get_full_name', read_only=True)
+    student_phone = serializers.CharField(source='student.student_profile.phone', read_only=True)
     
     class Meta:
         model = Wallet
         fields = [
-            'id', 'student', 'student_email', 'student_name',
+            'id', 'student', 'student_email', 'student_name', 'student_phone',
             'balance', 'created_at', 'updated_at'
         ]
         read_only_fields = ['created_at', 'updated_at']

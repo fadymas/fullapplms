@@ -8,7 +8,7 @@ const cookieStorage = {
   setItem: (name, value) =>
     Cookies.set(name, value, {
       expires: 7, // Cookie expires in 7 days
-      secure: true, // Only send over HTTPS
+      secure: false, // Only send over HTTPS
       sameSite: 'strict'
     }),
   removeItem: (name) => Cookies.remove(name)
@@ -54,6 +54,9 @@ const useAuthStore = create(
       name: 'auth-storage',
       // This tells Zustand to use our cookieStorage instead of localStorage
       storage: createJSONStorage(() => cookieStorage),
+      onRehydrateStorage: () => (state) => {
+        state.setHasHydrated(true)
+      },
       partialize: (state) => ({
         user: state.user,
         accessToken: state.accessToken,

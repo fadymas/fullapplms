@@ -4443,3 +4443,1752 @@ WARNING 2026-01-31 16:27:42,934 log 16 140575637588776 Unauthorized: /api/paymen
 WARNING 2026-01-31 16:27:55,821 log 16 140575637588776 Bad Request: /api/users/auth/login/
 WARNING 2026-01-31 16:28:35,324 log 16 140575637588776 Method Not Allowed: /api/users/auth/login/
 WARNING 2026-01-31 16:28:36,639 log 16 140575637588776 Not Found: /favicon.ico
+WARNING 2026-01-31 20:54:01,703 log 9 129058129451816 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 20:54:11,570 log 9 129058129451816 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:02:37,020 log 18 133086725270312 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:02:44,959 log 17 133086725270312 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:09:37,915 log 12 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:09:38,703 log 12 138510160395048 Bad Request: /api/users/auth/login/
+INFO 2026-01-31 21:11:50,046 services 12 138510160395048 Payment Action: bulk_code_generation - Actor: fady@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 21:12:05,744 log 13 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:23:31,379 log 11 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:23:59,037 log 10 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:30:02,362 log 13 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:30:06,766 log 13 138510160395048 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 21:49:59,567 log 10 138510160395048 Bad Request: /api/users/auth/login/
+INFO 2026-01-31 21:52:16,062 services 13 138510160395048 Payment Action: manual_deposit - Actor: fady@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:52:28,897 services 10 138510160395048 Payment Action: purchase - Actor: fady@example.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:52:28,907 services 10 138510160395048 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:52:28,912 services 10 138510160395048 Payment Action: purchase - Actor: fady@example.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:54:16,387 services 12 138510160395048 Payment Action: purchase - Actor: fady@example.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:54:16,394 services 12 138510160395048 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 21:54:16,397 services 12 138510160395048 Payment Action: purchase - Actor: fady@example.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:01:42,055 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:02:37,697 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:02:39,426 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:02:42,912 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:02:48,576 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:03:17,265 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:03:48,869 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:03:58,678 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:05:54,615 log 30 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:05:57,545 log 28 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:07:52,385 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:07:58,362 log 29 128222161484584 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-01-31 22:07:58,363 log 30 128222161484584 Unauthorized: /api/notifications/notifications/
+WARNING 2026-01-31 22:07:58,431 log 30 128222161484584 Unauthorized: /api/courses/courses/2/
+WARNING 2026-01-31 22:09:12,409 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:09:13,863 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 22:09:15,035 log 29 128222161484584 Bad Request: /api/users/auth/login/
+INFO 2026-01-31 22:10:21,873 services 29 128222161484584 Payment Action: manual_deposit - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:13:44,145 services 28 128222161484584 Payment Action: manual_deposit - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:14:19,308 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:14:19,317 services 30 128222161484584 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:14:19,323 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:17:36,838 log 29 128222161484584 Bad Request: /api/courses/lectures/
+WARNING 2026-01-31 22:23:45,212 log 28 128222161484584 Bad Request: /api/users/profile/
+WARNING 2026-01-31 22:23:47,459 log 28 128222161484584 Bad Request: /api/users/profile/
+WARNING 2026-01-31 22:23:55,355 log 28 128222161484584 Bad Request: /api/users/profile/
+WARNING 2026-01-31 22:23:59,744 log 28 128222161484584 Bad Request: /api/users/profile/
+WARNING 2026-01-31 22:25:42,518 log 27 128222161484584 Bad Request: /api/users/profile/
+INFO 2026-01-31 22:27:47,832 services 28 128222161484584 Payment Action: refund - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:27:47,844 services 28 128222161484584 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:27:47,850 services 28 128222161484584 Payment Action: refund - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:27:47,865 services 28 128222161484584 Payment Action: refund - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:29:38,545 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:38,546 services 28 128222161484584 IntegrityError on purchase_course attempt 1: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:38,653 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:38,654 services 28 128222161484584 IntegrityError on purchase_course attempt 2: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:38,861 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:38,862 services 28 128222161484584 IntegrityError on purchase_course attempt 3: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+ERROR 2026-01-31 22:29:38,862 views 28 128222161484584 Purchase error: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/payments/views.py", line 272, in purchase_course
+    purchase = PaymentService.purchase_course(request.user, course, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/payments/services.py", line 159, in purchase_course
+    purchase = Purchase.objects.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 669, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/app/payments/models.py", line 188, in save
+    super().save(*args, **kwargs)
+  File "/app/utils/dirtyfields.py", line 34, in save
+    result = super().save(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 874, in save
+    self.save_base(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 966, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1167, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1218, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1918, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1925, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+WARNING 2026-01-31 22:29:38,868 log 28 128222161484584 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-01-31 22:29:44,903 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:44,904 services 30 128222161484584 IntegrityError on purchase_course attempt 1: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:45,011 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:45,012 services 30 128222161484584 IntegrityError on purchase_course attempt 2: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:45,219 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:45,220 services 30 128222161484584 IntegrityError on purchase_course attempt 3: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+ERROR 2026-01-31 22:29:45,220 views 30 128222161484584 Purchase error: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/payments/views.py", line 272, in purchase_course
+    purchase = PaymentService.purchase_course(request.user, course, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/payments/services.py", line 159, in purchase_course
+    purchase = Purchase.objects.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 669, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/app/payments/models.py", line 188, in save
+    super().save(*args, **kwargs)
+  File "/app/utils/dirtyfields.py", line 34, in save
+    result = super().save(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 874, in save
+    self.save_base(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 966, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1167, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1218, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1918, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1925, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+WARNING 2026-01-31 22:29:45,225 log 30 128222161484584 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-01-31 22:29:54,225 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:54,226 services 28 128222161484584 IntegrityError on purchase_course attempt 1: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:54,333 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:54,334 services 28 128222161484584 IntegrityError on purchase_course attempt 2: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:29:54,541 services 28 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:29:54,542 services 28 128222161484584 IntegrityError on purchase_course attempt 3: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+ERROR 2026-01-31 22:29:54,542 views 28 128222161484584 Purchase error: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/payments/views.py", line 272, in purchase_course
+    purchase = PaymentService.purchase_course(request.user, course, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/payments/services.py", line 159, in purchase_course
+    purchase = Purchase.objects.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 669, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/app/payments/models.py", line 188, in save
+    super().save(*args, **kwargs)
+  File "/app/utils/dirtyfields.py", line 34, in save
+    result = super().save(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 874, in save
+    self.save_base(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 966, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1167, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1218, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1918, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1925, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+WARNING 2026-01-31 22:29:54,544 log 28 128222161484584 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-01-31 22:31:45,225 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:31:45,231 services 30 128222161484584 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:31:45,235 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:34:43,156 services 27 128222161484584 Payment Action: recharge_code_used - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:35:10,268 services 27 128222161484584 Payment Action: bulk_code_generation - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:35:36,169 services 28 128222161484584 Payment Action: recharge_code_used - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 22:39:50,596 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:39:50,598 services 30 128222161484584 IntegrityError on purchase_course attempt 1: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:39:50,706 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:39:50,707 services 30 128222161484584 IntegrityError on purchase_course attempt 2: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+INFO 2026-01-31 22:39:50,914 services 30 128222161484584 Payment Action: purchase - Actor: student@student.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 22:39:50,915 services 30 128222161484584 IntegrityError on purchase_course attempt 3: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+ERROR 2026-01-31 22:39:50,915 views 30 128222161484584 Purchase error: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/app/payments/views.py", line 272, in purchase_course
+    purchase = PaymentService.purchase_course(request.user, course, request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/payments/services.py", line 159, in purchase_course
+    purchase = Purchase.objects.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 669, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/app/payments/models.py", line 188, in save
+    super().save(*args, **kwargs)
+  File "/app/utils/dirtyfields.py", line 34, in save
+    result = super().save(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 874, in save
+    self.save_base(
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 966, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1167, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1218, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/query.py", line 1918, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/sql/compiler.py", line 1925, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/db/utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.12/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: duplicate key value violates unique constraint "payments_purchase_student_id_course_id_2044e6e4_uniq"
+DETAIL:  Key (student_id, course_id)=(3, 1) already exists.
+
+WARNING 2026-01-31 22:39:50,917 log 30 128222161484584 Bad Request: /api/payments/purchases/purchase_course/
+ERROR 2026-01-31 22:40:21,357 services 27 128222161484584 Failed to log quiz unpublish: type object 'ActionType' has no attribute 'QUIZ_UNPUBLISHED'
+INFO 2026-01-31 22:40:21,357 services 27 128222161484584 Unpublished quiz 1 by admin@test.com
+ERROR 2026-01-31 22:40:24,281 services 30 128222161484584 Failed to log quiz publish: type object 'ActionType' has no attribute 'QUIZ_PUBLISHED'
+INFO 2026-01-31 22:40:24,281 services 30 128222161484584 Published quiz 1 by admin@test.com
+ERROR 2026-01-31 22:41:05,448 services 27 128222161484584 Failed to log attempt start: type object 'ActionType' has no attribute 'QUIZ_STARTED'
+INFO 2026-01-31 22:41:05,449 services 27 128222161484584 Student student@student.com started quiz attempt for الامتحان
+WARNING 2026-01-31 22:41:50,481 log 27 128222161484584 Bad Request: /api/quizzes/attempts/1/submit_answer/
+ERROR 2026-01-31 22:41:50,501 services 30 128222161484584 Failed to log attempt submission: type object 'ActionType' has no attribute 'QUIZ_SUBMITTED'
+INFO 2026-01-31 22:41:50,649 services 30 128222161484584 Student student@student.com submitted quiz attempt الامتحان
+ERROR 2026-01-31 22:42:13,316 services 29 128222161484584 Failed to log attempt start: type object 'ActionType' has no attribute 'QUIZ_STARTED'
+INFO 2026-01-31 22:42:13,316 services 29 128222161484584 Student student@student.com started quiz attempt for الامتحان
+ERROR 2026-01-31 22:42:25,018 services 29 128222161484584 Failed to log attempt submission: type object 'ActionType' has no attribute 'QUIZ_SUBMITTED'
+INFO 2026-01-31 22:42:25,018 services 29 128222161484584 Student student@student.com submitted quiz attempt الامتحان
+WARNING 2026-01-31 23:08:29,273 log 29 128222161484584 Not Found: /v1/models
+WARNING 2026-01-31 23:12:54,738 log 28 128222161484584 Not Found: /api/users/users/3
+WARNING 2026-01-31 23:12:56,643 log 30 128222161484584 Not Found: /api/users/users/3
+WARNING 2026-01-31 23:13:00,645 log 27 128222161484584 Not Found: /api/users/users/1
+WARNING 2026-01-31 23:13:17,313 log 29 128222161484584 Not Found: /api/users/users/1
+WARNING 2026-01-31 23:13:28,237 log 29 128222161484584 Not Found: /api/users/users/1
+WARNING 2026-01-31 23:13:47,227 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-01-31 23:13:49,895 log 29 128222161484584 Bad Request: /api/users/auth/login/
+INFO 2026-01-31 23:19:35,951 services 30 128222161484584 Payment Action: manual_deposit - Actor: admin@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 23:19:56,327 services 28 128222161484584 Payment Action: recharge_code_used - Actor: student@test.com - Student: N/A - Amount: N/A - IP: N/A
+ERROR 2026-01-31 23:20:51,394 log 29 128222161484584 Internal Server Error: /api/courses/courses/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1297, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/deletion.py", line 354, in collect
+    raise ProtectedError(
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Course' because they are referenced through protected foreign keys: 'Purchase.course'.", {<Purchase: student1@student.com - كورس 2 - 300.00>})
+ERROR 2026-01-31 23:20:53,679 log 30 128222161484584 Internal Server Error: /api/courses/courses/2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 91, in destroy
+    self.perform_destroy(instance)
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/mixins.py", line 95, in perform_destroy
+    instance.delete()
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/base.py", line 1297, in delete
+    collector.collect([self], keep_parents=keep_parents)
+  File "/usr/local/lib/python3.12/site-packages/django/db/models/deletion.py", line 354, in collect
+    raise ProtectedError(
+django.db.models.deletion.ProtectedError: ("Cannot delete some instances of model 'Course' because they are referenced through protected foreign keys: 'Purchase.course'.", {<Purchase: student1@student.com - كورس 2 - 300.00>})
+INFO 2026-01-31 23:25:51,018 services 28 128222161484584 Payment Action: purchase - Actor: student@test.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 23:25:51,026 services 28 128222161484584 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-01-31 23:25:51,029 services 28 128222161484584 Payment Action: purchase - Actor: student@test.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-01-31 23:33:55,020 log 30 128222161484584 Bad Request: /api/quizzes/questions/
+WARNING 2026-01-31 23:34:02,556 log 30 128222161484584 Bad Request: /api/quizzes/questions/
+ERROR 2026-01-31 23:34:55,235 services 30 128222161484584 Failed to log quiz publish: type object 'ActionType' has no attribute 'QUIZ_PUBLISHED'
+INFO 2026-01-31 23:34:55,235 services 30 128222161484584 Published quiz 2 by admin@test.com
+ERROR 2026-01-31 23:35:14,876 services 29 128222161484584 Failed to log attempt start: type object 'ActionType' has no attribute 'QUIZ_STARTED'
+INFO 2026-01-31 23:35:14,876 services 29 128222161484584 Student student@test.com started quiz attempt for علي الفديو الاول
+ERROR 2026-01-31 23:35:29,515 services 30 128222161484584 Failed to log attempt submission: type object 'ActionType' has no attribute 'QUIZ_SUBMITTED'
+INFO 2026-01-31 23:35:29,516 services 30 128222161484584 Student student@test.com submitted quiz attempt علي الفديو الاول
+ERROR 2026-01-31 23:35:59,595 services 29 128222161484584 Failed to log attempt start: type object 'ActionType' has no attribute 'QUIZ_STARTED'
+INFO 2026-01-31 23:35:59,595 services 29 128222161484584 Student student@test.com started quiz attempt for علي الفديو الاول
+ERROR 2026-01-31 23:36:40,644 services 27 128222161484584 Failed to log attempt submission: type object 'ActionType' has no attribute 'QUIZ_SUBMITTED'
+INFO 2026-01-31 23:36:40,644 services 27 128222161484584 Student student@test.com submitted quiz attempt علي الفديو الاول
+WARNING 2026-02-01 02:12:17,119 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 02:14:03,882 log 29 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 02:14:05,652 log 28 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 02:14:08,860 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 03:01:36,385 log 30 128222161484584 Not Found: /
+WARNING 2026-02-01 03:01:36,535 log 27 128222161484584 Not Found: /login
+WARNING 2026-02-01 09:49:48,731 log 27 128222161484584 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 11:01:18,940 log 18 125284011445032 Not Found: /api/users/users/undefined
+WARNING 2026-02-01 11:01:28,129 log 18 125284011445032 Not Found: /api/users/users/undefined
+WARNING 2026-02-01 11:01:28,578 log 18 125284011445032 Not Found: /favicon.ico
+WARNING 2026-02-01 11:01:37,021 log 19 125284011445032 Not Found: /api/users/users/undefined
+WARNING 2026-02-01 11:03:06,739 log 18 125284011445032 Unauthorized: /api/users/users/
+WARNING 2026-02-01 11:03:33,546 log 18 125284011445032 Not Found: /api/users/users/2
+WARNING 2026-02-01 11:03:40,119 log 19 125284011445032 Method Not Allowed: /api/users/users/
+WARNING 2026-02-01 11:07:14,007 log 17 125284011445032 Not Found: /api/users/users/undefined
+WARNING 2026-02-01 11:11:51,191 log 19 125284011445032 Not Found: /api/users/users/undefined
+WARNING 2026-02-01 11:24:47,146 log 16 125284011445032 Not Found: /api/users/users/3
+WARNING 2026-02-01 11:34:49,197 log 16 125284011445032 Unauthorized: /api/users/users/
+WARNING 2026-02-01 11:35:04,888 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:20:44,300 log 18 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:31:06,339 services 19 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:36:23,583 log 19 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:39:07,379 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:39:23,292 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:39:24,676 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:39:37,867 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:39:47,708 log 17 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:40:54,902 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:41:08,169 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:41:36,042 log 18 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:42:23,971 log 19 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:42:37,078 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:42:47,145 log 19 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:43:42,280 log 16 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 12:43:46,640 log 18 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 12:44:07,426 log 16 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 12:44:09,131 log 16 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 12:44:26,204 services 17 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:45:27,861 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:45:39,557 log 16 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 12:45:43,784 log 17 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 12:46:59,186 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:47:29,983 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:47:32,769 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:47:34,603 log 17 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:47:35,211 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:47:35,501 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:47:36,257 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:48:33,934 services 17 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:48:55,962 services 17 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:48:57,907 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:49:06,165 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:51:24,759 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:52:36,270 services 1555 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:53:04,320 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:53:05,841 log 17 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 12:53:07,304 log 17 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 12:53:47,251 services 17 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:55:42,478 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 12:56:50,243 log 1598 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-01 12:58:28,064 services 1555 125284011445032 Payment Action: purchase - Actor: h.m.h.m11223336@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:58:28,072 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:58:28,076 services 1555 125284011445032 Payment Action: purchase - Actor: h.m.h.m11223336@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:58:33,257 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:00,918 services 1555 125284011445032 Payment Action: purchase - Actor: h.m.h.m11223336@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:00,925 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:00,929 services 1555 125284011445032 Payment Action: purchase - Actor: h.m.h.m11223336@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:37,120 services 17 125284011445032 Payment Action: purchase - Actor: Ghanim2322@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:37,127 services 17 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 12:59:37,131 services 17 125284011445032 Payment Action: purchase - Actor: Ghanim2322@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:00:46,021 log 17 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:01:00,857 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:01:10,829 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:01:12,989 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:01:52,011 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:01:54,900 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 13:01:55,802 services 17 125284011445032 Payment Action: purchase - Actor: janjonaamr312@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:01:55,812 services 17 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:01:55,817 services 17 125284011445032 Payment Action: purchase - Actor: janjonaamr312@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:02:07,938 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 13:02:36,706 services 1555 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:03:23,043 services 1555 125284011445032 Payment Action: purchase - Actor: janjonaamr312@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:03:23,048 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:03:23,051 services 1555 125284011445032 Payment Action: purchase - Actor: janjonaamr312@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:03:28,309 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:04:09,049 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:04:13,970 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:04:28,765 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:29,380 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:29,865 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:30,033 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:56,174 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:57,270 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:04:58,183 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:05:16,251 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:05:28,513 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:05:35,037 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:05:37,739 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:05:38,598 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:05:42,192 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:06:11,809 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:06:29,107 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:06:30,198 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:06:34,154 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:07:06,427 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:07:19,452 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:07:25,248 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:07:26,386 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:07:27,088 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:08:02,865 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:08:07,658 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:08:15,869 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:08:16,903 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:08:36,514 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:09:05,193 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:14,784 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:16,638 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:17,513 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:20,994 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:21,988 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:31,987 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:34,609 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:09:37,233 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:09:43,361 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:09:52,332 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:10:41,811 services 1847 125284011445032 Payment Action: purchase - Actor: sondosalaaeldeen2010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:10:41,818 services 1847 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:10:41,821 services 1847 125284011445032 Payment Action: purchase - Actor: sondosalaaeldeen2010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:10:50,299 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:11:00,115 services 1555 125284011445032 Payment Action: purchase - Actor: sondosalaaeldeen2010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:11:00,122 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:11:00,125 services 1555 125284011445032 Payment Action: purchase - Actor: sondosalaaeldeen2010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:11:33,554 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:11:44,573 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:12:02,727 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:12:48,672 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:12:50,355 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:13:08,872 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:13:44,906 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:15:04,557 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:15:46,920 services 1555 125284011445032 Payment Action: purchase - Actor: ladel20302030@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:15:46,926 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:15:46,929 services 1555 125284011445032 Payment Action: purchase - Actor: ladel20302030@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:15:58,194 services 1555 125284011445032 Payment Action: purchase - Actor: ladel20302030@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:15:58,201 services 1555 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:15:58,205 services 1555 125284011445032 Payment Action: purchase - Actor: ladel20302030@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:16:17,174 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:16:21,396 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:16:23,727 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:16:25,258 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:16:53,614 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:16:59,244 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:17:06,405 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:17:19,514 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:17:20,735 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:06,013 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:10,085 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:35,012 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:48,497 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:51,584 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:18:52,811 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:19:46,066 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:19:58,335 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:00,078 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:06,336 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:17,987 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:20,462 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:22,249 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:20:23,952 log 1555 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:21:47,072 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:22:26,517 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:22:35,593 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:23:39,916 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:23:49,632 log 16 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:23:51,902 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:25:15,851 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:25:22,077 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:25:41,446 log 1598 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:25:44,867 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:25:54,287 log 16 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:26:10,019 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:26:22,163 log 1847 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-01 13:26:25,237 services 1847 125284011445032 Payment Action: purchase - Actor: basant.ahmed.ebrahim@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:26:25,244 services 1847 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:26:25,247 services 1847 125284011445032 Payment Action: purchase - Actor: basant.ahmed.ebrahim@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:26:26,292 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:26:32,224 log 1847 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-01 13:26:50,043 services 1598 125284011445032 Payment Action: purchase - Actor: basant.ahmed.ebrahim@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:26:50,049 services 1598 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:26:50,052 services 1598 125284011445032 Payment Action: purchase - Actor: basant.ahmed.ebrahim@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:26:50,326 log 1598 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 13:27:54,103 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:28:23,313 services 16 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:28:27,702 log 16 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+WARNING 2026-02-01 13:28:40,402 log 1847 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-01 13:28:53,878 services 1598 125284011445032 Payment Action: purchase - Actor: basemmostafa43@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:28:53,884 services 1598 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:28:53,888 services 1598 125284011445032 Payment Action: purchase - Actor: basemmostafa43@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:29:14,001 log 1598 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-01 13:29:21,759 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:30:08,200 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:30:24,384 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:30:25,402 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:30:47,871 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:30:58,918 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:12,883 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:26,392 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:31:27,674 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:31:28,165 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:31:32,203 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:38,761 log 2112 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:39,620 log 2112 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:40,463 log 2112 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:31:41,231 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 13:31:49,608 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:32:09,862 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:32:10,805 log 1598 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 13:32:11,933 log 1847 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 13:32:27,835 services 1847 125284011445032 Payment Action: purchase - Actor: mahmoud117ahmed11@gmil.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:32:27,842 services 1847 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:32:27,846 services 1847 125284011445032 Payment Action: purchase - Actor: mahmoud117ahmed11@gmil.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:32:51,080 services 2090 125284011445032 Payment Action: purchase - Actor: mahmoud117ahmed11@gmil.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:32:51,089 services 2090 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:32:51,094 services 2090 125284011445032 Payment Action: purchase - Actor: mahmoud117ahmed11@gmil.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:33:25,577 services 1598 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:34:33,179 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:35:32,755 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:37:56,967 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:37:57,510 services 1847 125284011445032 Payment Action: purchase - Actor: shmlul333@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:37:57,516 services 1847 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:37:57,520 services 1847 125284011445032 Payment Action: purchase - Actor: shmlul333@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:38:37,042 services 2112 125284011445032 Payment Action: purchase - Actor: shmlul333@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:38:37,050 services 2112 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:38:37,053 services 2112 125284011445032 Payment Action: purchase - Actor: shmlul333@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 13:40:49,314 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:42:11,066 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:42:30,682 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:42:43,390 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:42:51,478 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:43:01,397 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:45:47,030 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:46:40,788 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:46:42,077 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:46:42,894 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:49:04,293 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:50:20,145 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:55:38,582 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:56:03,166 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:56:10,269 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:56:10,532 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:56:54,946 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:57:54,303 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:58:03,464 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 13:58:56,095 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:59:02,789 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 13:59:15,432 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 13:59:43,141 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:01:20,309 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:02:30,737 log 2203 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:02:38,084 log 2203 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 14:03:15,032 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:03:32,822 log 2112 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 14:04:03,332 log 1847 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 14:04:10,292 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:04:13,566 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:05:07,040 log 1847 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 14:07:35,506 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:08:35,159 log 1847 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 14:08:46,917 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:11:22,504 log 1847 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 14:12:34,877 log 2203 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:12:42,134 log 2112 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:12:51,731 log 2112 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:13:09,673 log 2090 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:13:13,313 log 2090 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:13:30,898 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:13:57,365 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:14:15,663 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:15:03,174 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:19:14,461 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:21:15,727 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:21:28,985 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:21:31,939 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:21:48,457 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:22:10,238 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:22:59,136 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:23:51,779 log 2112 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-01 14:23:53,489 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:23:54,746 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:25:54,479 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:28:11,453 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:28:46,877 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:29:24,907 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:31:17,502 log 2112 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-01 14:31:28,677 services 1847 125284011445032 Payment Action: purchase - Actor: hm1672010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:31:28,683 services 1847 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:31:28,687 services 1847 125284011445032 Payment Action: purchase - Actor: hm1672010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:31:49,444 services 2090 125284011445032 Payment Action: purchase - Actor: hm1672010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:31:49,451 services 2090 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:31:49,455 services 2090 125284011445032 Payment Action: purchase - Actor: hm1672010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:32:43,414 services 1847 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:33:04,504 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:33:10,691 log 1847 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:33:56,771 services 2090 125284011445032 Payment Action: purchase - Actor: salahyoussef602@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:33:56,778 services 2090 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:33:56,782 services 2090 125284011445032 Payment Action: purchase - Actor: salahyoussef602@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:34:38,333 services 2090 125284011445032 Payment Action: purchase - Actor: ganaalfadawi@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:34:38,338 services 2090 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:34:38,342 services 2090 125284011445032 Payment Action: purchase - Actor: ganaalfadawi@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:36:02,045 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:37:39,123 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:12,445 services 2112 125284011445032 Payment Action: purchase - Actor: ashmawimohamedabdala@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:12,453 services 2112 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:12,458 services 2112 125284011445032 Payment Action: purchase - Actor: ashmawimohamedabdala@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:41,316 services 3007 125284011445032 Payment Action: purchase - Actor: ashmawimohamedabdala@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:41,323 services 3007 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:40:41,327 services 3007 125284011445032 Payment Action: purchase - Actor: ashmawimohamedabdala@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:41:13,328 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:47:03,412 log 2090 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-01 14:50:10,338 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:51:23,971 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:52:10,650 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:53:43,420 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:53:47,049 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:54:25,356 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:54:44,707 services 2090 125284011445032 Payment Action: purchase - Actor: amnytahmd867@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:54:44,715 services 2090 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:54:44,719 services 2090 125284011445032 Payment Action: purchase - Actor: amnytahmd867@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:54:54,645 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:55:02,589 services 2203 125284011445032 Payment Action: purchase - Actor: amnytahmd867@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:55:02,597 services 2203 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:55:02,602 services 2203 125284011445032 Payment Action: purchase - Actor: amnytahmd867@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:55:04,678 log 2090 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 14:55:14,317 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 14:56:17,376 services 2090 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 14:57:47,975 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 14:57:49,737 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:04:13,629 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:05:35,394 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:06:44,030 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:09:38,716 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:10:10,822 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:10:12,558 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:19,227 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:20,281 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:21,289 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:22,162 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:23,189 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:24,032 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:10:24,856 log 2112 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:11:03,706 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:12:08,441 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:12:38,947 services 3372 125284011445032 Payment Action: purchase - Actor: konbesho@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:12:38,957 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:12:38,962 services 3372 125284011445032 Payment Action: purchase - Actor: konbesho@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:13:11,895 services 2112 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:13:30,483 log 3372 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:14:59,999 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:21:34,181 log 3372 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-01 15:22:04,157 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:22:57,534 log 3372 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:23:04,188 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:23:06,764 services 3684 125284011445032 Payment Action: purchase - Actor: shehabmohsen7719@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:23:06,772 services 3684 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:23:06,777 services 3684 125284011445032 Payment Action: purchase - Actor: shehabmohsen7719@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:23:20,744 log 3372 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:24:08,591 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:24:51,699 services 3372 125284011445032 Payment Action: purchase - Actor: shehabmohsen7719@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:24:51,706 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:24:51,710 services 3372 125284011445032 Payment Action: purchase - Actor: shehabmohsen7719@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:24:59,941 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:26:10,249 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:26:13,594 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:26:14,600 log 3372 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:26:41,571 services 2203 125284011445032 Payment Action: purchase - Actor: hamedhaitham88@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:26:41,579 services 2203 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:26:41,582 services 2203 125284011445032 Payment Action: purchase - Actor: hamedhaitham88@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:26:41,887 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:27:39,334 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:09,833 services 3007 125284011445032 Payment Action: purchase - Actor: jtamer975@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:09,841 services 3007 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:09,845 services 3007 125284011445032 Payment Action: purchase - Actor: jtamer975@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:37,281 services 3007 125284011445032 Payment Action: purchase - Actor: jtamer975@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:37,286 services 3007 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:28:37,290 services 3007 125284011445032 Payment Action: purchase - Actor: jtamer975@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:29:16,241 services 2203 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:29:42,324 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 15:29:45,302 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:31:56,611 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:32:11,132 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:34:35,305 log 3372 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:34:40,093 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:35:49,141 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:36:06,039 log 2203 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 15:37:38,351 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:40:05,822 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:40:59,410 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:42:19,151 services 3933 125284011445032 Payment Action: purchase - Actor: zaidelgamal01@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:42:19,159 services 3933 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:42:19,163 services 3933 125284011445032 Payment Action: purchase - Actor: zaidelgamal01@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:42:48,153 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:43:09,439 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:43:55,001 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:25,212 services 3007 125284011445032 Payment Action: purchase - Actor: ms8443011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:25,219 services 3007 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:25,223 services 3007 125284011445032 Payment Action: purchase - Actor: ms8443011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:47,440 services 3372 125284011445032 Payment Action: purchase - Actor: ms8443011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:47,447 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:46:47,452 services 3372 125284011445032 Payment Action: purchase - Actor: ms8443011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:48:38,840 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:49:35,062 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:50:26,048 services 3372 125284011445032 Payment Action: purchase - Actor: mwm.1642010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:50:26,055 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:50:26,059 services 3372 125284011445032 Payment Action: purchase - Actor: mwm.1642010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:50:40,603 services 3007 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:51:09,882 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:51:13,271 services 3372 125284011445032 Payment Action: purchase - Actor: mwm.1642010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:51:13,279 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:51:13,284 services 3372 125284011445032 Payment Action: purchase - Actor: mwm.1642010@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:52:21,871 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:53:51,263 services 3372 125284011445032 Payment Action: purchase - Actor: mai.hana.moaaz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:53:51,272 services 3372 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:53:51,275 services 3372 125284011445032 Payment Action: purchase - Actor: mai.hana.moaaz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:53:59,618 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:54:20,844 services 3933 125284011445032 Payment Action: purchase - Actor: mai.hana.moaaz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:54:20,852 services 3933 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:54:20,855 services 3933 125284011445032 Payment Action: purchase - Actor: mai.hana.moaaz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 15:54:27,944 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 15:57:58,859 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 15:58:29,136 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 16:00:27,914 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:02:30,463 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:03:35,104 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:04:19,602 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:06:28,161 services 3684 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:07:13,908 services 3372 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 16:12:21,818 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:14:04,108 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:14:08,330 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:20:46,341 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:20:48,287 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:00,458 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:02,094 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:02,483 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:03,208 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:03,616 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:25,050 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:21:25,823 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:22:35,326 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:22:39,077 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:34:42,347 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:44:13,223 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:44:18,557 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 16:53:10,957 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 16:53:37,367 services 3684 125284011445032 Payment Action: purchase - Actor: harwnmazn859@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:53:37,375 services 3684 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:53:37,379 services 3684 125284011445032 Payment Action: purchase - Actor: harwnmazn859@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:55:57,658 services 3933 125284011445032 Payment Action: purchase - Actor: harwnmazn859@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:55:57,665 services 3933 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 16:55:57,668 services 3933 125284011445032 Payment Action: purchase - Actor: harwnmazn859@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 17:02:19,078 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:31,229 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:32,858 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:34,005 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:34,852 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:35,755 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:38,389 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:02:39,581 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:06:55,579 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:07:43,017 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:07:54,477 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:07:55,217 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:07:56,712 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:10,676 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:10,979 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:11,811 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:36,354 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:48,551 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:08:59,838 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:02,216 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:03,211 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:11,618 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:13,056 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:13,896 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:14,598 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:14,938 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:15,329 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:15,642 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:16,060 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:16,393 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:09:16,788 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:08,734 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:17,443 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:19,375 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:20,915 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:21,970 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:24,550 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:28,924 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:29,990 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:10:30,522 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:31,561 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:32,616 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:33,388 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:34,405 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:10:37,506 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:11:00,879 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:15:35,353 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:15:38,894 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:15:39,764 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:09,494 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:11,978 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:40,341 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:44,188 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:47,400 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:16:53,322 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:05,836 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:08,532 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:27,819 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:30,274 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:31,172 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:17:37,277 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:17:47,700 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:17:48,829 log 3007 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:19:18,563 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:20,495 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:21,254 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:22,046 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:23,179 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:23,916 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:24,375 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:24,913 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:25,389 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:25,809 log 3684 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:29,298 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:30,047 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:30,680 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:31,095 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:31,478 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:32,130 log 3007 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:33,032 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:35,835 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:36,455 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:36,746 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:36,948 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:37,131 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:37,489 log 3933 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:37,983 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:19:38,816 log 4533 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-01 17:36:21,211 log 3684 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 17:41:26,839 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:43:52,933 services 5418 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:44:43,416 services 4533 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:46:07,559 services 5583 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:46:53,124 services 4533 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:48:20,543 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 17:48:21,843 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:48:24,535 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:48:52,704 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:48:53,695 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:48:55,396 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 17:48:56,452 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 17:49:42,693 services 5583 125284011445032 Payment Action: purchase - Actor: fatmaashrafbalamony@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:49:42,700 services 5583 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:49:42,704 services 5583 125284011445032 Payment Action: purchase - Actor: fatmaashrafbalamony@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 17:49:49,990 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 17:49:55,202 services 5583 125284011445032 Payment Action: purchase - Actor: fatmaashrafbalamony@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:49:55,208 services 5583 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:49:55,212 services 5583 125284011445032 Payment Action: purchase - Actor: fatmaashrafbalamony@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 17:50:27,713 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 17:51:25,108 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:53:42,323 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:54:09,432 services 5583 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:56:42,241 services 5418 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:58:55,176 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:04,733 services 3933 125284011445032 Payment Action: purchase - Actor: ahmedelsayed446578@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:04,740 services 3933 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:04,744 services 3933 125284011445032 Payment Action: purchase - Actor: ahmedelsayed446578@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:29,409 services 4533 125284011445032 Payment Action: purchase - Actor: jannahhaytham@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:29,416 services 4533 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:29,420 services 4533 125284011445032 Payment Action: purchase - Actor: jannahhaytham@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:53,785 services 3933 125284011445032 Payment Action: purchase - Actor: jannahhaytham@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:53,794 services 3933 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 17:59:53,801 services 3933 125284011445032 Payment Action: purchase - Actor: jannahhaytham@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:00:05,870 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:00:09,618 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:00:10,984 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:00:12,033 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:00:12,901 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:00:13,738 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:02:40,628 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:03:13,647 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:04:19,622 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:07:29,551 services 5418 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:07:49,929 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:51,117 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:51,959 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:52,756 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:53,106 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:53,507 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:53,837 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:56,841 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:57,575 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:58,644 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:59,325 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:07:59,602 log 5583 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:10:06,654 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:24,000 services 4533 125284011445032 Payment Action: purchase - Actor: a.moneer50@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:24,008 services 4533 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:24,012 services 4533 125284011445032 Payment Action: purchase - Actor: a.moneer50@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:30,186 services 4533 125284011445032 Payment Action: purchase - Actor: marwansamireg@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:30,194 services 4533 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:30,199 services 4533 125284011445032 Payment Action: purchase - Actor: marwansamireg@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:54,699 services 5583 125284011445032 Payment Action: purchase - Actor: marwansamireg@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:54,708 services 5583 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:10:54,711 services 5583 125284011445032 Payment Action: purchase - Actor: marwansamireg@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:15:11,391 services 5418 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:20:51,922 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:21:54,423 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:23:43,228 services 3933 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:27:26,645 services 5418 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:28:22,780 log 4533 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:29:55,304 log 3933 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:30:12,248 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:30:13,791 log 5418 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:31:27,834 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:31:27,993 services 6267 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:32:38,728 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:32:38,736 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:32:44,850 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:32:45,991 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:33:07,217 services 6267 125284011445032 Payment Action: purchase - Actor: earafa813@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:33:07,226 services 6267 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:33:07,230 services 6267 125284011445032 Payment Action: purchase - Actor: earafa813@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:33:50,486 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 18:33:52,268 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 18:34:05,363 services 6267 125284011445032 Payment Action: purchase - Actor: earafa813@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:34:05,369 services 6267 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:34:05,373 services 6267 125284011445032 Payment Action: purchase - Actor: earafa813@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:34:50,041 services 4533 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:40:28,621 services 6267 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:40:44,224 log 4533 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-01 18:45:22,894 services 4533 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 18:47:35,412 services 6316 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 18:51:08,004 log 6267 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-01 19:08:16,634 services 6316 125284011445032 Payment Action: purchase - Actor: nasraragab384@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 19:08:16,642 services 6316 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 19:08:16,647 services 6316 125284011445032 Payment Action: purchase - Actor: nasraragab384@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 20:00:35,017 log 6316 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-01 20:02:12,255 log 6316 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 20:06:06,948 services 6316 125284011445032 Payment Action: purchase - Actor: egyotaku2009@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 20:06:06,957 services 6316 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 20:06:06,962 services 6316 125284011445032 Payment Action: purchase - Actor: egyotaku2009@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 20:07:03,264 services 6324 125284011445032 Payment Action: purchase - Actor: egyotaku2009@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 20:07:03,272 services 6324 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 20:07:03,277 services 6324 125284011445032 Payment Action: purchase - Actor: egyotaku2009@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 20:10:27,653 log 6324 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-01 21:21:26,119 services 6316 125284011445032 Payment Action: purchase - Actor: retalsameh1111@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:21:26,127 services 6316 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:21:26,131 services 6316 125284011445032 Payment Action: purchase - Actor: retalsameh1111@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:22:00,013 services 4533 125284011445032 Payment Action: purchase - Actor: retalsameh1111@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:22:00,021 services 4533 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:22:00,025 services 4533 125284011445032 Payment Action: purchase - Actor: retalsameh1111@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 21:37:08,701 log 6267 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-01 21:40:13,680 services 8230 125284011445032 Payment Action: purchase - Actor: masa.alaa16012011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:40:13,691 services 8230 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:40:13,696 services 8230 125284011445032 Payment Action: purchase - Actor: masa.alaa16012011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:41:12,052 services 6316 125284011445032 Payment Action: purchase - Actor: masa.alaa16012011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:41:12,058 services 6316 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-01 21:41:12,062 services 6316 125284011445032 Payment Action: purchase - Actor: masa.alaa16012011@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-01 21:51:49,728 log 8230 125284011445032 Not Found: /
+WARNING 2026-02-01 21:51:49,883 log 6316 125284011445032 Not Found: /favicon.ico
+WARNING 2026-02-02 00:09:34,948 log 8872 125284011445032 Not Found: /
+WARNING 2026-02-02 00:10:44,514 log 8230 125284011445032 Not Found: /robots.txt
+WARNING 2026-02-02 00:37:37,944 log 6316 125284011445032 Not Found: /api/route
+WARNING 2026-02-02 00:37:44,239 log 8872 125284011445032 Not Found: /api/route
+WARNING 2026-02-02 00:41:45,257 log 8230 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+WARNING 2026-02-02 09:23:45,251 log 8872 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 09:23:52,162 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 09:24:16,172 log 6316 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 09:25:48,749 log 6316 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 09:55:28,429 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 09:55:46,670 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:01:23,144 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:01:45,892 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:03:35,185 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:07:01,605 log 18986 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-02 10:08:58,840 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:11:06,523 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 10:18:14,370 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:22:16,481 log 8230 125284011445032 Not Found: /
+WARNING 2026-02-02 10:22:16,787 log 8230 125284011445032 Not Found: /login
+INFO 2026-02-02 10:23:17,667 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:25:21,598 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:27:17,763 services 8230 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:29:52,331 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:30:45,176 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:31:32,218 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 10:31:36,094 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 10:32:12,537 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 10:32:28,027 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:33:00,366 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:33:02,101 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:36:45,213 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 10:36:55,078 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 10:44:09,696 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 10:44:21,946 services 8230 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:44:24,102 log 8230 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 10:49:29,013 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:52:59,017 services 18986 125284011445032 Payment Action: purchase - Actor: rabeefares62@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:52:59,027 services 18986 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:52:59,031 services 18986 125284011445032 Payment Action: purchase - Actor: rabeefares62@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:53:17,109 services 8230 125284011445032 Payment Action: purchase - Actor: rabeefares62@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:53:17,122 services 8230 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:53:17,127 services 8230 125284011445032 Payment Action: purchase - Actor: rabeefares62@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:55:23,095 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 10:58:11,309 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 10:59:33,595 log 18984 125284011445032 Bad Request: /api/payments/purchases/purchase_course/
+INFO 2026-02-02 11:03:01,651 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:04:48,604 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:05:56,109 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:10:17,923 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:10:26,755 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:10:43,056 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:10:46,025 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:10:52,235 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:12:12,574 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:16:01,322 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:16:45,699 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:18:22,388 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:18:24,010 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:18:25,280 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:18:26,499 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:18:57,439 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 11:19:18,843 services 18985 125284011445032 Payment Action: purchase - Actor: omaroboelezz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:19:18,855 services 18985 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:19:18,860 services 18985 125284011445032 Payment Action: purchase - Actor: omaroboelezz@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:19:46,206 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:20:01,642 services 19850 125284011445032 Payment Action: purchase - Actor: shenoooo280@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:20:01,654 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:20:01,660 services 19850 125284011445032 Payment Action: purchase - Actor: shenoooo280@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:23:03,581 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:23:06,174 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:26:23,268 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:26:55,743 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:29:51,004 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:30:06,689 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:30:43,572 services 18984 125284011445032 Payment Action: purchase - Actor: www.nsobhy123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:30:43,581 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:30:43,585 services 18984 125284011445032 Payment Action: purchase - Actor: www.nsobhy123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:33:04,276 services 19850 125284011445032 Payment Action: purchase - Actor: www.nsobhy123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:33:04,284 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:33:04,288 services 19850 125284011445032 Payment Action: purchase - Actor: www.nsobhy123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:33:26,611 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:36:26,034 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:36:37,669 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:38:33,574 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:40:11,406 services 18986 125284011445032 Payment Action: purchase - Actor: yassinmedo1234567@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:40:11,413 services 18986 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:40:11,417 services 18986 125284011445032 Payment Action: purchase - Actor: yassinmedo1234567@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:41:15,330 services 18985 125284011445032 Payment Action: purchase - Actor: yassinmedo1234567@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:41:15,337 services 18985 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:41:15,341 services 18985 125284011445032 Payment Action: purchase - Actor: yassinmedo1234567@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:41:38,152 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:41:40,020 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:41:48,526 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:41:53,959 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:41:54,321 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 11:42:19,443 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:44:09,094 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:44:54,310 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:45:38,656 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:47:16,996 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:47:20,253 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:47:21,677 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:47:23,110 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:47:23,948 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:48:26,504 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:48:28,927 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:48:31,515 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:48:34,119 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:50:34,948 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:51:27,151 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 11:51:41,635 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:51:56,406 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:51:58,676 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:52:06,668 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:52:17,303 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:52:20,375 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 11:52:49,654 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:53:16,736 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:53:17,688 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:53:18,154 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 11:53:24,720 services 19850 125284011445032 Payment Action: purchase - Actor: ahmo17986@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:53:24,728 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:53:24,732 services 19850 125284011445032 Payment Action: purchase - Actor: ahmo17986@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:53:44,547 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 11:56:50,596 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:56:52,854 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:56:57,631 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:12,319 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:16,967 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:18,199 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:18,528 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:18,986 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 11:57:47,186 log 18985 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 11:58:03,397 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 11:59:26,092 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:00:54,194 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:01:44,255 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:02:37,935 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:02:45,079 log 18985 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:03:56,116 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:03:57,341 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:05:33,636 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 12:06:48,748 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:08:08,096 log 18985 125284011445032 Not Found: /api/payments/wallets/
+INFO 2026-02-02 12:09:26,707 services 18985 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:12:36,786 log 18986 125284011445032 Unauthorized: /api/payments/wallets/225/manual_deposit/
+INFO 2026-02-02 12:13:16,091 services 18984 125284011445032 Payment Action: purchase - Actor: sajaabdelsamad54@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:16,099 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:16,104 services 18984 125284011445032 Payment Action: purchase - Actor: sajaabdelsamad54@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:24,726 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:47,838 services 18986 125284011445032 Payment Action: purchase - Actor: sajaabdelsamad54@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:47,845 services 18986 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:13:47,848 services 18986 125284011445032 Payment Action: purchase - Actor: sajaabdelsamad54@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:14:05,714 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:15:03,886 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:15:06,656 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:15:27,642 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 12:15:38,048 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:15:45,972 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:15:47,101 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:16:07,066 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 12:17:37,443 services 18984 125284011445032 Payment Action: purchase - Actor: Lamarghobara27@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:17:37,449 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:17:37,452 services 18984 125284011445032 Payment Action: purchase - Actor: Lamarghobara27@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:18:07,479 services 18984 125284011445032 Payment Action: purchase - Actor: Lamarghobara27@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:18:07,487 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:18:07,492 services 18984 125284011445032 Payment Action: purchase - Actor: Lamarghobara27@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:19:23,532 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:22:14,579 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:13,721 services 18984 125284011445032 Payment Action: purchase - Actor: mshn2810@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:13,727 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:13,730 services 18984 125284011445032 Payment Action: purchase - Actor: mshn2810@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:31,221 services 18984 125284011445032 Payment Action: purchase - Actor: mshn2810@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:31,227 services 18984 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:23:31,230 services 18984 125284011445032 Payment Action: purchase - Actor: mshn2810@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:24:24,683 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:27:22,810 services 20829 125284011445032 Payment Action: purchase - Actor: halayaser49@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:27:22,819 services 20829 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:27:22,825 services 20829 125284011445032 Payment Action: purchase - Actor: halayaser49@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:29:56,110 services 20829 125284011445032 Payment Action: purchase - Actor: halayaser49@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:29:56,116 services 20829 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:29:56,120 services 20829 125284011445032 Payment Action: purchase - Actor: halayaser49@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:32:12,808 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:35:29,874 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:36:22,583 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:38:14,587 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:38:17,104 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:38:18,524 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:38:19,385 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:38:20,485 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:39:04,295 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:39:05,681 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:39:06,455 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:39:07,396 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 12:39:57,703 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:40:41,946 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:40:49,495 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 12:41:03,086 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:41:03,780 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:41:05,783 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:41:12,846 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:41:29,126 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:41:29,490 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:42:15,725 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:42:20,810 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 12:42:36,565 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:43:01,322 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 12:43:15,352 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 12:43:49,034 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 12:44:06,350 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 12:50:13,424 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:52:23,425 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:54:23,800 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 12:58:06,698 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:05:42,999 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:07:05,096 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 13:07:21,611 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 13:09:59,046 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:14:02,797 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 13:14:36,731 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:15:01,536 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:15:11,959 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:15:16,427 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:15:20,648 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:15:22,041 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 13:16:03,657 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:19:08,096 services 18984 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:20:34,137 log 18984 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 13:21:56,417 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:21:58,396 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:21:59,514 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:00,652 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:01,162 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:01,584 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:02,671 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:31,744 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:33,514 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:35,180 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:35,739 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:36,248 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:47,647 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:49,015 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:22:49,586 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:12,905 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:19,214 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:37,090 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:40,171 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:41,130 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:41,905 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:42,607 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:44,295 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:44,874 log 18984 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:23:45,563 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 13:26:08,623 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:26:32,693 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 13:27:45,847 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:47,943 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:48,878 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:49,600 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:50,082 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:50,555 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:51,379 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:52,416 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:55,968 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:56,677 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:56,896 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:57,305 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:57,547 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:57,858 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:58,212 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:58,581 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:27:58,947 log 18986 125284011445032 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 13:29:46,157 services 18986 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:30:48,476 log 18986 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 13:30:52,969 services 21841 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:31:01,393 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 13:32:24,528 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:32:26,045 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:32:32,765 log 20829 125284011445032 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 13:32:32,767 log 20829 125284011445032 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 13:32:32,795 log 20829 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 13:33:50,609 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:34:09,588 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:34:11,119 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:34:11,753 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:34:12,364 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:34:12,847 log 20829 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:38:30,152 log 19850 125284011445032 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 13:38:30,158 log 19850 125284011445032 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 13:38:30,164 log 19850 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 13:40:44,193 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 13:41:38,313 log 20829 125284011445032 Not Found: /api/payments/wallets/
+WARNING 2026-02-02 13:42:28,296 log 21945 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 13:44:13,035 services 21946 125284011445032 Payment Action: purchase - Actor: gmer44ali544428@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:44:13,043 services 21946 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:44:13,047 services 21946 125284011445032 Payment Action: purchase - Actor: gmer44ali544428@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:45:09,351 log 21945 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 13:46:49,227 services 21945 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:48:35,779 log 21946 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:48:38,352 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:48:45,315 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:48:45,901 log 21946 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:48:49,332 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:48:49,807 log 19850 125284011445032 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 13:50:51,857 log 21945 125284011445032 Unauthorized: /api/dashboard/filter-options/
+WARNING 2026-02-02 13:50:51,913 log 20829 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 13:51:43,434 log 20829 125284011445032 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 13:51:43,444 log 20829 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 13:51:43,446 log 21946 125284011445032 Unauthorized: /api/notifications/notifications/
+INFO 2026-02-02 13:55:26,479 services 20829 125284011445032 Payment Action: purchase - Actor: seifalashraf@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:55:26,487 services 20829 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:55:26,491 services 20829 125284011445032 Payment Action: purchase - Actor: seifalashraf@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:55:47,962 services 20829 125284011445032 Payment Action: purchase - Actor: seifalashraf@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:55:47,969 services 20829 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:55:47,974 services 20829 125284011445032 Payment Action: purchase - Actor: seifalashraf@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:56:29,799 services 19850 125284011445032 Payment Action: purchase - Actor: r34962777@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:56:29,807 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 13:56:29,811 services 19850 125284011445032 Payment Action: purchase - Actor: r34962777@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 13:58:16,544 log 21946 125284011445032 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 14:03:38,743 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 14:07:11,627 log 21946 125284011445032 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 14:07:11,628 log 19850 125284011445032 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 14:07:11,633 log 21945 125284011445032 Unauthorized: /api/dashboard/
+INFO 2026-02-02 14:20:49,660 services 21945 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:25,603 services 20829 125284011445032 Payment Action: purchase - Actor: faristalaat2910@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:25,611 services 20829 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:25,615 services 20829 125284011445032 Payment Action: purchase - Actor: faristalaat2910@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:42,228 services 19850 125284011445032 Payment Action: purchase - Actor: faristalaat2910@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:42,234 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:22:42,238 services 19850 125284011445032 Payment Action: purchase - Actor: faristalaat2910@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 14:25:28,776 log 19850 125284011445032 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 14:25:28,779 log 21946 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 14:25:28,780 log 19850 125284011445032 Unauthorized: /api/payments/wallets/my_wallet/
+INFO 2026-02-02 14:30:55,584 services 21946 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:33:14,646 services 21945 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:46:02,260 services 21946 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:46:51,207 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:00,303 services 19850 125284011445032 Payment Action: purchase - Actor: janaahmedabdelhamid52@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:00,316 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:00,323 services 19850 125284011445032 Payment Action: purchase - Actor: janaahmedabdelhamid52@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:18,957 services 19850 125284011445032 Payment Action: purchase - Actor: janaahmedabdelhamid52@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:18,963 services 19850 125284011445032 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:49:18,967 services 19850 125284011445032 Payment Action: purchase - Actor: janaahmedabdelhamid52@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 14:54:01,745 services 20829 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 15:01:07,667 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:02:09,615 log 21945 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:02:11,179 log 21945 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:03:07,960 log 21945 125284011445032 Unauthorized: /api/dashboard/filter-options/
+WARNING 2026-02-02 15:03:07,970 log 20829 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 15:03:08,177 log 20829 125284011445032 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 15:03:08,188 log 19850 125284011445032 Unauthorized: /api/dashboard/filter-options/
+WARNING 2026-02-02 15:03:43,320 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:03:44,790 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:03:45,681 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:03:46,373 log 19850 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:04:08,939 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:04:09,824 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:04:26,241 log 20829 125284011445032 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:05:25,203 log 19850 125284011445032 Method Not Allowed: /api/users/auth/login/
+WARNING 2026-02-02 15:05:25,757 log 20829 125284011445032 Not Found: /favicon.ico
+WARNING 2026-02-02 15:15:57,198 log 19850 125284011445032 Unauthorized: /api/dashboard/filter-options/
+WARNING 2026-02-02 15:15:57,205 log 21945 125284011445032 Unauthorized: /api/dashboard/
+INFO 2026-02-02 15:17:46,142 services 19850 125284011445032 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 15:37:33,202 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 15:41:37,391 log 243 139221173238568 Bad Request: /api/payments/purchases/purchase_course/
+WARNING 2026-02-02 15:43:20,243 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:43:28,273 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 15:45:33,930 log 11 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 15:47:13,337 services 9 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 15:48:06,441 services 11 139221173238568 Payment Action: purchase - Actor: waelm0647@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 15:48:06,450 services 11 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 15:48:06,454 services 11 139221173238568 Payment Action: purchase - Actor: waelm0647@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 15:51:20,680 log 9 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 15:51:20,741 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 15:51:20,755 log 12 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 15:53:58,083 services 11 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 15:58:39,358 log 11 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 15:58:39,358 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 15:58:39,360 log 243 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 16:04:50,857 log 243 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 16:04:50,871 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 16:04:50,903 log 11 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 16:24:56,436 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 16:29:54,168 log 11 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 16:32:03,477 services 11 139221173238568 Payment Action: purchase - Actor: Ziadmoneer07@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 16:32:03,486 services 11 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 16:32:03,493 services 11 139221173238568 Payment Action: purchase - Actor: Ziadmoneer07@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 16:34:46,635 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:34:51,708 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:35:52,265 log 243 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 16:35:52,270 log 243 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 16:35:52,276 log 243 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 16:36:27,038 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:36:28,241 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:36:29,232 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:36:29,622 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:36:30,432 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:36:32,190 log 11 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 16:37:37,788 services 9 139221173238568 Payment Action: purchase - Actor: noor.0bayoumi11@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 16:37:37,796 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 16:37:37,800 services 9 139221173238568 Payment Action: purchase - Actor: noor.0bayoumi11@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 16:39:13,385 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:39:17,464 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:39:24,664 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:39:27,153 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 16:45:40,058 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 16:45:40,076 log 9 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 16:45:40,076 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 16:58:07,370 log 12 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 16:58:59,482 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:00,642 services 9 139221173238568 Payment Action: purchase - Actor: shoshoelshafeey@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:00,651 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:00,655 services 9 139221173238568 Payment Action: purchase - Actor: shoshoelshafeey@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:13,172 services 12 139221173238568 Payment Action: purchase - Actor: shoshoelshafeey@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:13,179 services 12 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 17:23:13,183 services 12 139221173238568 Payment Action: purchase - Actor: shoshoelshafeey@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 17:38:07,166 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:41:19,552 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:42:07,932 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:42:21,777 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:46:47,816 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:49:27,511 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:55:27,741 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:55:34,596 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:55:39,388 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 17:56:34,929 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:02:22,052 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:03:20,651 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:04:01,219 log 243 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 18:17:38,515 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 18:19:24,624 log 12 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 18:19:24,626 log 243 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 18:19:24,648 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 18:22:13,808 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 18:22:13,971 log 243 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 18:22:15,565 log 11 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 18:24:49,625 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 18:24:49,633 log 12 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 18:24:49,633 log 243 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 18:28:40,054 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:30:08,857 services 9 139221173238568 Payment Action: purchase - Actor: shrouk456m123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:30:08,864 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:30:08,870 services 9 139221173238568 Payment Action: purchase - Actor: shrouk456m123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:33:40,816 services 11 139221173238568 Payment Action: purchase - Actor: shrouk456m123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:33:40,823 services 11 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:33:40,827 services 11 139221173238568 Payment Action: purchase - Actor: shrouk456m123@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:50:04,043 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 18:50:47,888 services 9 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 18:54:28,840 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:54:42,894 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:54:44,777 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 18:55:33,199 log 243 139221173238568 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 19:01:34,762 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 19:13:37,723 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:13:37,963 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:13:46,868 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:21:29,396 log 11 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 19:25:49,920 services 11 139221173238568 Payment Action: purchase - Actor: dimaelashry220@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:25:49,928 services 11 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:25:49,932 services 11 139221173238568 Payment Action: purchase - Actor: dimaelashry220@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:26:00,089 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:26:57,483 services 12 139221173238568 Payment Action: purchase - Actor: y.01002231098@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:26:57,490 services 12 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:26:57,494 services 12 139221173238568 Payment Action: purchase - Actor: y.01002231098@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:27:00,250 services 11 139221173238568 Payment Action: purchase - Actor: dimaelashry220@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:27:00,260 services 11 139221173238568 Payment Action: purchase - Actor: dimaelashry220@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:28:30,147 services 9 139221173238568 Payment Action: purchase - Actor: y.01002231098@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:28:30,155 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:28:30,159 services 9 139221173238568 Payment Action: purchase - Actor: y.01002231098@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:32:36,978 services 9 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 19:34:05,301 log 12 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 19:34:05,387 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 19:34:05,785 log 11 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 19:35:11,731 log 243 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 19:36:32,929 services 9 139221173238568 Payment Action: purchase - Actor: Tmare3501@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:36:32,937 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 19:36:32,941 services 9 139221173238568 Payment Action: purchase - Actor: Tmare3501@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 19:37:43,454 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:37:44,908 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:38:57,365 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:40:00,513 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 19:40:00,514 log 11 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 19:40:00,596 log 11 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 19:40:00,632 log 9 139221173238568 Unauthorized: /api/courses/enrollments/
+WARNING 2026-02-02 19:40:00,656 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 19:40:00,658 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 19:45:22,966 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:45:26,060 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:45:28,629 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:48:11,423 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:48:27,079 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:50:07,807 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 19:51:08,972 log 12 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:51:10,509 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:51:12,808 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:51:16,126 log 9 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:51:17,242 log 243 139221173238568 Bad Request: /api/users/auth/register/
+INFO 2026-02-02 19:52:26,634 services 12 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 19:56:01,664 log 243 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 19:56:03,028 log 12 139221173238568 Bad Request: /api/users/auth/register/
+WARNING 2026-02-02 20:10:40,750 log 11 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 20:10:40,761 log 11 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:10:40,761 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 20:16:11,842 log 243 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 20:16:11,842 log 9 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:16:11,984 log 243 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 20:22:14,760 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:22:55,594 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 20:23:05,667 log 11 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:23:05,671 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 20:23:05,675 log 11 139221173238568 Unauthorized: /api/notifications/notifications/
+INFO 2026-02-02 20:25:06,785 services 9 139221173238568 Payment Action: purchase - Actor: salmahelile834@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:25:06,795 services 9 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:25:06,800 services 9 139221173238568 Payment Action: purchase - Actor: salmahelile834@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:25:32,740 services 11 139221173238568 Payment Action: purchase - Actor: salmahelile834@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:25:32,747 services 11 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:25:32,751 services 11 139221173238568 Payment Action: purchase - Actor: salmahelile834@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:27:55,023 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:29:29,351 services 243 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:34:53,133 services 9 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:36:47,221 services 243 139221173238568 Payment Action: purchase - Actor: omarjukr91@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:36:47,230 services 243 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 20:36:47,234 services 243 139221173238568 Payment Action: purchase - Actor: omarjukr91@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 20:38:18,768 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:38:23,994 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:38:25,690 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:38:26,259 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:38:26,796 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:42:35,858 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:43:01,033 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:43:03,770 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:45:51,283 log 9 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 20:45:51,284 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:45:51,290 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 20:46:38,866 log 12 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 20:46:38,879 log 11 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:46:38,888 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 20:53:20,990 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:24,188 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:25,480 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:26,567 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:27,404 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:29,409 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:30,263 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:32,779 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:33,874 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:34,499 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:34,880 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:35,183 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:35,615 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:36,122 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:37,071 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:53:38,188 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:00,890 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:01,736 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:02,440 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:03,147 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:03,853 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:55:04,857 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:45,526 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:47,293 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:48,489 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:49,209 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:49,967 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:50,668 log 12 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:51,549 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:52,185 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:52,430 log 11 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:53,417 log 9 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:54,130 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:56:58,010 log 243 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 20:59:16,347 log 243 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 20:59:16,388 log 12 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 20:59:16,486 log 12 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 21:11:04,323 log 12 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 21:11:04,325 log 243 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 21:11:04,325 log 9 139221173238568 Unauthorized: /api/courses/courses/
+WARNING 2026-02-02 21:18:32,823 log 243 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 21:18:32,865 log 4992 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 21:18:34,917 log 243 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 21:19:11,949 services 5007 139221173238568 Payment Action: manual_deposit - Actor: mohamedghanem@admin.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 21:19:50,020 services 4935 139221173238568 Payment Action: purchase - Actor: eawad4899@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 21:19:50,030 services 4935 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 21:19:50,035 services 4935 139221173238568 Payment Action: purchase - Actor: eawad4899@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 21:19:55,627 log 4935 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 21:21:56,614 log 4992 139221173238568 Bad Request: /api/users/auth/login/
+INFO 2026-02-02 21:22:56,057 services 243 139221173238568 Payment Action: recharge_code_used - Actor: eawad4899@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 21:29:55,771 log 4992 139221173238568 Bad Request: /api/users/auth/login/
+WARNING 2026-02-02 21:32:58,036 log 5007 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 21:32:58,067 log 4992 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 21:32:58,096 log 4992 139221173238568 Unauthorized: /api/dashboard/
+INFO 2026-02-02 21:33:26,422 services 5098 139221173238568 Payment Action: purchase - Actor: ddemo3949@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 21:33:26,430 services 5098 139221173238568 Payment Action: course_stats_updated - Actor: System - Student: N/A - Amount: N/A - IP: N/A
+INFO 2026-02-02 21:33:26,434 services 5098 139221173238568 Payment Action: purchase - Actor: ddemo3949@gmail.com - Student: N/A - Amount: N/A - IP: N/A
+WARNING 2026-02-02 21:36:07,445 log 5007 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 21:36:07,450 log 4992 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 21:36:07,455 log 5113 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 22:01:59,776 log 5007 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 22:01:59,781 log 5098 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 22:01:59,788 log 5113 139221173238568 Unauthorized: /api/dashboard/
+WARNING 2026-02-02 22:09:54,126 log 5113 139221173238568 Unauthorized: /api/notifications/notifications/
+WARNING 2026-02-02 22:09:54,126 log 5098 139221173238568 Unauthorized: /api/payments/wallets/my_wallet/
+WARNING 2026-02-02 22:09:54,131 log 5098 139221173238568 Unauthorized: /api/dashboard/

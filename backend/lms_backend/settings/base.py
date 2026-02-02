@@ -81,29 +81,17 @@ DATABASES = {
         'HOST': config('DB_HOST', default='localhost'),
         'PORT': config('DB_PORT', default='5432'),
         'OPTIONS': {
-            'connect_timeout': 10,
+            'connect_timeout': 30,
         },
     }
 }
 
-# Password validation
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS': {
-            'min_length': 8,
-        }
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
-]
+# Password validation - DISABLED FOR DEV
+AUTH_PASSWORD_VALIDATORS = []
+
+# URL/Slash
+APPEND_SLASH = False
+PREPEND_WWW = False
 
 # Internationalization
 LANGUAGE_CODE = 'en-us'
@@ -169,8 +157,32 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=7),
 }
 
-# CORS Settings (override in dev/prod)
+# CORS Settings
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
+CORS_ALLOW_HEADERS = ['*']
+
+# CSRF - OPEN EVERYTHING
+CSRF_TRUSTED_ORIGINS = [
+    'http://72.62.232.8',
+    'http://admin.mohamedghanem.cloud',
+    'http://student.mohamedghanem.cloud',
+]
+CSRF_COOKIE_SECURE = False
+CSRF_COOKIE_HTTPONLY = False
+CSRF_USE_SESSIONS = False
+CSRF_COOKIE_SAMESITE = None
+
+# Session
+SESSION_COOKIE_SECURE = False
+SESSION_COOKIE_HTTPONLY = False
+SESSION_COOKIE_SAMESITE = None
+
+# Password Hashing Speed
+from django.contrib.auth.hashers import PBKDF2PasswordHasher
+PBKDF2PasswordHasher.iterations = 10000
+
 
 # Create logs directory if it doesn't exist
 LOGS_DIR = BASE_DIR / 'logs'

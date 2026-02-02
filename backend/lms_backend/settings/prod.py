@@ -14,36 +14,29 @@ if SECRET_KEY == 'django-insecure-key-change-in-production':
 
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS',
-    default='student.mohamedghanem.cloud,mohamedghanem.cloud'
-).split(',')
+ALLOWED_HOSTS = ['*']
 
-# CORS - Restrict to specific origins in production
-CORS_ALLOW_ALL_ORIGINS = False
+# CORS - OPEN EVERYTHING
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = config(
     'CORS_ALLOWED_ORIGINS',
-    default='',
-    cast=lambda v: [s.strip() for s in v.split(',') if s.strip()]
-)
+    default='http://72.62.232.8,http://admin.mohamedghanem.cloud,http://student.mohamedghanem.cloud'
+).split(',')
 
-# Security settings - STRICT for production
-SECURE_SSL_REDIRECT = config('SECURE_SSL_REDIRECT', default=True, cast=bool)
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 31536000  # 1 year
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = 'DENY'
+# Security settings - DISABLED FOR NOW
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_HSTS_SECONDS = 0
+SECURE_HSTS_INCLUDE_SUBDOMAINS = False
+SECURE_HSTS_PRELOAD = False
+SECURE_BROWSER_XSS_FILTER = False
+SECURE_CONTENT_TYPE_NOSNIFF = False
+X_FRAME_OPTIONS = 'ALLOWALL'
 
-# Password hashing - Use Argon2 in production
+# Password hashing
 PASSWORD_HASHERS = [
-    'django.contrib.auth.hashers.Argon2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 ]
 
 # Database connection pooling (if using pgBouncer or similar)

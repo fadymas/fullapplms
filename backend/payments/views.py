@@ -52,17 +52,27 @@ class WalletViewSet(viewsets.ReadOnlyModelViewSet):
     
     def get_queryset(self):
         queryset = super().get_queryset()
+        user = self.request.user
         
-        if self.request.user.role == 'student':
-            queryset = queryset.filter(student=self.request.user)
-        elif self.request.user.role == 'teacher':
+        if user.role == 'student':
+            queryset = queryset.filter(student=user)
+        elif user.role == 'teacher':
             # Teachers can see wallets of students enrolled in their courses
             from courses.models import Enrollment
             student_ids = Enrollment.objects.filter(
-                course__instructor=self.request.user
+                course__instructor=user
             ).values_list('student_id', flat=True).distinct()
             queryset = queryset.filter(student_id__in=student_ids)
         
+        # Search filter
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(
+                Q(student__email__icontains=search) |
+                Q(student__student_profile__full_name__icontains=search) |
+                Q(student__student_profile__phone__icontains=search)
+            )
+            
         return queryset
     
     @action(detail=False, methods=['get'])
@@ -188,6 +198,15 @@ class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
         if student_email and user.role in ['admin', 'teacher']:
             queryset = queryset.filter(wallet__student__email__icontains=student_email)
         
+        # Search filter
+        search = self.request.query_params.get('search')
+        if search and user.role in ['admin', 'teacher']:
+            queryset = queryset.filter(
+                Q(wallet__student__email__icontains=search) |
+                Q(wallet__student__student_profile__full_name__icontains=search) |
+                Q(wallet__student__student_profile__phone__icontains=search)
+            )
+        
         return queryset
     
     @action(detail=False, methods=['get'])
@@ -250,6 +269,15 @@ class PurchaseViewSet(viewsets.ReadOnlyModelViewSet):
         end_date = self.request.query_params.get('end_date')
         if end_date:
             queryset = queryset.filter(purchased_at__lte=end_date)
+        
+        # Search filter
+        search = self.request.query_params.get('search')
+        if search and user.role in ['admin', 'teacher']:
+            queryset = queryset.filter(
+                Q(student__email__icontains=search) |
+                Q(student__student_profile__full_name__icontains=search) |
+                Q(student__student_profile__phone__icontains=search)
+            )
         
         return queryset
 

@@ -50,7 +50,7 @@ services:
       context: ./student
       args:
         REACT_APP_API_URL: "http://72.62.232.8:8000/"
-        PUBLIC_URL: /student
+#        PUBLIC_URL: /student
     container_name: react-student
     restart: unless-stopped
     networks:
@@ -63,9 +63,9 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d:ro
-      - ./nginx/html:/usr/share/nginx/html:ro
-      - ./backend/media:/usr/share/nginx/html/media:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/html:/usr/share/nginx/html
+      - ./backend/media:/usr/share/nginx/html/media
     depends_on:
       - react-admin
       - react-student

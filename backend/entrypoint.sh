@@ -23,4 +23,12 @@ python manage.py collectstatic --noinput
 
 # Start the application
 echo "Starting Gunicorn..."
-exec gunicorn --bind 0.0.0.0:8000 lms_backend.wsgi:application
+exec gunicorn --bind 0.0.0.0:8000 \
+    --timeout 300 \
+    --workers 4 \
+    --worker-class sync \
+    --max-requests 1000 \
+    --max-requests-jitter 50 \
+    --access-logfile - \
+    --error-logfile - \
+    lms_backend.wsgi:application

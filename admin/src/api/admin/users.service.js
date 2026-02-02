@@ -44,11 +44,11 @@ const adminUsersService = {
   },
 
   deleteUser: async (userId) => {
-    const response = await apiClient.delete(`/api/users/users/${userId}`)
+    const response = await apiClient.delete(`/api/users/users/${userId}/`)
     return response.data
   }
 
-  
+
 }
 
 export default adminUsersService

@@ -235,7 +235,7 @@ const Wallets = () => {
                   <input
                     type="text"
                     className="form-control search-input"
-                    placeholder="ابحث باسم الطالب أو البريد الإلكتروني..."
+                    placeholder="ابحث باسم الطالب، البريد، أو رقم الهاتف..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
@@ -282,6 +282,7 @@ const Wallets = () => {
                       <tr>
                         <th>الطالب</th>
                         <th>البريد الإلكتروني</th>
+                        <th>رقم الهاتف</th>
                         <th>الرصيد</th>
                         <th>تاريخ الإنشاء</th>
                         <th>آخر تحديث</th>
@@ -296,6 +297,9 @@ const Wallets = () => {
                           </td>
                           <td>
                             <div className="student-email">{wallet.student_email}</div>
+                          </td>
+                          <td>
+                            <div className="student-phone text-muted">{wallet.student_phone || '-'}</div>
                           </td>
                           <td>
                             <div className="balance-display">
@@ -400,8 +404,11 @@ const Wallets = () => {
                       <h6 className="mb-2">
                         <strong>الطالب:</strong> {selectedWallet.student_name}
                       </h6>
-                      <p className="mb-2 text-muted">
+                      <p className="mb-1 text-muted">
                         <strong>البريد الإلكتروني:</strong> {selectedWallet.student_email}
+                      </p>
+                      <p className="mb-2 text-muted">
+                        <strong>رقم الهاتف:</strong> {selectedWallet.student_phone || '-'}
                       </p>
                       <p className="mb-0">
                         <strong>الرصيد الحالي: </strong>
