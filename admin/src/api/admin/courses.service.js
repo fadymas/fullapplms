@@ -47,9 +47,9 @@ const adminCoursesService = {
   },
 
   // List all lectures (paginated)
-  listLectures: async (page = 1) => {
+  listLectures: async (page = 1, section) => {
     const response = await apiClient.get('/api/courses/lectures/', {
-      params: { page }
+      params: { page, section }
     })
     return response.data
   },

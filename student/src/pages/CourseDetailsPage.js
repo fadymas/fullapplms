@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useParams, Link } from 'react-router-dom';
-import DashboardNavbar from '../components/DashboardNavbar';
-import Sidebar from '../components/Sidebar';
-import Footer from '../components/Footer';
-import courseService from '../api/course.service';
-import paymentService from '../api/payment.service';
-import useUIStore from '../store/uiStore';
-import '../styles/CourseDetailsPage.css';
+import React, { useState, useEffect, useRef } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import DashboardNavbar from '../components/DashboardNavbar'
+import Sidebar from '../components/Sidebar'
+import Footer from '../components/Footer'
+import courseService from '../api/course.service'
+import paymentService from '../api/payment.service'
+import useUIStore from '../store/uiStore'
+import '../styles/CourseDetailsPage.css'
 
 // Icons
 import {
@@ -28,119 +28,140 @@ import {
   FaMobileAlt,
   FaSpinner,
   FaExclamationTriangle
-} from 'react-icons/fa';
+} from 'react-icons/fa'
 
-const BASE_URL = 'http://72.62.232.8';
+const BASE_URL = 'http://72.62.232.8'
 
 function CourseDetailsPage() {
-  const { id } = useParams();
-  const { darkMode } = useUIStore();
-  const [activeTab, setActiveTab] = useState('overview');
-  const [course, setCourse] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [purchaseLoading, setPurchaseLoading] = useState(false);
-  const [expandedWeeks, setExpandedWeeks] = useState({});
-  const [sidebarFixed, setSidebarFixed] = useState(true);
-  const sidebarRef = useRef(null);
-  const contentRef = useRef(null);
+  const { id } = useParams()
+  const { darkMode } = useUIStore()
+  const [activeTab, setActiveTab] = useState('overview')
+  const [course, setCourse] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [purchaseLoading, setPurchaseLoading] = useState(false)
+  const [expandedWeeks, setExpandedWeeks] = useState({})
+  const [sidebarFixed, setSidebarFixed] = useState(true)
+  const sidebarRef = useRef(null)
+  const contentRef = useRef(null)
 
   const fetchCourseDetails = async () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true)
+    setError(null)
     try {
-      const data = await courseService.getCourseDetails(id);
-      setCourse(data);
+      const data = await courseService.getCourseDetails(id)
+      setCourse(data)
       if (data.sections?.length > 0) {
-        setExpandedWeeks({ [data.sections[0].id]: true });
+        setExpandedWeeks({ [data.sections[0].id]: true })
       }
     } catch (err) {
-      console.error('Error fetching course details:', err);
-      setError('تعذر تحميل بيانات الكورس. يرجى المحاولة مرة أخرى لاحقاً.');
+      console.error('Error fetching course details:', err)
+      setError('تعذر تحميل بيانات الكورس. يرجى المحاولة مرة أخرى لاحقاً.')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   useEffect(() => {
-    fetchCourseDetails();
-  }, [id]);
+    fetchCourseDetails()
+  }, [id])
 
   const handlePurchase = async () => {
-    if (!course) return;
+    if (!course) return
 
-    if (!window.confirm(`هل أنت متأكد من رغبتك في شراء كورس "${course.title}" بمبلغ ${course.price} جنية؟`)) {
-      return;
+    if (
+      !window.confirm(
+        `هل أنت متأكد من رغبتك في شراء كورس "${course.title}" بمبلغ ${course.price} جنية؟`
+      )
+    ) {
+      return
     }
 
-    setPurchaseLoading(true);
+    setPurchaseLoading(true)
     try {
-      await paymentService.purchaseCourse(course.id);
-      alert('تم شراء الكورس بنجاح! يمكنك الآن الوصول للمحتوى.');
-      await fetchCourseDetails(); // Refresh to update enrollment status
+      await paymentService.purchaseCourse(course.id)
+      alert('تم شراء الكورس بنجاح! يمكنك الآن الوصول للمحتوى.')
+      await fetchCourseDetails() // Refresh to update enrollment status
     } catch (err) {
-      const msg = err.response?.data?.detail || 'فشلت عملية الشراء. تأكد من وجود رصيد كافٍ في محفظتك.';
-      alert(msg);
+      const msg =
+        err.response?.data?.detail || 'فشلت عملية الشراء. تأكد من وجود رصيد كافٍ في محفظتك.'
+      alert(msg)
     } finally {
-      setPurchaseLoading(false);
+      setPurchaseLoading(false)
     }
-  };
+  }
 
   const toggleWeek = (weekId) => {
-    setExpandedWeeks(prev => ({
+    setExpandedWeeks((prev) => ({
       ...prev,
       [weekId]: !prev[weekId]
-    }));
-  };
+    }))
+  }
 
   const getItemIcon = (type) => {
     switch (type) {
-      case 'video': return <FaPlayCircle className="me-2 text-primary" />;
+      case 'video':
+        return <FaPlayCircle className="me-2 text-primary" />
       case 'file':
-      case 'document': return <FaFileAlt className="me-2 text-success" />;
+      case 'document':
+        return <FaFileAlt className="me-2 text-success" />
       case 'quiz':
-      case 'exam': return <FaQuestionCircle className="me-2 text-warning" />;
-      default: return <FaFile className="me-2" />;
+      case 'exam':
+        return <FaQuestionCircle className="me-2 text-warning" />
+      default:
+        return <FaFile className="me-2" />
     }
-  };
+  }
 
   const formatImage = (url) => {
-    if (!url) return 'https://via.placeholder.com/800x450?text=Course+Image';
-    return url.startsWith('http') ? url : `${BASE_URL}${url}`;
-  };
+    if (!url) return 'https://via.placeholder.com/800x450?text=Course+Image'
+    return url.startsWith('http') ? url : `${BASE_URL}${url}`
+  }
 
   if (loading) {
     return (
-      <div className={`course-details-page ${darkMode ? 'dark-mode' : ''} min-vh-100 d-flex flex-column`}>
+      <div
+        className={`course-details-page ${darkMode ? 'dark-mode' : ''} min-vh-100 d-flex flex-column`}
+      >
         <DashboardNavbar />
         <div className="flex-grow-1 d-flex align-items-center justify-content-center">
           <div className="text-center">
-            <FaSpinner className="spinner-animation mb-3" style={{ fontSize: '3rem', color: '#4CACB7' }} />
+            <FaSpinner
+              className="spinner-animation mb-3"
+              style={{ fontSize: '3rem', color: '#4CACB7' }}
+            />
             <h4 className={darkMode ? 'text-light' : ''}>جاري تحميل بيانات الكورس...</h4>
           </div>
         </div>
       </div>
-    );
+    )
   }
 
   if (error || !course) {
     return (
-      <div className={`course-details-page ${darkMode ? 'dark-mode' : ''} min-vh-100 d-flex flex-column`}>
+      <div
+        className={`course-details-page ${darkMode ? 'dark-mode' : ''} min-vh-100 d-flex flex-column`}
+      >
         <DashboardNavbar />
         <div className="flex-grow-1 d-flex align-items-center justify-content-center">
           <div className="text-center p-4 card shadow-sm">
             <FaExclamationTriangle className="text-danger mb-3" style={{ fontSize: '3rem' }} />
             <h4 className="mb-3 text-danger">{error || 'لم يتم العثور على الكورس'}</h4>
-            <Link to="/courses" className="btn btn-primary px-4">العودة لجميع الكورسات</Link>
+            <Link to="/courses" className="btn btn-primary px-4">
+              العودة لجميع الكورسات
+            </Link>
           </div>
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 
   return (
-    <div className={`main-content course-details-page ${darkMode ? 'dark-mode' : ''}`} ref={contentRef}>
+    <div
+      className={`main-content course-details-page ${darkMode ? 'dark-mode' : ''}`}
+      ref={contentRef}
+    >
       <DashboardNavbar />
       <Sidebar activePage="courses" />
 
@@ -163,25 +184,21 @@ function CourseDetailsPage() {
                 <div className="row g-3 py-3">
                   <div className="col-md-6 col-6">
                     <div className="d-flex align-items-center">
-                      <div className="icon-badge me-2 bg-primary-soft"><FaUser /></div>
+                      <div className="icon-badge me-2 bg-primary-soft">
+                        <FaUser />
+                      </div>
                       <div>
                         <small className="text-muted d-block">المعلم</small>
                         <strong>{course.instructor_name}</strong>
                       </div>
                     </div>
                   </div>
+
                   <div className="col-md-6 col-6">
                     <div className="d-flex align-items-center">
-                      <div className="icon-badge me-2 bg-success-soft"><FaUsers /></div>
-                      <div>
-                        <small className="text-muted d-block">طلاب الكورس</small>
-                        <strong>{course.student_count} طالب</strong>
+                      <div className="icon-badge me-2 bg-warning-soft">
+                        <FaCalendarAlt />
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-6">
-                    <div className="d-flex align-items-center">
-                      <div className="icon-badge me-2 bg-warning-soft"><FaCalendarAlt /></div>
                       <div>
                         <small className="text-muted d-block">المستوى</small>
                         <strong>{course.difficulty_level || 'عام'}</strong>
@@ -190,7 +207,9 @@ function CourseDetailsPage() {
                   </div>
                   <div className="col-md-6 col-6">
                     <div className="d-flex align-items-center">
-                      <div className="icon-badge me-2 bg-info-soft"><FaClock /></div>
+                      <div className="icon-badge me-2 bg-info-soft">
+                        <FaClock />
+                      </div>
                       <div>
                         <small className="text-muted d-block">السعر</small>
                         <strong>{course.price} جنية</strong>
@@ -228,12 +247,17 @@ function CourseDetailsPage() {
                   <div className="tab-pane fade show active">
                     <h5 className="mb-4 d-flex align-items-center fw-bold">
                       محتوى الدورة التعليمية
-                      <span className="badge bg-light text-primary ms-2 fs-14 border">{course.sections?.length || 0} فصول</span>
+                      <span className="badge bg-light text-primary ms-2 fs-14 border">
+                        {course.sections?.length || 0} فصول
+                      </span>
                     </h5>
 
                     <div className="accordion custom-accordion" id="mainAccordion">
                       {course.sections?.map((section) => (
-                        <div className="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm" key={section.id}>
+                        <div
+                          className="accordion-item mb-3 border rounded-3 overflow-hidden shadow-sm"
+                          key={section.id}
+                        >
                           <h2 className="accordion-header">
                             <button
                               className={`accordion-button py-3 ${expandedWeeks[section.id] ? '' : 'collapsed'}`}
@@ -244,11 +268,15 @@ function CourseDetailsPage() {
                                 <span className="section-number me-3">{section.order || '•'}</span>
                                 <span className="fw-bold fs-16">{section.title}</span>
                               </div>
-                              <span className="badge bg-light text-muted ms-auto me-3 border">{section.lectures?.length || 0} دروس</span>
+                              <span className="badge bg-light text-muted ms-auto me-3 border">
+                                {section.lectures?.length || 0} دروس
+                              </span>
                             </button>
                           </h2>
 
-                          <div className={`accordion-collapse collapse ${expandedWeeks[section.id] ? 'show' : ''}`}>
+                          <div
+                            className={`accordion-collapse collapse ${expandedWeeks[section.id] ? 'show' : ''}`}
+                          >
                             <div className="accordion-body p-2 bg-light bg-opacity-10">
                               <div className="list-group list-group-flush rounded-3 overflow-hidden">
                                 {section.lectures?.length > 0 ? (
@@ -258,19 +286,37 @@ function CourseDetailsPage() {
                                       key={lecture.id}
                                     >
                                       <div className="sub-icon me-3">
-                                        {(!course.is_enrolled && !lecture.is_free) ? <FaLock className="text-danger opacity-50" /> : getItemIcon(lecture.lecture_type)}
+                                        {!course.is_enrolled && !lecture.is_free ? (
+                                          <FaLock className="text-danger opacity-50" />
+                                        ) : (
+                                          getItemIcon(lecture.lecture_type)
+                                        )}
                                       </div>
 
                                       <div className="flex-grow-1">
-                                        <div className="fw-bold fs-14 text-dark-custom">{lecture.title}</div>
+                                        <div className="fw-bold fs-14 text-dark-custom">
+                                          {lecture.title}
+                                        </div>
                                         <div className="small text-muted d-flex align-items-center">
-                                          {lecture.duration_minutes && <><FaClock className="me-1 fs-11" /> {lecture.duration_minutes} دقيقة</>}
-                                          {lecture.is_free && <span className="badge bg-success-soft text-success ms-2 fs-10">مجاني</span>}
+                                          {lecture.duration_minutes && (
+                                            <>
+                                              <FaClock className="me-1 fs-11" />{' '}
+                                              {lecture.duration_minutes} دقيقة
+                                            </>
+                                          )}
+                                          {lecture.is_free && (
+                                            <span className="badge bg-success-soft text-success ms-2 fs-10">
+                                              مجاني
+                                            </span>
+                                          )}
                                         </div>
                                       </div>
 
                                       {course.is_enrolled || lecture.is_free ? (
-                                        <Link to={`/course/${course.id}/lecture/${lecture.id}`} className="btn btn-primary-soft btn-sm scale-hover">
+                                        <Link
+                                          to={`/course/${course.id}/lecture/${lecture.id}`}
+                                          className="btn btn-primary-soft btn-sm scale-hover"
+                                        >
                                           <span>دخول</span>
                                         </Link>
                                       ) : (
@@ -279,7 +325,9 @@ function CourseDetailsPage() {
                                     </div>
                                   ))
                                 ) : (
-                                  <div className="text-center py-4 text-muted small">هذا الفصل لا يحتوي على محاضرات بعد</div>
+                                  <div className="text-center py-4 text-muted small">
+                                    هذا الفصل لا يحتوي على محاضرات بعد
+                                  </div>
                                 )}
                               </div>
                             </div>
@@ -300,19 +348,25 @@ function CourseDetailsPage() {
                     <div className="row g-4 mt-2">
                       <div className="col-md-6">
                         <div className="info-card p-3 rounded-4 border bg-white h-100 shadow-sm">
-                          <h6 className="fw-bold mb-3 d-flex align-items-center"><FaLanguage className="me-2 text-primary" /> اللغة</h6>
+                          <h6 className="fw-bold mb-3 d-flex align-items-center">
+                            <FaLanguage className="me-2 text-primary" /> اللغة
+                          </h6>
                           <p className="mb-0 text-muted">{course.language || 'العربية'}</p>
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="info-card p-3 rounded-4 border bg-white h-100 shadow-sm">
-                          <h6 className="fw-bold mb-3 d-flex align-items-center"><FaMobileAlt className="me-2 text-primary" /> التوافق</h6>
+                          <h6 className="fw-bold mb-3 d-flex align-items-center">
+                            <FaMobileAlt className="me-2 text-primary" /> التوافق
+                          </h6>
                           <p className="mb-0 text-muted">يعمل على جميع الأجهزة الذكية</p>
                         </div>
                       </div>
                       <div className="col-md-6">
                         <div className="info-card p-3 rounded-4 border bg-white h-100 shadow-sm">
-                          <h6 className="fw-bold mb-3 d-flex align-items-center"><FaCertificate className="me-2 text-primary" /> الشهادة</h6>
+                          <h6 className="fw-bold mb-3 d-flex align-items-center">
+                            <FaCertificate className="me-2 text-primary" /> الشهادة
+                          </h6>
                           <p className="mb-0 text-muted">متاح شهادة عند إتمام الكورس بنجاح</p>
                         </div>
                       </div>
@@ -331,9 +385,15 @@ function CourseDetailsPage() {
             >
               <div className="card-body p-4">
                 <div className="text-center mb-4">
-                  <div className={`purchase-status-badge p-3 rounded-4 mb-3 ${course.is_enrolled ? 'bg-success-soft text-success' : 'bg-primary-soft text-primary'}`}>
-                    <h5 className="mb-1 fw-bold">{course.is_enrolled ? 'تم الشراء بنجاح' : 'اشترك الآن في الكورس'}</h5>
-                    <p className="small mb-0">{course.is_enrolled ? 'لديك صلاحية الوصول للمحتوى' : 'ابدأ رحلة تعلمك اليوم'}</p>
+                  <div
+                    className={`purchase-status-badge p-3 rounded-4 mb-3 ${course.is_enrolled ? 'bg-success-soft text-success' : 'bg-primary-soft text-primary'}`}
+                  >
+                    <h5 className="mb-1 fw-bold">
+                      {course.is_enrolled ? 'تم الشراء بنجاح' : 'اشترك الآن في الكورس'}
+                    </h5>
+                    <p className="small mb-0">
+                      {course.is_enrolled ? 'لديك صلاحية الوصول للمحتوى' : 'ابدأ رحلة تعلمك اليوم'}
+                    </p>
                   </div>
                 </div>
 
@@ -343,10 +403,19 @@ function CourseDetailsPage() {
                     disabled={purchaseLoading}
                     className="btn btn-primary w-100 py-3 rounded-3 fw-bold mb-4 shadow-sm pulse-animation"
                   >
-                    {purchaseLoading ? <FaSpinner className="spinner-animation" /> : <>شراء الكورس {course.price} جنية <FaCreditCard className="ms-2" /></>}
+                    {purchaseLoading ? (
+                      <FaSpinner className="spinner-animation" />
+                    ) : (
+                      <>
+                        شراء الكورس {course.price} جنية <FaCreditCard className="ms-2" />
+                      </>
+                    )}
                   </button>
                 ) : (
-                  <Link to={`/course/${course.id}/player`} className="btn btn-success w-100 py-3 rounded-3 fw-bold mb-4 shadow-sm">
+                  <Link
+                    to={`/course/${course.id}/player`}
+                    className="btn btn-success w-100 py-3 rounded-3 fw-bold mb-4 shadow-sm"
+                  >
                     ابدأ التعلم الآن <FaVideo className="ms-2" />
                   </Link>
                 )}
@@ -355,7 +424,10 @@ function CourseDetailsPage() {
                 <ul className="list-unstyled course-meta-list small">
                   <li className="mb-3 d-flex align-items-center">
                     <FaPlayCircle className="me-2 text-primary" />
-                    <span>{course.sections?.reduce((sum, s) => sum + (s.lectures?.length || 0), 0) || 0} درس تعليمي</span>
+                    <span>
+                      {course.sections?.reduce((sum, s) => sum + (s.lectures?.length || 0), 0) || 0}{' '}
+                      درس تعليمي
+                    </span>
                   </li>
                   <li className="mb-3 d-flex align-items-center">
                     <FaClock className="me-2 text-primary" />
@@ -376,13 +448,18 @@ function CourseDetailsPage() {
                 <h6 className="fw-bold mb-3">الفصول الرئيسية</h6>
                 <div className="sidebar-sections-list">
                   {course.sections?.slice(0, 5).map((section) => (
-                    <div key={section.id} className="d-flex align-items-center mb-2 small text-muted">
+                    <div
+                      key={section.id}
+                      className="d-flex align-items-center mb-2 small text-muted"
+                    >
                       <span className="me-2 text-primary">•</span>
                       <span className="text-truncate">{section.title}</span>
                     </div>
                   ))}
                   {course.sections?.length > 5 && (
-                    <div className="text-primary small fw-bold">...و {course.sections.length - 5} فصول أخرى</div>
+                    <div className="text-primary small fw-bold">
+                      ...و {course.sections.length - 5} فصول أخرى
+                    </div>
                   )}
                 </div>
               </div>
@@ -392,7 +469,7 @@ function CourseDetailsPage() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default CourseDetailsPage;
+export default CourseDetailsPage

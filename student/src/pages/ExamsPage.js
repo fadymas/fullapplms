@@ -14,10 +14,38 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 16
+    marginBottom: 16,
+    flexWrap: 'wrap',
+    gap: 16
   },
+  headerLeft: { flex: '1 1 auto' },
   title: { fontSize: 28, fontWeight: 700, letterSpacing: 0.2, margin: 0 },
   subtitle: { color: '#6b7280', fontSize: 14 },
+  filterContainer: {
+    display: 'flex',
+    gap: 8,
+    background: '#fff',
+    border: '1px solid #e5e7eb',
+    borderRadius: 12,
+    padding: 8,
+    'margin-top': '100px'
+  },
+  filterBtn: {
+    background: 'transparent',
+    border: 'none',
+    borderRadius: 8,
+    padding: '8px 16px',
+    cursor: 'pointer',
+    fontWeight: 600,
+    fontSize: 14,
+    color: '#6b7280',
+    transition: 'all 120ms ease'
+  },
+  filterBtnActive: {
+    background: '#4f46e5',
+    color: '#fff',
+    boxShadow: '0 1px 2px rgba(79, 70, 229, 0.3)'
+  },
   grid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
@@ -46,6 +74,14 @@ const styles = {
     fontSize: 12,
     fontWeight: 600,
     marginBottom: 8
+  },
+  badgeAssignment: {
+    background: '#fef3c7',
+    color: '#92400e'
+  },
+  badgeQuiz: {
+    background: '#dbeafe',
+    color: '#1e40af'
   },
   cardTitle: { fontSize: 18, fontWeight: 700, margin: '4px 0 6px' },
   cardDesc: { color: '#4b5563', fontSize: 14, minHeight: 40, marginBottom: 10 },
@@ -122,7 +158,6 @@ const styles = {
     animation: 'shine 1.4s ease-in-out infinite',
     height: 160
   }
-  // Keyframes can't be declared inline; we append them once below.
 }
 
 // Append keyframes for skeleton shimmer on first import
@@ -151,12 +186,18 @@ function QuizCard({ quiz, onStart, startingId }) {
     is_mandatory,
     can_take,
     id,
-    questions
+    quiz_type
   } = quiz
 
   const canStart = can_take && remaining_attempts > 0
   const isStarting = startingId === id
   const [hovered, setHovered] = useState(false)
+
+  // Get badge style based on quiz type
+  const typeBadgeStyle =
+    quiz_type === 'assignment'
+      ? { ...styles.badge, ...styles.badgeAssignment }
+      : { ...styles.badge, ...styles.badgeQuiz }
 
   return (
     <>
@@ -166,18 +207,26 @@ function QuizCard({ quiz, onStart, startingId }) {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >
-        {lecture_title ? <div style={styles.badge}>{lecture_title}</div> : null}
+        <div style={{ display: 'flex', gap: 8, marginBottom: 8, flexWrap: 'wrap' }}>
+          {quiz_type && (
+            <div style={typeBadgeStyle}>
+              {quiz_type === 'assignment' ? '📝 Assignment' : '📋 Quiz'}
+            </div>
+          )}
+          {lecture_title && <div style={styles.badge}>{lecture_title}</div>}
+        </div>
+
         <div style={styles.cardTitle}>{title}</div>
         {description ? <div style={styles.cardDesc}>{description}</div> : null}
 
         <div style={styles.metaRow}>
           <span style={styles.metaPill}>Questions: {question_count}</span>
           <span style={styles.metaPill}>Points: {total_points}</span>
-          <span style={styles.metaPill}>Passing: {passing_grade}</span>
+          <span style={styles.metaPill}>Passing: {passing_grade}%</span>
           <span style={styles.metaPill}>
             Attempts: {remaining_attempts}/{max_attempts}
           </span>
-          <span style={styles.metaPill}>{is_mandatory ? 'mandatory' : 'Optional'}</span>
+          {is_mandatory && <span style={styles.metaPill}>⭐ Mandatory</span>}
         </div>
 
         <div style={styles.footer}>
@@ -204,6 +253,9 @@ function SkeletonCard() {
 export default function ExamsPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const initialPage = searchParams.get('page') ? Number(searchParams.get('page')) : 1
+  const initialFilter = searchParams.get('type') || 'all'
+
+  const [quizTypeFilter, setQuizTypeFilter] = useState(initialFilter)
 
   const {
     quizzes,
@@ -221,12 +273,19 @@ export default function ExamsPage() {
     range
   } = useQuizzes(initialPage)
 
-  // Keep ?page in sync with state
+  // Keep ?page and ?type in sync with state
   React.useEffect(() => {
     const next = new URLSearchParams()
     if (page && page !== 1) next.set('page', String(page))
+    if (quizTypeFilter && quizTypeFilter !== 'all') next.set('type', quizTypeFilter)
     setSearchParams(next)
-  }, [page, setSearchParams])
+  }, [page, quizTypeFilter, setSearchParams])
+
+  // Filter quizzes based on selected type
+  const filteredQuizzes = useMemo(() => {
+    if (quizTypeFilter === 'all') return quizzes
+    return quizzes.filter((quiz) => quiz.quiz_type === quizTypeFilter)
+  }, [quizzes, quizTypeFilter])
 
   const [startError, setStartError] = useState(null)
   const [startingFor, setStartingFor] = useState(null)
@@ -259,22 +318,62 @@ export default function ExamsPage() {
     }
   }
 
+  const handleFilterChange = (filter) => {
+    setQuizTypeFilter(filter)
+    setPage(1) // Reset to first page when changing filter
+  }
+
   const totalCount = meta.count || quizzes.length || 0
+  const filteredCount = filteredQuizzes.length
+
   const headerSubtitle = useMemo(() => {
     if (loading && totalCount === 0) return 'Fetching quizzes...'
-    return `Total quizzes: ${totalCount}`
-  }, [loading, totalCount])
+    if (quizTypeFilter === 'all') return `Total: ${totalCount}`
+
+    const typeLabel = quizTypeFilter === 'assignment' ? 'Assignments' : 'Quizzes'
+    return `${typeLabel}: ${filteredCount} of ${totalCount}`
+  }, [loading, totalCount, filteredCount, quizTypeFilter])
 
   return (
     <>
-      {' '}
       <DashboardNavbar />
-      <Sidebar />{' '}
+      <Sidebar />
       <div style={styles.container}>
         <div style={styles.header}>
-          <div>
+          <div style={styles.headerLeft}>
             <h1 style={styles.title}>Exams</h1>
             <div style={styles.subtitle}>{headerSubtitle}</div>
+          </div>
+
+          {/* Filter Buttons */}
+          <div style={styles.filterContainer}>
+            <button
+              onClick={() => handleFilterChange('all')}
+              style={{
+                ...styles.filterBtn,
+                ...(quizTypeFilter === 'all' ? styles.filterBtnActive : {})
+              }}
+            >
+              All
+            </button>
+            <button
+              onClick={() => handleFilterChange('quiz')}
+              style={{
+                ...styles.filterBtn,
+                ...(quizTypeFilter === 'quiz' ? styles.filterBtnActive : {})
+              }}
+            >
+              📋 Quizzes
+            </button>
+            <button
+              onClick={() => handleFilterChange('assignment')}
+              style={{
+                ...styles.filterBtn,
+                ...(quizTypeFilter === 'assignment' ? styles.filterBtnActive : {})
+              }}
+            >
+              📝 Assignments
+            </button>
           </div>
         </div>
 
@@ -294,54 +393,68 @@ export default function ExamsPage() {
             ? Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)
             : null}
 
-          {!loading && !error && quizzes?.length === 0 ? (
+          {!loading && !error && filteredQuizzes?.length === 0 ? (
             <div style={{ gridColumn: '1 / -1' }}>
-              <div style={styles.empty}>No quizzes available at the moment.</div>
+              <div style={styles.empty}>
+                {quizTypeFilter === 'all'
+                  ? 'No quizzes available at the moment.'
+                  : `No ${quizTypeFilter === 'assignment' ? 'assignments' : 'quizzes'} available.`}
+              </div>
             </div>
           ) : null}
 
-          {quizzes?.map((q) => (
+          {filteredQuizzes?.map((q) => (
             <QuizCard key={q.id} quiz={q} onStart={handleStart} startingId={startingFor} />
           ))}
         </div>
 
-        {/* Pagination */}
-        <div style={styles.pagination} aria-label="Pagination">
-          <div style={styles.pageInfo}>
-            {totalCount > 0 ? `Showing ${range.start}–${range.end} of ${totalCount}` : 'No items'}
-          </div>
-
-          <div style={styles.pageControls}>
-            <button
-              onClick={prevPage}
-              disabled={!hasPrev || loading}
-              style={{ ...styles.pageBtn, ...(!hasPrev || loading ? styles.pageBtnDisabled : {}) }}
-            >
-              →
-            </button>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <input
-                type="number"
-                min={1}
-                value={page}
-                onChange={(e) => setPage(Math.max(1, Number(e.target.value || 1)))}
-                style={styles.pageInput}
-                disabled={loading}
-                aria-label="Current page"
-              />
-              <span style={{ color: '#6b7280', fontSize: 13 }}>of {totalPages}</span>
+        {/* Pagination - Only show if there are items */}
+        {totalCount > 0 && (
+          <div style={styles.pagination} aria-label="Pagination">
+            <div style={styles.pageInfo}>
+              {filteredCount > 0
+                ? `Showing ${Math.min(range.start, filteredCount)}–${Math.min(range.end, filteredCount)} of ${filteredCount}${quizTypeFilter !== 'all' ? ` (${totalCount} total)` : ''}`
+                : 'No items'}
             </div>
 
-            <button
-              onClick={nextPage}
-              disabled={!hasNext || loading}
-              style={{ ...styles.pageBtn, ...(!hasNext || loading ? styles.pageBtnDisabled : {}) }}
-            >
-              ←
-            </button>
+            <div style={styles.pageControls}>
+              <button
+                onClick={prevPage}
+                disabled={!hasPrev || loading}
+                style={{
+                  ...styles.pageBtn,
+                  ...(!hasPrev || loading ? styles.pageBtnDisabled : {})
+                }}
+              >
+                ←
+              </button>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <input
+                  type="number"
+                  min={1}
+                  value={page}
+                  onChange={(e) => setPage(Math.max(1, Number(e.target.value || 1)))}
+                  style={styles.pageInput}
+                  disabled={loading}
+                  aria-label="Current page"
+                />
+                <span style={{ color: '#6b7280', fontSize: 13 }}>of {totalPages}</span>
+              </div>
+
+              <button
+                onClick={nextPage}
+                disabled={!hasNext || loading}
+                style={{
+                  ...styles.pageBtn,
+                  ...(!hasNext || loading ? styles.pageBtnDisabled : {})
+                }}
+              >
+                →
+              </button>
+            </div>
           </div>
-        </div>
+        )}
       </div>
       <Footer />
     </>

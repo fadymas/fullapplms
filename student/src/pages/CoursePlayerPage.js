@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import ReactPlayer from 'react-player'
 import DashboardNavbar from '../components/DashboardNavbar'
+import CustomVideoPlayer from '../components/CustomVideoPlayer'
 import courseService from '../api/course.service'
 import useUIStore from '../store/uiStore'
 import useAuthStore from '../store/authStore'
@@ -15,18 +15,14 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaLock,
-  FaArrowRight,
   FaSpinner,
   FaExclamationCircle,
   FaUserGraduate
 } from 'react-icons/fa'
 
 /**
- * CoursePlayerPage
- * Matches API_DOCUMENTATION.md requirements:
- * 1. Fetch course structure via GET /api/courses/courses/{id}/ (or /content/)
- * 2. Fetch specific lecture via GET /api/courses/lectures/{id}/
- * 3. Enforce permission checks based on Backend response.
+ * CoursePlayerPage with Custom Video Controls
+ * Includes custom video player with fullscreen, quality, skip buttons, and volume control
  */
 function CoursePlayerPage() {
   const { id: courseId, lectureId } = useParams()
@@ -34,11 +30,8 @@ function CoursePlayerPage() {
   const { darkMode } = useUIStore()
   const { isAuthenticated } = useAuthStore()
 
-  // 'course' holds metadata (title, price, is_enrolled) from getCourseDetails
   const [course, setCourse] = useState(null)
-  // 'sections' holds the full content (lectures, text, urls) from getCourseContent
   const [sections, setSections] = useState([])
-
   const [currentLecture, setCurrentLecture] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -56,25 +49,22 @@ function CoursePlayerPage() {
         setLoading(true)
         setError(null)
 
-        // Fetch Metadata (for title, is_enrolled, etc.)
+        // Fetch Metadata
         const metaData = await courseService.getCourseDetails(courseId)
         setCourse(metaData)
 
-        // Fetch Full Content (Sections & Lectures with URLs/Text)
-        // Note: User snippet shows this returns an Array of sections directly.
+        // Fetch Full Content
         const contentData = await courseService.getCourseContent(courseId)
         const sectionsList = Array.isArray(contentData) ? contentData : contentData.sections || []
         setSections(sectionsList)
 
         // Initial Redirection or Section Expansion
         if (!lectureId) {
-          // Auto-redirect to first lecture if none specified
           const firstLecture = sectionsList?.[0]?.lectures?.[0]
           if (firstLecture) {
             navigate(`/course/${courseId}/lecture/${firstLecture.id}`, { replace: true })
           }
         } else {
-          // Expand the section containing the current lecture
           const section = sectionsList.find((s) =>
             s.lectures?.some((l) => l.id.toString() === lectureId.toString())
           )
@@ -93,7 +83,6 @@ function CoursePlayerPage() {
   }, [courseId, isAuthenticated])
 
   // 2. Client-side Lecture Lookup
-  // Whenever lectureId changes (or sections are loaded), update currentLecture from local state.
   useEffect(() => {
     if (!lectureId || sections.length === 0) return
 
@@ -108,14 +97,6 @@ function CoursePlayerPage() {
 
     if (found) {
       setCurrentLecture(found)
-    } else {
-      // Lecture ID in URL but not found in content
-      // This might happen if permission was denied for that specific lecture at fetch time,
-      // or invalid ID.
-      if (!loading) {
-        // Only set error if we are done loading and truly can't find it
-        // console.warn("Lecture not found in loaded content");
-      }
     }
   }, [lectureId, sections, loading])
 
@@ -143,6 +124,14 @@ function CoursePlayerPage() {
     }
   }
 
+  // Prepare video URL
+  const getVideoUrl = (videoUrl) => {
+    if (!videoUrl) return null
+    return videoUrl.startsWith('http')
+      ? videoUrl.trim()
+      : `http://72.62.232.8${videoUrl.trim()}`
+  }
+
   // Global Loading state
   if (loading) {
     return (
@@ -156,7 +145,7 @@ function CoursePlayerPage() {
     )
   }
 
-  // Global Error State (e.g. Course not found or not enrolled at all)
+  // Global Error State
   if (error && !course) {
     return (
       <div className={`course-player-page ${darkMode ? 'dark-mode' : ''} min-vh-100`}>
@@ -189,20 +178,10 @@ function CoursePlayerPage() {
         <div className="player-main shadow-inner">
           {currentLecture ? (
             <div className="fade-in">
-              {/* Video Player Section */}
+              {/* Custom Video Player Section */}
               {currentLecture.lecture_type === 'video' && currentLecture.video_url ? (
-                <div className="video-wrapper shadow-lg border border-dark mb-4">
-                  <ReactPlayer
-                    src={
-                      currentLecture.video_url.startsWith('http')
-                        ? currentLecture.video_url.trim()
-                        : `http://72.62.232.8${currentLecture.video_url.trim()}`
-                    }
-                    className="react-player"
-                    width="100%"
-                    height="100%"
-                    controls={true}
-                  />
+                <div className="video-wrapper-custom shadow-lg border border-dark mb-4">
+                  <CustomVideoPlayer url={getVideoUrl(currentLecture.video_url)} />
                 </div>
               ) : null}
 
@@ -219,7 +198,7 @@ function CoursePlayerPage() {
                   )}
                 </div>
 
-                {/* Text Content (Description/Article) */}
+                {/* Text Content */}
                 <div className="lecture-content-body">
                   {currentLecture.content ? (
                     <div
@@ -232,7 +211,6 @@ function CoursePlayerPage() {
                     <p className="text-muted">لا يوجد محتوى نصي.</p>
                   )}
 
-                  {/* Description fallback if different from content */}
                   {currentLecture.description &&
                     currentLecture.description !== currentLecture.content && (
                       <p className="text-secondary small mt-2">{currentLecture.description}</p>
@@ -354,7 +332,6 @@ function CoursePlayerPage() {
                                   {lecture.duration_minutes} دقيقة
                                 </small>
                               )}
-                              {/* Show type label if needed */}
                             </div>
                           </div>
                           {isActive && <div className="active-indicator ms-2"></div>}

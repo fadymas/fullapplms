@@ -9,7 +9,6 @@ import Courses from './pages/Courses'
 import Lectures from './pages/Lectures'
 import CourseDetails from './pages/CourseDetails'
 import ExamList from './pages/ExamList'
-import ExamAdd from './pages/ExamAdd'
 import Reports from './pages/Reports'
 import TeacherProfile from './pages/TeacherProfile'
 import TeacherCodes from './pages/TeacherCodes'
@@ -109,14 +108,6 @@ function App() {
         element={
           <ProtectedRoute requiredRole="admin">
             <QuizList />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/admin/exams/add"
-        element={
-          <ProtectedRoute requiredRole="admin">
-            <ExamAdd />
           </ProtectedRoute>
         }
       />
@@ -247,14 +238,7 @@ function App() {
           </ProtectedRoute>
         }
       />
-      <Route
-        path="/teacher/exams/add"
-        element={
-          <ProtectedRoute requiredRole="teacher">
-            <ExamAdd />
-          </ProtectedRoute>
-        }
-      />
+
       <Route
         path="/teacher/exams/:quizId"
         element={

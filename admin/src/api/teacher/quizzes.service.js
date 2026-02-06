@@ -46,7 +46,11 @@ const teacherQuizzesService = {
   },
 
   createQuestion: async (questionData) => {
-    const response = await apiClient.post(`/api/quizzes/questions/`, questionData)
+    const response = await apiClient.post(`/api/quizzes/questions/`, questionData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
     return response.data
   },
 

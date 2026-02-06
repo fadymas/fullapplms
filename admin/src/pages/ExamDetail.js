@@ -18,7 +18,9 @@ import {
   FaGraduationCap,
   FaClipboardList,
   FaPen,
-  FaEye
+  FaEye,
+  FaImage,
+  FaTimes
 } from 'react-icons/fa'
 import { useParams, useNavigate } from 'react-router-dom'
 import Header from '../components/Header'
@@ -53,9 +55,16 @@ const QuizDetail = () => {
     text: '',
     points: '',
     order: '',
-    options: ['', '', '', ''],
-    correct_answer: ''
+    image: null,
+    choices: [
+      { text: '', image: null, is_correct: false, order: 1 },
+      { text: '', image: null, is_correct: false, order: 2 },
+      { text: '', image: null, is_correct: false, order: 3 },
+      { text: '', image: null, is_correct: false, order: 4 }
+    ]
   })
+  const [questionImagePreview, setQuestionImagePreview] = useState(null)
+  const [choiceImagePreviews, setChoiceImagePreviews] = useState({})
 
   // Grading state - store individual question scores
   const [questionScores, setQuestionScores] = useState({})
@@ -116,28 +125,40 @@ const QuizDetail = () => {
   const handleCreateQuestion = async (e) => {
     e.preventDefault()
     try {
-      const questionData = {
-        quiz: quizId,
-        question_type: questionForm.question_type,
-        text: questionForm.text,
-        points: parseFloat(questionForm.points),
-        order: questionForm.order ? parseInt(questionForm.order) : null
+      const formData = new FormData()
+
+      // Add basic fields
+      formData.append('quiz', quizId)
+      formData.append('question_type', questionForm.question_type)
+      formData.append('text', questionForm.text)
+      formData.append('points', questionForm.points)
+
+      if (questionForm.order) {
+        formData.append('order', questionForm.order)
       }
 
-      // Add options and correct_answer only for multiple_choice and true_false
+      // Add question image if exists
+      if (questionForm.image instanceof File) {
+        formData.append('image', questionForm.image)
+      }
+
+      // For multiple choice and true/false, add choices
       if (questionForm.question_type !== 'essay') {
-        questionData.options = questionForm.options.filter((opt) => opt.trim() !== '')
-        questionData.correct_answer = questionForm.correct_answer
-        if (questionForm.question_type === 'true_false') {
-          questionData.options = questionForm.options.map((opt) =>
-            opt === 'صح' ? 'True' : 'False'
-          )
+        const correctChoise = questionForm.choices.filter((choice) => choice.is_correct === true)
+        const choices = questionForm.choices
+          .filter((choice) => choice.text.trim() !== '')
+          .map((choice, index) => ({
+            text: choice.text,
+            is_correct: choice.is_correct,
+            image: choice.image,
+            order: index + 1
+          }))
 
-          questionData.correct_answer = questionForm.correct_answer === 'صح' ? 'True' : 'False'
-        }
+        formData.append('choices', JSON.stringify(choices))
+        formData.append('correct_answer', correctChoise[0].text)
       }
 
-      const newQuestion = await teacherQuizzesService.createQuestion(questionData)
+      const newQuestion = await teacherQuizzesService.createQuestion(formData)
       setQuestions([...questions, newQuestion])
       setShowQuestionModal(false)
       resetQuestionForm()
@@ -150,26 +171,47 @@ const QuizDetail = () => {
   const handleUpdateQuestion = async (e) => {
     e.preventDefault()
     try {
-      const questionData = {
-        question_type: questionForm.question_type,
-        text: questionForm.text,
-        points: parseFloat(questionForm.points),
-        order: questionForm.order ? parseInt(questionForm.order) : null
+      const formData = new FormData()
+
+      // Add basic fields
+      formData.append('question_type', questionForm.question_type)
+      formData.append('text', questionForm.text)
+      formData.append('points', questionForm.points)
+
+      if (questionForm.order) {
+        formData.append('order', questionForm.order)
       }
 
+      // Add question image if changed
+      if (questionForm.image instanceof File) {
+        formData.append('image', questionForm.image)
+      } else if (questionForm.image === 'DELETE') {
+        formData.append('delete_image', 'true')
+      }
+
+      // For multiple choice and true/false, add choices
       if (questionForm.question_type !== 'essay') {
-        questionData.options = questionForm.options.filter((opt) => opt.trim() !== '')
-        questionData.correct_answer = questionForm.correct_answer
-        if (questionForm.question_type === 'true_false') {
-          questionData.options = questionForm.options.map((opt) =>
-            opt === 'صح' ? 'True' : 'False'
-          )
+        const choices = questionForm.choices
+          .filter((choice) => choice.text.trim() !== '')
+          .map((choice, index) => ({
+            text: choice.text,
+            is_correct: choice.is_correct,
+            order: index + 1
+          }))
 
-          questionData.correct_answer = questionForm.correct_answer === 'صح' ? 'True' : 'False'
-        }
+        formData.append('choices', JSON.stringify(choices))
+
+        // Add choice images for ALL choices
+        questionForm.choices.forEach((choice, index) => {
+          if (choice.image instanceof File) {
+            formData.append(`choice_${index}_image`, choice.image)
+          } else if (choice.image === 'DELETE') {
+            formData.append(`choice_${index}_delete_image`, 'true')
+          }
+        })
       }
 
-      const updated = await teacherQuizzesService.updateQuestion(selectedQuestion.id, questionData)
+      const updated = await teacherQuizzesService.updateQuestion(selectedQuestion.id, formData)
       setQuestions(questions.map((q) => (q.id === updated.id ? updated : q)))
       setShowQuestionModal(false)
       setSelectedQuestion(null)
@@ -209,13 +251,11 @@ const QuizDetail = () => {
     if (!selectedAttempt) return
 
     try {
-      // Build scores object: { questionId: { answer: answerText, points_earned: points } }
       const scores = {}
 
       selectedAttempt.answers.forEach(async (answer) => {
         if (answer.question_type === 'essay') {
           const questionId = answer.question
-          const answerText = answer.answer_text || answer.selected_option || ''
           const pointsEarned =
             questionScores[questionId]?.points_earned || answer.points_earned || 0
 
@@ -224,15 +264,11 @@ const QuizDetail = () => {
       })
       await teacherQuizzesService.gradeAttempt(selectedAttempt.id, scores, gradingFeedback)
 
-      // Calculate total score
-      // Prepare grading data
       const gradingData = {
         scores: scores,
         feedback: gradingFeedback
       }
 
-
-      // Refresh attempts and close modal
       await fetchAttempts()
       setShowAttemptDetail(false)
       setSelectedAttempt(null)
@@ -249,14 +285,58 @@ const QuizDetail = () => {
   const openQuestionModal = (question = null) => {
     if (question) {
       setSelectedQuestion(question)
+
+      // Convert question data to form format
+      const choices = question.choices || []
+      const formChoices =
+        question.question_type === 'true_false'
+          ? [
+              {
+                text: 'صح',
+                image: null,
+                is_correct: choices.find((c) => c.text === 'True')?.is_correct || false,
+                order: 1
+              },
+              {
+                text: 'خطأ',
+                image: null,
+                is_correct: choices.find((c) => c.text === 'False')?.is_correct || false,
+                order: 2
+              }
+            ]
+          : choices.length > 0
+            ? choices.map((choice, index) => ({
+                text: choice.text || '',
+                image: choice.image || null,
+                is_correct: choice.is_correct || false,
+                order: index + 1
+              }))
+            : [
+                { text: '', image: null, is_correct: false, order: 1 },
+                { text: '', image: null, is_correct: false, order: 2 },
+                { text: '', image: null, is_correct: false, order: 3 },
+                { text: '', image: null, is_correct: false, order: 4 }
+              ]
+
       setQuestionForm({
         question_type: question.question_type || 'multiple_choice',
         text: question.text || '',
         points: question.points || '',
         order: question.order || '',
-        options: question.options || ['', '', '', ''],
-        correct_answer: question.correct_answer || ''
+        image: question.image || null,
+        choices: formChoices
       })
+
+      setQuestionImagePreview(question.image || null)
+
+      // Set choice image previews
+      const previews = {}
+      formChoices.forEach((choice, index) => {
+        if (choice.image) {
+          previews[index] = choice.image
+        }
+      })
+      setChoiceImagePreviews(previews)
     } else {
       resetQuestionForm()
     }
@@ -269,10 +349,17 @@ const QuizDetail = () => {
       text: '',
       points: '',
       order: '',
-      options: ['', '', '', ''],
-      correct_answer: ''
+      image: null,
+      choices: [
+        { text: '', image: null, is_correct: false, order: 1 },
+        { text: '', image: null, is_correct: false, order: 2 },
+        { text: '', image: null, is_correct: false, order: 3 },
+        { text: '', image: null, is_correct: false, order: 4 }
+      ]
     })
     setSelectedQuestion(null)
+    setQuestionImagePreview(null)
+    setChoiceImagePreviews({})
   }
 
   const handleQuestionTypeChange = (type) => {
@@ -280,22 +367,71 @@ const QuizDetail = () => {
       const newForm = { ...prev, question_type: type }
 
       if (type === 'true_false') {
-        newForm.options = ['صح', 'خطأ']
+        newForm.choices = [
+          { text: 'صح', image: null, is_correct: false, order: 1 },
+          { text: 'خطأ', image: null, is_correct: false, order: 2 }
+        ]
       } else if (type === 'multiple_choice') {
-        newForm.options = ['', '', '', '']
+        newForm.choices = [
+          { text: '', image: null, is_correct: false, order: 1 },
+          { text: '', image: null, is_correct: false, order: 2 },
+          { text: '', image: null, is_correct: false, order: 3 },
+          { text: '', image: null, is_correct: false, order: 4 }
+        ]
       } else if (type === 'essay') {
-        newForm.options = []
-        newForm.correct_answer = ''
+        newForm.choices = []
       }
 
       return newForm
     })
+    setChoiceImagePreviews({})
   }
 
-  const handleOptionChange = (index, value) => {
-    const newOptions = [...questionForm.options]
-    newOptions[index] = value
-    setQuestionForm((prev) => ({ ...prev, options: newOptions }))
+  const handleChoiceChange = (index, field, value) => {
+    const newChoices = [...questionForm.choices]
+    newChoices[index] = { ...newChoices[index], [field]: value }
+    setQuestionForm((prev) => ({ ...prev, choices: newChoices }))
+  }
+
+  const handleCorrectAnswerChange = (index) => {
+    const newChoices = questionForm.choices.map((choice, i) => ({
+      ...choice,
+      is_correct: i === index
+    }))
+    setQuestionForm((prev) => ({ ...prev, choices: newChoices }))
+  }
+
+  const handleQuestionImageChange = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      setQuestionForm((prev) => ({ ...prev, image: file }))
+      setQuestionImagePreview(URL.createObjectURL(file))
+    }
+  }
+
+  const handleRemoveQuestionImage = () => {
+    setQuestionForm((prev) => ({ ...prev, image: 'DELETE' }))
+    setQuestionImagePreview(null)
+  }
+
+  const handleChoiceImageChange = (index, e) => {
+    const file = e.target.files[0]
+    if (file) {
+      handleChoiceChange(index, 'image', file)
+      setChoiceImagePreviews((prev) => ({
+        ...prev,
+        [index]: URL.createObjectURL(file)
+      }))
+    }
+  }
+
+  const handleRemoveChoiceImage = (index) => {
+    handleChoiceChange(index, 'image', 'DELETE')
+    setChoiceImagePreviews((prev) => {
+      const newPreviews = { ...prev }
+      delete newPreviews[index]
+      return newPreviews
+    })
   }
 
   const toggleSidebar = () => {
@@ -474,17 +610,35 @@ const QuizDetail = () => {
                       <div className="question-body">
                         <p className="question-text">{question.text}</p>
 
-                        {question.question_type !== 'essay' && question.options && (
+                        {/* Display question image if exists */}
+                        {question.image_url && (
+                          <div className="question-image-container">
+                            <img
+                              src={process.env.REACT_APP_API_URL + question.image_url}
+                              alt="Question"
+                              className="question-image"
+                            />
+                          </div>
+                        )}
+
+                        {question.question_type !== 'essay' && question.choices && (
                           <div className="question-options">
-                            {question.options.map((option, optIndex) => (
+                            {question.choices.map((choice, optIndex) => (
                               <div
                                 key={optIndex}
-                                className={`option-item ${option === question.correct_answer ? 'correct' : ''}`}
+                                className={`option-item ${choice.is_correct ? 'correct' : ''}`}
                               >
-                                {option === question.correct_answer && (
-                                  <FaCheckCircle className="correct-icon" />
-                                )}
-                                <span>{option}</span>
+                                {choice.is_correct && <FaCheckCircle className="correct-icon" />}
+                                <div className="option-content">
+                                  <span>{choice.text}</span>
+                                  {choice.image && (
+                                    <img
+                                      src={choice.image}
+                                      alt={`Choice ${optIndex + 1}`}
+                                      className="choice-image"
+                                    />
+                                  )}
+                                </div>
                               </div>
                             ))}
                           </div>
@@ -645,6 +799,36 @@ const QuizDetail = () => {
                     />
                   </div>
 
+                  {/* Question Image Upload */}
+                  <div className="form-group">
+                    <label>صورة السؤال (اختياري)</label>
+                    <div className="image-upload-container">
+                      {questionImagePreview ? (
+                        <div className="image-preview">
+                          <img src={questionImagePreview} alt="Question preview" />
+                          <button
+                            type="button"
+                            className="btn-remove-image"
+                            onClick={handleRemoveQuestionImage}
+                          >
+                            <FaTimes />
+                          </button>
+                        </div>
+                      ) : (
+                        <label className="image-upload-label">
+                          <input
+                            type="file"
+                            accept="image/*"
+                            onChange={handleQuestionImageChange}
+                            style={{ display: 'none' }}
+                          />
+                          <FaImage />
+                          <span>اضغط لرفع صورة</span>
+                        </label>
+                      )}
+                    </div>
+                  </div>
+
                   <div className="form-row">
                     <div className="form-group">
                       <label>النقاط *</label>
@@ -680,40 +864,65 @@ const QuizDetail = () => {
                       <div className="form-group">
                         <label>الخيارات *</label>
                         <div className="options-list">
-                          {questionForm.options.map((option, index) => (
-                            <div key={index} className="option-input">
-                              <span className="option-label">{index + 1}.</span>
-                              <input
-                                type="text"
-                                value={option}
-                                onChange={(e) => handleOptionChange(index, e.target.value)}
-                                required={questionForm.question_type === 'true_false' || index < 2}
-                                placeholder={`الخيار ${index + 1}`}
-                                disabled={questionForm.question_type === 'true_false'}
-                              />
+                          {questionForm.choices.map((choice, index) => (
+                            <div key={index} className="option-input-container">
+                              <div className="option-input">
+                                <span className="option-label">{index + 1}.</span>
+                                <input
+                                  type="text"
+                                  value={choice.text}
+                                  onChange={(e) =>
+                                    handleChoiceChange(index, 'text', e.target.value)
+                                  }
+                                  required={
+                                    questionForm.question_type === 'true_false' || index < 2
+                                  }
+                                  placeholder={`الخيار ${index + 1}`}
+                                  disabled={questionForm.question_type === 'true_false'}
+                                />
+                                <input
+                                  type="radio"
+                                  name="correct_answer"
+                                  checked={choice.is_correct}
+                                  onChange={() => handleCorrectAnswerChange(index)}
+                                  title="الإجابة الصحيحة"
+                                />
+                              </div>
+
+                              {/* Choice Image Upload */}
+                              <div className="choice-image-upload">
+                                {choiceImagePreviews[index] ? (
+                                  <div className="choice-image-preview">
+                                    <img
+                                      src={choiceImagePreviews[index]}
+                                      alt={`Choice ${index + 1}`}
+                                    />
+                                    <button
+                                      type="button"
+                                      className="btn-remove-image-small"
+                                      onClick={() => handleRemoveChoiceImage(index)}
+                                    >
+                                      <FaTimes />
+                                    </button>
+                                  </div>
+                                ) : (
+                                  <label className="choice-image-upload-label">
+                                    <input
+                                      type="file"
+                                      accept="image/*"
+                                      onChange={(e) => handleChoiceImageChange(index, e)}
+                                      style={{ display: 'none' }}
+                                    />
+                                    <FaImage />
+                                  </label>
+                                )}
+                              </div>
                             </div>
                           ))}
                         </div>
-                      </div>
-
-                      <div className="form-group">
-                        <label>الإجابة الصحيحة *</label>
-                        <select
-                          value={questionForm.correct_answer}
-                          onChange={(e) =>
-                            setQuestionForm((prev) => ({ ...prev, correct_answer: e.target.value }))
-                          }
-                          required
-                        >
-                          <option value="">اختر الإجابة الصحيحة</option>
-                          {questionForm.options
-                            .filter((opt) => opt.trim() !== '')
-                            .map((option, index) => (
-                              <option key={index} value={option}>
-                                {option}
-                              </option>
-                            ))}
-                        </select>
+                        <small className="form-help-text">
+                          اختر الإجابة الصحيحة باستخدام الدائرة بجانب الخيار
+                        </small>
                       </div>
                     </>
                   )}
@@ -838,6 +1047,17 @@ const QuizDetail = () => {
                         <div className="answer-body">
                           <p className="question-text">{answer.question_text}</p>
 
+                          {/* Display question image if exists */}
+                          {answer.question_image && (
+                            <div className="question-image-container">
+                              <img
+                                src={answer.question_image}
+                                alt="Question"
+                                className="question-image"
+                              />
+                            </div>
+                          )}
+
                           <div className="student-answer">
                             <strong>إجابة الطالب:</strong>
                             <p>
@@ -907,7 +1127,7 @@ const QuizDetail = () => {
                     <strong>الدرجة الإجمالية المحسوبة:</strong>
                     <span className="total-score">
                       {Object.values(questionScores)
-                        .reduce((sum, item) => sum + (parseFloat(item.points_earned) || 0), 0) // ✅ Initial value 0 added
+                        .reduce((sum, item) => sum + (parseFloat(item.points_earned) || 0), 0)
                         .toFixed(2)}
                     </span>
                   </div>

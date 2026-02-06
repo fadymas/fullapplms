@@ -6,6 +6,9 @@ import Footer from '../components/Footer'
 import adminCoursesService from '../api/admin/courses.service'
 import useAuthStore from '../store/authStore'
 
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+
 const SectionsManagement = () => {
   const { user } = useAuthStore()
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
@@ -42,6 +45,12 @@ const SectionsManagement = () => {
   const [alert, setAlert] = useState({ show: false, type: '', message: '' })
   const [sectionToDelete, setSectionToDelete] = useState(null)
 
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const courseIdFromUrl = searchParams.get('course')
+  const courseNameFromUrl = searchParams.get('courseName')
+  const [selectedCourse, setSelectedCourse] = useState(null)
+
   const toggleSidebar = () => setSidebarCollapsed(!sidebarCollapsed)
 
   // Apply Dark Mode
@@ -59,7 +68,7 @@ const SectionsManagement = () => {
     try {
       const response = await adminCoursesService.getAllCourses(1, '', '', '')
       const approvedCourses = response.results.filter(
-        (course) => course.status === 'published' || course.status === 'dra'
+        (course) => course.status === 'published' || course.status === 'draft'
       )
       setCourses(approvedCourses || [])
     } catch (error) {
@@ -75,11 +84,18 @@ const SectionsManagement = () => {
         const response = await adminCoursesService.listSections(page)
 
         if (response && response.results) {
-          setSections(response.results)
-          setTotalCount(response.count || 0)
+          // Filter sections by course if courseId is in URL
+          let filteredSections = response.results
+          if (courseIdFromUrl) {
+            filteredSections = response.results.filter(
+              (section) => section.course === parseInt(courseIdFromUrl)
+            )
+          }
 
-          // Calculate total pages based on backend pagination
-          const pages = Math.ceil((response.count || 0) / itemsPerPage)
+          setSections(filteredSections)
+          setTotalCount(filteredSections.length)
+
+          const pages = Math.ceil(filteredSections.length / itemsPerPage)
           setTotalPages(pages > 0 ? pages : 1)
         } else {
           setSections([])
@@ -96,9 +112,14 @@ const SectionsManagement = () => {
         setLoading(false)
       }
     },
-    [itemsPerPage]
+    [itemsPerPage, courseIdFromUrl]
   )
 
+  const handleNavigateToLectures = (section) => {
+    navigate(
+      `/${user.role}/lectures?section=${section.id}&course=${section.course}&sectionName=${encodeURIComponent(section.title)}`
+    )
+  }
   useEffect(() => {
     fetchCourses()
   }, [fetchCourses])
@@ -106,6 +127,15 @@ const SectionsManagement = () => {
   useEffect(() => {
     fetchSections(currentPage)
   }, [currentPage, fetchSections])
+  useEffect(() => {
+    console.log(courseIdFromUrl, modalMode)
+    if (courseIdFromUrl && modalMode === 'create') {
+      setFormData((prev) => ({
+        ...prev,
+        course: courseIdFromUrl
+      }))
+    }
+  }, [courseIdFromUrl, modalMode])
 
   const showAlert = (type, message) => {
     setAlert({ show: true, type, message })
@@ -291,7 +321,7 @@ const SectionsManagement = () => {
                 </div>
                 <div className="modal-body-custom">
                   <form onSubmit={handleSubmit}>
-                    <div className="form-group">
+                    {/* <div className="form-group">
                       <label className="form-label">
                         الكورس <span className="required">*</span>
                       </label>
@@ -309,7 +339,7 @@ const SectionsManagement = () => {
                           </option>
                         ))}
                       </select>
-                    </div>
+                    </div> */}
 
                     <div className="form-group">
                       <label className="form-label">
@@ -485,12 +515,26 @@ const SectionsManagement = () => {
           <div className="page-header mb-5">
             <div className="row align-items-center">
               <div className="col-md-6 mb-3 mb-md-0">
+                {courseIdFromUrl && courseNameFromUrl && (
+                  <button
+                    className="btn btn-link text-decoration-none mb-2 p-0"
+                    onClick={() => navigate(`/${user.role}/courses`)}
+                    style={{ fontSize: '0.9rem' }}
+                  >
+                    <FaArrowLeft className="me-2" />
+                    العودة للكورسات
+                  </button>
+                )}
                 <div className="header-content">
                   <div className="header-icon">
                     <FaLayerGroup />
                   </div>
                   <div>
-                    <h1 className="page-title mb-2">إدارة الأقسام</h1>
+                    <h1 className="page-title mb-2">
+                      {courseNameFromUrl
+                        ? `أقسام: ${decodeURIComponent(courseNameFromUrl)}`
+                        : 'إدارة الأقسام'}
+                    </h1>
                     <p className="page-subtitle mb-0">تنظيم وإدارة أقسام الكورسات التعليمية</p>
                   </div>
                 </div>
@@ -550,20 +594,41 @@ const SectionsManagement = () => {
             ) : (
               <div className="sections-grid">
                 {sections.map((section) => (
-                  <div key={section.id} className="section-card">
+                  <div
+                    key={section.id}
+                    className="section-card"
+                    onClick={() => handleNavigateToLectures(section)}
+                    style={{ cursor: 'pointer' }}
+                  >
                     <div className="section-header">
                       <div className="section-order">#{section.order}</div>
                       <div className="section-actions">
                         <button
+                          className="btn-icon btn-navigate"
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            handleNavigateToLectures(section)
+                          }}
+                          title="إدارة المحاضرات"
+                        >
+                          <FaArrowRight />
+                        </button>
+                        <button
                           className="btn-icon btn-edit"
-                          onClick={() => openEditModal(section)}
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            openEditModal(section)
+                          }}
                           title="تعديل"
                         >
                           <FaEdit />
                         </button>
                         <button
                           className="btn-icon btn-delete"
-                          onClick={() => openDeleteModal(section)}
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            openDeleteModal(section)
+                          }}
                           title="حذف"
                         >
                           <FaTrash />
@@ -579,6 +644,10 @@ const SectionsManagement = () => {
                           {getCourseName(section.course)}
                         </span>
                       </div>
+                    </div>
+                    <div className="section-footer-hint">
+                      <FaArrowRight className="me-2" />
+                      اضغط لإدارة المحاضرات
                     </div>
                   </div>
                 ))}
@@ -643,6 +712,36 @@ const SectionsManagement = () => {
 
 const sectionStyles = `
   @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+  .btn-navigate {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.btn-navigate:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.section-footer-hint {
+  padding: 1rem 1.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-top: 2px solid rgba(102, 126, 234, 0.15);
+  text-align: center;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark-mode .section-footer-hint {
+  background: rgba(129, 140, 248, 0.1);
+  border-color: rgba(129, 140, 248, 0.2);
+  color: #818cf8;
+}
   
   .sections-page {
     font-family: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
@@ -675,6 +774,7 @@ const sectionStyles = `
       margin-right: 0;
     }
   }
+    
 
   .custom-alert {
     position: fixed;

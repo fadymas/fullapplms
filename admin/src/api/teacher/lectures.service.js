@@ -57,10 +57,11 @@ const teacherLecturesService = {
 
   uploadLectureFile: async (lectureId, file, fileName) => {
     const formData = new FormData()
+    formData.append('lecture', lectureId)
     formData.append('file', file)
     formData.append('title', fileName)
     const response = await apiClient.post(
-      `/api/courses/lectures/${lectureId}/upload_file/`,
+      `/api/courses/lecture-files/`,
       formData,
       {
         headers: {

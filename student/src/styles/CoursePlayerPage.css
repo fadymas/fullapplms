@@ -189,3 +189,117 @@
         height: auto;
     }
 }
+
+/* Additional CSS for CoursePlayerPage with Custom Video Player */
+
+.video-wrapper-custom {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-wrapper-custom > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Override for fullscreen mode */
+.video-wrapper-custom:fullscreen {
+  padding-top: 0;
+}
+
+.video-wrapper-custom:-webkit-full-screen {
+  padding-top: 0;
+}
+
+.video-wrapper-custom:-moz-full-screen {
+  padding-top: 0;
+}
+
+.video-wrapper-custom:-ms-fullscreen {
+  padding-top: 0;
+}
+
+/* Ensure video player fills the wrapper */
+.video-wrapper-custom .custom-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Spinner animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-animation {
+  animation: spin 1s linear infinite;
+}
+
+/* Hover shadow effect for attachments */
+.hover-shadow {
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Active indicator for current lecture */
+.active-indicator {
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(to bottom, #e50914, #ff0a16);
+  border-radius: 2px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Transition for all interactive elements */
+.transition {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .video-wrapper-custom {
+    border-radius: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+  }
+}

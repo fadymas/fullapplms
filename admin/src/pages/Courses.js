@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import adminCoursesService from '../api/admin/courses.service'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -8,14 +9,14 @@ import useAuthStore from '../store/authStore'
 
 const CoursesManagement = () => {
   const { user } = useAuthStore()
-  // Layout States
+  const navigate = useNavigate()
+
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('darkMode')
     return saved ? JSON.parse(saved) : false
   })
 
-  // Data States
   const [courses, setCourses] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
@@ -23,12 +24,10 @@ const CoursesManagement = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [appliedSearch, setAppliedSearch] = useState('')
 
-  // Modal States
   const [showModal, setShowModal] = useState(false)
   const [modalMode, setModalMode] = useState('create')
   const [showDeleteModal, setShowDeleteModal] = useState(false)
 
-  // Form States
   const [formData, setFormData] = useState({
     id: null,
     title: '',
@@ -40,14 +39,12 @@ const CoursesManagement = () => {
   })
   const [tagInput, setTagInput] = useState('')
 
-  // UI States
   const [loading, setLoading] = useState(false)
   const [submitLoading, setSubmitLoading] = useState(false)
   const [alert, setAlert] = useState({ show: false, type: '', message: '' })
   const [courseToDelete, setCourseToDelete] = useState(null)
   const [submittingCourseId, setSubmittingCourseId] = useState(null)
 
-  // Options
   const categoryOptions = [
     { value: 'Programming', label: 'البرمجة' },
     { value: 'Design', label: 'التصميم' },
@@ -63,12 +60,10 @@ const CoursesManagement = () => {
     { value: 'advanced', label: 'متقدم' }
   ]
 
-  // Toggle Sidebar
   const toggleSidebar = () => {
     setSidebarCollapsed(!sidebarCollapsed)
   }
 
-  // Apply Dark Mode
   useEffect(() => {
     if (darkMode) {
       document.body.classList.add('dark-mode')
@@ -78,7 +73,6 @@ const CoursesManagement = () => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode))
   }, [darkMode])
 
-  // Fetch Courses
   const fetchCourses = async (page = 1, search = '') => {
     try {
       setLoading(true)
@@ -112,6 +106,12 @@ const CoursesManagement = () => {
     setAppliedSearch(searchTerm.trim())
   }
 
+  const handleCourseClick = (courseId, courseName) => {
+    navigate(
+      `/${user.role}/sections?course=${courseId}&courseName=${encodeURIComponent(courseName)}`
+    )
+  }
+
   const openCreateModal = () => {
     setFormData({
       id: null,
@@ -119,7 +119,6 @@ const CoursesManagement = () => {
       description: '',
       price: '',
       category: '',
-      difficulty_level: '',
       tags: []
     })
     setTagInput('')
@@ -134,7 +133,6 @@ const CoursesManagement = () => {
       description: course.description || '',
       price: course.price || '',
       category: course.category || '',
-      difficulty_level: course.difficulty_level || '',
       tags: course.tags || []
     })
     setTagInput('')
@@ -168,13 +166,7 @@ const CoursesManagement = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if (
-      !formData.title ||
-      !formData.description ||
-      !formData.price ||
-      !formData.category ||
-      !formData.difficulty_level
-    ) {
+    if (!formData.title || !formData.description || !formData.price || !formData.category) {
       showAlert('warning', 'يرجى ملء جميع الحقول المطلوبة')
       return
     }
@@ -195,10 +187,7 @@ const CoursesManagement = () => {
         await adminCoursesService.updateCourse(formData.id, submitData)
         showAlert('success', 'تم تحديث الكورس بنجاح')
       } else {
-        const data = await adminCoursesService.createCourse(submitData)
-        if (user.role === 'admin') {
-          // await adminCoursesService.approveCourse(data.id)
-        }
+        await adminCoursesService.createCourse(submitData)
         showAlert('success', 'تم إنشاء الكورس بنجاح')
       }
 
@@ -247,11 +236,8 @@ const CoursesManagement = () => {
   const handleSubmitForApproval = async (courseId) => {
     try {
       setSubmittingCourseId(courseId)
-
-      // Submit for approval
       await adminCoursesService.submitCourseForApproval(courseId)
 
-      // If user is admin, automatically approve
       if (user?.role === 'admin') {
         await adminCoursesService.approveCourse(courseId)
         showAlert('success', 'تم إرسال الكورس للموافقة والموافقة عليه بنجاح')
@@ -259,12 +245,10 @@ const CoursesManagement = () => {
         showAlert('success', 'تم إرسال الكورس للموافقة بنجاح')
       }
 
-      // Refresh courses list
       fetchCourses(currentPage, appliedSearch)
     } catch (error) {
       const errorMessage = error?.response?.data?.detail || 'فشل في إرسال الكورس للموافقة'
       showAlert('error', errorMessage)
-      console.error('Error submitting course for approval:', error)
     } finally {
       setSubmittingCourseId(null)
     }
@@ -273,23 +257,13 @@ const CoursesManagement = () => {
   const handleAdminDenay = async (courseId) => {
     try {
       setSubmittingCourseId(courseId)
-
-      // Submit for approval
-
-      // If user is admin, automatically approve
       if (user?.role === 'admin') {
         await adminCoursesService.rejectCourse(courseId, 'admin reject it')
-        showAlert('success', 'تم رفض الكورس  بنجاح')
-      } else {
         showAlert('success', 'تم رفض الكورس بنجاح')
       }
-
-      // Refresh courses list
       fetchCourses(currentPage, appliedSearch)
     } catch (error) {
-      const errorMessage = error?.response?.data?.detail || 'فشل في إرسال الكورس للموافقة'
-      showAlert('error', errorMessage)
-      console.error('Error submitting course for approval:', error)
+      showAlert('error', 'فشل في رفض الكورس')
     } finally {
       setSubmittingCourseId(null)
     }
@@ -298,48 +272,19 @@ const CoursesManagement = () => {
   const handleAdminApprove = async (courseId) => {
     try {
       setSubmittingCourseId(courseId)
-
-      // If user is admin, automatically approve
       if (user?.role === 'admin') {
         await adminCoursesService.approveCourse(courseId)
         showAlert('success', 'تمت الموافقة عليه بنجاح')
-      } else {
-        showAlert('success', 'تم إرسال الكورس للموافقة بنجاح')
       }
-
-      // Refresh courses list
       fetchCourses(currentPage, appliedSearch)
     } catch (error) {
-      const errorMessage = error?.response?.data?.detail || 'فشل في الموافقة'
-      showAlert('error', errorMessage)
-      console.error('Error submitting course for approval:', error)
+      showAlert('error', 'فشل في الموافقة')
     } finally {
       setSubmittingCourseId(null)
     }
   }
 
-  const getDifficultyLabel = (value) => {
-    const option = difficultyOptions.find((opt) => opt.value === value)
-    return option ? option.label : value
-  }
-
-  const getCategoryLabel = (value) => {
-    const option = categoryOptions.find((opt) => opt.value === value)
-    return option ? option.label : value
-  }
-
-  const getDifficultyColor = (level) => {
-    switch (level) {
-      case 'beginner':
-        return '#00b894'
-      case 'intermediate':
-        return '#fdcb6e'
-      case 'advanced':
-        return '#e74c3c'
-      default:
-        return '#0d6efd'
-    }
-  }
+  const getDifficultyColor = () => '#00b894'
 
   return (
     <div
@@ -476,9 +421,20 @@ const CoursesManagement = () => {
               </div>
             ) : (
               <div className="row">
-                {courses.map((course, index) => (
+                {courses.map((course) => (
                   <div key={course.id} className="col-xl-4 col-lg-6 col-md-6 mb-4">
-                    <div className="course-card">
+                    <div
+                      className="course-card"
+                      onClick={(e) => {
+                        if (
+                          !e.target.closest('.btn-edit') &&
+                          !e.target.closest('.btn-delete') &&
+                          !e.target.closest('.btn-submit-approval')
+                        ) {
+                          handleCourseClick(course.id, course.title)
+                        }
+                      }}
+                    >
                       <div className="course-image">
                         {course.thumbnail ? (
                           <img src={course.thumbnail} alt={course.title} className="course-img" />
@@ -489,9 +445,9 @@ const CoursesManagement = () => {
                         )}
                         <div
                           className="difficulty-badge"
-                          style={{ background: getDifficultyColor(course.difficulty_level) }}
+                          style={{ background: getDifficultyColor() }}
                         >
-                          {getDifficultyLabel(course.difficulty_level)}
+                          {course.category}
                         </div>
                         {course.status && (
                           <div className="status-badge">
@@ -509,7 +465,6 @@ const CoursesManagement = () => {
                       </div>
 
                       <div className="course-content">
-                        <div className="course-category">{getCategoryLabel(course.category)}</div>
                         <h5 className="course-title">{course.title}</h5>
                         <p className="course-description">{course.description}</p>
 
@@ -536,14 +491,20 @@ const CoursesManagement = () => {
                           <div className="course-actions">
                             <button
                               className="btn btn-sm btn-edit"
-                              onClick={() => openEditModal(course)}
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                openEditModal(course)
+                              }}
                               title="تعديل"
                             >
                               ✏️
                             </button>
                             <button
                               className="btn btn-sm btn-delete"
-                              onClick={() => openDeleteModal(course)}
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                openDeleteModal(course)
+                              }}
                               title="حذف"
                             >
                               🗑️
@@ -551,12 +512,14 @@ const CoursesManagement = () => {
                           </div>
                         </div>
 
-                        {/* Submit for Approval Button */}
                         {course.status === 'draft' && (
                           <div className="mt-3">
                             <button
                               className="btn btn-warning btn-sm w-100 btn-submit-approval"
-                              onClick={() => handleSubmitForApproval(course.id)}
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                handleSubmitForApproval(course.id)
+                              }}
                               disabled={submittingCourseId === course.id}
                             >
                               {submittingCourseId === course.id ? (
@@ -573,44 +536,33 @@ const CoursesManagement = () => {
                             </button>
                           </div>
                         )}
+
                         {course.status === 'pending_approval' && user?.role === 'admin' && (
                           <>
                             <div className="mt-3">
                               <button
-                                className="btn btn-warning btn-sm w-100 btn-submit-approval "
-                                onClick={() => handleAdminDenay(course.id)}
+                                className="btn btn-danger btn-sm w-100"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  handleAdminDenay(course.id)
+                                }}
                                 disabled={submittingCourseId === course.id}
                               >
-                                {submittingCourseId === course.id ? (
-                                  <>
-                                    <span className="spinner-border spinner-border-sm me-2"></span>
-                                    جاري الرفض...
-                                  </>
-                                ) : (
-                                  <>
-                                    <span className="me-2">📤</span>
-                                    رفض
-                                  </>
-                                )}
+                                {submittingCourseId === course.id ? 'جاري الرفض...' : '❌ رفض'}
                               </button>
                             </div>
-                            <div className="mt-3">
+                            <div className="mt-2">
                               <button
-                                className="btn btn-warning btn-sm w-100 btn-submit-approval "
-                                onClick={() => handleAdminApprove(course.id)}
+                                className="btn btn-success btn-sm w-100"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                  handleAdminApprove(course.id)
+                                }}
                                 disabled={submittingCourseId === course.id}
                               >
-                                {submittingCourseId === course.id ? (
-                                  <>
-                                    <span className="spinner-border spinner-border-sm me-2"></span>
-                                    جاري الموافقة...
-                                  </>
-                                ) : (
-                                  <>
-                                    <span className="me-2">📤</span>
-                                    مواففة
-                                  </>
-                                )}
+                                {submittingCourseId === course.id
+                                  ? 'جاري الموافقة...'
+                                  : '✅ موافقة'}
                               </button>
                             </div>
                           </>
@@ -753,43 +705,17 @@ const CoursesManagement = () => {
 
                       <div className="col-md-6 mb-3">
                         <label className="form-label fw-bold">
-                          الفئة <span className="text-danger">*</span>
+                          الصف <span className="text-danger">*</span>
                         </label>
-                        <select
-                          className="form-select"
+                        <input
                           name="category"
                           value={formData.category}
                           onChange={handleFormChange}
                           required
-                        >
-                          <option value="">اختر الفئة</option>
-                          {categoryOptions.map((option) => (
-                            <option key={option.value} value={option.value}>
-                              {option.label}
-                            </option>
-                          ))}
-                        </select>
+                          className="form-control"
+                          placeholder="مثال: الصف الأول الثانوي"
+                        />
                       </div>
-                    </div>
-
-                    <div className="mb-3">
-                      <label className="form-label fw-bold">
-                        مستوى الصعوبة <span className="text-danger">*</span>
-                      </label>
-                      <select
-                        className="form-select"
-                        name="difficulty_level"
-                        value={formData.difficulty_level}
-                        onChange={handleFormChange}
-                        required
-                      >
-                        <option value="">اختر المستوى</option>
-                        {difficultyOptions.map((option) => (
-                          <option key={option.value} value={option.value}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
                     </div>
 
                     <div className="mb-3">
@@ -950,7 +876,6 @@ const customStyles = `
   @media (max-width: 991.98px) {
     .main-content {
       margin-right: 0;
-      margin-top: 76px;
     }
     .sidebar-collapsed .main-content {
       margin-right: 0;
@@ -978,10 +903,6 @@ const customStyles = `
       transform: translateX(0);
       opacity: 1;
     }
-  }
-
-  .page-header {
-    margin-bottom: 2rem;
   }
 
   .page-title {
@@ -1044,17 +965,9 @@ const customStyles = `
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
   }
 
-  .stats-card-1 {
-    border-color: #0d6efd;
-  }
-
-  .stats-card-2 {
-    border-color: #198754;
-  }
-
-  .stats-card-3 {
-    border-color: #ffc107;
-  }
+  .stats-card-1 { border-color: #0d6efd; }
+  .stats-card-2 { border-color: #198754; }
+  .stats-card-3 { border-color: #ffc107; }
 
   .stats-icon {
     font-size: 2.5rem;
@@ -1127,6 +1040,7 @@ const customStyles = `
     height: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
   }
 
   .dark-mode .course-card {
@@ -1135,7 +1049,7 @@ const customStyles = `
 
   .course-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
   }
 
   .course-image {
@@ -1198,18 +1112,6 @@ const customStyles = `
     flex: 1;
     display: flex;
     flex-direction: column;
-  }
-
-  .course-category {
-    display: inline-block;
-    background: #0d6efd;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 0.75rem;
-    align-self: flex-start;
   }
 
   .course-title {
@@ -1352,17 +1254,11 @@ const customStyles = `
     font-weight: bold;
     border-radius: 10px;
     transition: all 0.3s ease;
-    padding: 0.75rem 1rem;
   }
 
   .btn-submit-approval:hover:not(:disabled) {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
-  }
-
-  .btn-submit-approval:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
   }
 
   .student-count {
@@ -1546,30 +1442,8 @@ const customStyles = `
       display: flex !important;
     }
 
-    .search-bar-container {
-      max-width: 100%;
-    }
-
     .course-card {
       margin-bottom: 1rem;
-    }
-  }
-
-  @media (max-width: 575.98px) {
-    .page-title {
-      font-size: 1.25rem;
-    }
-
-    .stats-card {
-      padding: 1rem;
-    }
-
-    .course-title {
-      font-size: 1.1rem;
-    }
-
-    .price-amount {
-      font-size: 1.5rem;
     }
   }
 `

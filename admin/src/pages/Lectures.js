@@ -8,15 +8,27 @@ import {
   FaQuestionCircle,
   FaTasks,
   FaLock,
-  FaUnlock
+  FaUnlock,
+  FaUpload,
+  FaFileUpload
 } from 'react-icons/fa'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import adminCoursesService from '../api/admin/courses.service'
+import teacherLecturesService from '../api/teacher/lectures.service'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { FaArrowLeft } from 'react-icons/fa'
+import useAuthStore from '../store/authStore'
 
 const LecturesManagement = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
+  const navigate = useNavigate()
+  const { user } = useAuthStore()
+  const [searchParams] = useSearchParams()
+  const sectionIdFromUrl = searchParams.get('section')
+  const courseIdFromUrl = searchParams.get('course')
+  const sectionNameFromUrl = searchParams.get('sectionName')
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('darkMode')
     return saved ? JSON.parse(saved) : false
@@ -34,6 +46,7 @@ const LecturesManagement = () => {
   const [showModal, setShowModal] = useState(false)
   const [modalMode, setModalMode] = useState('create')
   const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [showUploadModal, setShowUploadModal] = useState(false)
 
   // Form States
   const [formData, setFormData] = useState({
@@ -50,9 +63,18 @@ const LecturesManagement = () => {
     duration_minutes: ''
   })
 
+  // Upload States
+  const [uploadData, setUploadData] = useState({
+    lectureId: null,
+    lectureTitle: '',
+    file: null,
+    fileName: ''
+  })
+
   // UI States
   const [loading, setLoading] = useState(false)
   const [submitLoading, setSubmitLoading] = useState(false)
+  const [uploadLoading, setUploadLoading] = useState(false)
   const [alert, setAlert] = useState({ show: false, type: '', message: '' })
   const [lectureToDelete, setLectureToDelete] = useState(null)
 
@@ -77,24 +99,44 @@ const LecturesManagement = () => {
   const fetchSections = useCallback(async () => {
     try {
       const response = await adminCoursesService.listSections(1)
-      setSections(response.results || [])
+      let filteredSections = response.results || []
+
+      // Filter sections by course if courseId is in URL
+      if (courseIdFromUrl) {
+        filteredSections = filteredSections.filter(
+          (section) => section.course === parseInt(courseIdFromUrl)
+        )
+      }
+
+      setSections(filteredSections)
     } catch (error) {
       console.error('Error fetching sections:', error)
       setSections([])
     }
-  }, [])
+  }, [courseIdFromUrl])
+
+  useEffect(() => {
+    if (sectionIdFromUrl && modalMode === 'create') {
+      setFormData((prev) => ({
+        ...prev,
+        section: sectionIdFromUrl
+      }))
+    }
+  }, [sectionIdFromUrl, modalMode])
 
   const fetchLectures = useCallback(
-    async (page = 1) => {
+    async (page = 1, section = sectionIdFromUrl) => {
       try {
         setLoading(true)
-        const response = await adminCoursesService.listLectures(page)
+        const response = await adminCoursesService.listLectures(page, section)
 
         if (response && response.results) {
-          setLectures(response.results)
-          setTotalCount(response.count || 0)
+          // Filter lectures by section if sectionId is in URL
 
-          const pages = Math.ceil((response.count || 0) / itemsPerPage)
+          setLectures(response.results)
+          setTotalCount(response.results.length)
+
+          const pages = Math.ceil(response.results.length / itemsPerPage)
           setTotalPages(pages > 0 ? pages : 1)
         } else {
           setLectures([])
@@ -111,7 +153,7 @@ const LecturesManagement = () => {
         setLoading(false)
       }
     },
-    [itemsPerPage]
+    [itemsPerPage, sectionIdFromUrl]
   )
 
   useEffect(() => {
@@ -163,12 +205,93 @@ const LecturesManagement = () => {
     setShowModal(true)
   }
 
+  const openUploadModal = (lecture) => {
+    setUploadData({
+      lectureId: lecture.id,
+      lectureTitle: lecture.title,
+      file: null,
+      fileName: ''
+    })
+    setShowUploadModal(true)
+  }
+
   const handleFormChange = (e) => {
     const { name, value, type, checked } = e.target
     setFormData((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }))
+  }
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0]
+    if (file) {
+      setUploadData((prev) => ({
+        ...prev,
+        file: file,
+        fileName: prev.fileName || file.name
+      }))
+    }
+  }
+
+  const handleFileNameChange = (e) => {
+    setUploadData((prev) => ({
+      ...prev,
+      fileName: e.target.value
+    }))
+  }
+
+  const handleFileUpload = async (e) => {
+    e.preventDefault()
+
+    if (!uploadData.file) {
+      showAlert('warning', 'يرجى اختيار ملف للرفع')
+      return
+    }
+
+    if (!uploadData.fileName || !uploadData.fileName.trim()) {
+      showAlert('warning', 'يرجى إدخال اسم الملف')
+      return
+    }
+
+    try {
+      setUploadLoading(true)
+
+      await teacherLecturesService.uploadLectureFile(
+        uploadData.lectureId,
+        uploadData.file,
+        uploadData.fileName.trim()
+      )
+
+      showAlert('success', 'تم رفع الملف بنجاح')
+      setShowUploadModal(false)
+      setUploadData({
+        lectureId: null,
+        lectureTitle: '',
+        file: null,
+        fileName: ''
+      })
+    } catch (error) {
+      console.error('Error uploading file:', error)
+
+      let errorMessage = 'فشل في رفع الملف'
+
+      if (error?.response?.data) {
+        if (typeof error.response.data === 'string') {
+          errorMessage = error.response.data
+        } else if (error.response.data.detail) {
+          errorMessage = error.response.data.detail
+        } else if (error.response.data.message) {
+          errorMessage = error.response.data.message
+        } else if (error.response.data.error) {
+          errorMessage = error.response.data.error
+        }
+      }
+
+      showAlert('error', errorMessage)
+    } finally {
+      setUploadLoading(false)
+    }
   }
 
   const handleSubmit = async (e) => {
@@ -360,12 +483,43 @@ const LecturesManagement = () => {
           <div className="page-header mb-5">
             <div className="row align-items-center">
               <div className="col-md-6 mb-3 mb-md-0">
+                {sectionIdFromUrl && sectionNameFromUrl && (
+                  <nav aria-label="breadcrumb" className="mb-2">
+                    <ol className="breadcrumb-custom">
+                      <li className="breadcrumb-item">
+                        <button
+                          className="btn btn-link text-decoration-none p-0"
+                          onClick={() => navigate(`/${user.role}/courses`)}
+                        >
+                          الكورسات
+                        </button>
+                      </li>
+                      <li className="breadcrumb-item">
+                        <button
+                          className="btn btn-link text-decoration-none p-0"
+                          onClick={() =>
+                            navigate(`/${user.role}/sections?course=${courseIdFromUrl}`)
+                          }
+                        >
+                          الأقسام
+                        </button>
+                      </li>
+                      <li className="breadcrumb-item active" aria-current="page">
+                        {decodeURIComponent(sectionNameFromUrl)}
+                      </li>
+                    </ol>
+                  </nav>
+                )}
                 <div className="header-content">
                   <div className="header-icon">
                     <FaVideo />
                   </div>
                   <div>
-                    <h1 className="page-title mb-2">إدارة المحاضرات</h1>
+                    <h1 className="page-title mb-2">
+                      {sectionNameFromUrl
+                        ? `محاضرات: ${decodeURIComponent(sectionNameFromUrl)}`
+                        : 'إدارة المحاضرات'}
+                    </h1>
                     <p className="page-subtitle mb-0">إنشاء وتنظيم محتوى الكورسات التعليمية</p>
                   </div>
                 </div>
@@ -386,7 +540,9 @@ const LecturesManagement = () => {
               </div>
               <div className="stat-content">
                 <div className="stat-number">{totalCount}</div>
-                <div className="stat-label">إجمالي المحاضرات</div>
+                <div className="stat-label">
+                  {sectionNameFromUrl ? 'محاضرات القسم' : 'إجمالي المحاضرات'}
+                </div>
               </div>
             </div>
             <div className="stat-card">
@@ -441,6 +597,13 @@ const LecturesManagement = () => {
                           {typeInfo.label}
                         </div>
                         <div className="lecture-actions">
+                          <button
+                            className="btn-icon btn-upload"
+                            onClick={() => openUploadModal(lecture)}
+                            title="رفع ملف"
+                          >
+                            <FaUpload />
+                          </button>
                           <button
                             className="btn-icon btn-edit"
                             onClick={() => openEditModal(lecture)}
@@ -578,26 +741,6 @@ const LecturesManagement = () => {
                 <div className="modal-body-custom">
                   <form onSubmit={handleSubmit}>
                     <div className="form-row">
-                      <div className="form-group">
-                        <label className="form-label">
-                          القسم <span className="required">*</span>
-                        </label>
-                        <select
-                          className="form-control-custom"
-                          name="section"
-                          value={formData.section}
-                          onChange={handleFormChange}
-                          required
-                        >
-                          <option value="">اختر القسم</option>
-                          {sections.map((section) => (
-                            <option key={section.id} value={section.id}>
-                              {section.title}
-                            </option>
-                          ))}
-                        </select>
-                      </div>
-
                       <div className="form-group">
                         <label className="form-label">
                           نوع المحاضرة <span className="required">*</span>
@@ -775,6 +918,114 @@ const LecturesManagement = () => {
         </>
       )}
 
+      {/* Upload File Modal */}
+      {showUploadModal && (
+        <>
+          <div
+            className="modal-overlay show"
+            onClick={(e) => {
+              if (e.target === e.currentTarget) {
+                setShowUploadModal(false)
+              }
+            }}
+          ></div>
+          <div className="modal-custom show">
+            <div className="modal-dialog modal-dialog-sm">
+              <div className="modal-content-custom">
+                <div className="modal-header-custom modal-header-upload">
+                  <h5 className="modal-title">📤 رفع ملف للمحاضرة</h5>
+                  <button
+                    type="button"
+                    className="btn-close-custom"
+                    onClick={() => setShowUploadModal(false)}
+                  >
+                    ×
+                  </button>
+                </div>
+                <div className="modal-body-custom">
+                  <div className="upload-lecture-info">
+                    <p className="upload-lecture-label">المحاضرة:</p>
+                    <p className="upload-lecture-title">{uploadData.lectureTitle}</p>
+                  </div>
+
+                  <form onSubmit={handleFileUpload}>
+                    <div className="form-group">
+                      <label className="form-label">
+                        اسم الملف <span className="required">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control-custom"
+                        value={uploadData.fileName}
+                        onChange={handleFileNameChange}
+                        placeholder="أدخل اسم الملف"
+                        required
+                      />
+                    </div>
+
+                    <div className="form-group">
+                      <label className="form-label">
+                        الملف <span className="required">*</span>
+                      </label>
+                      <div className="file-upload-wrapper">
+                        <input
+                          type="file"
+                          className="file-input-custom"
+                          id="file-upload"
+                          onChange={handleFileChange}
+                          required
+                        />
+                        <label htmlFor="file-upload" className="file-upload-label">
+                          <FaFileUpload className="upload-icon" />
+                          {uploadData.file ? (
+                            <span className="file-name">{uploadData.file.name}</span>
+                          ) : (
+                            <span className="file-placeholder">اضغط لاختيار ملف</span>
+                          )}
+                        </label>
+                      </div>
+                      {uploadData.file && (
+                        <div className="file-info">
+                          <small>الحجم: {(uploadData.file.size / 1024 / 1024).toFixed(2)} MB</small>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="modal-footer-custom">
+                      <button
+                        type="button"
+                        className="btn btn-secondary-custom"
+                        onClick={() => setShowUploadModal(false)}
+                        disabled={uploadLoading}
+                      >
+                        إلغاء
+                      </button>
+                      <button
+                        type="submit"
+                        className="btn btn-upload-custom"
+                        disabled={uploadLoading}
+                      >
+                        {uploadLoading ? (
+                          <>
+                            <span className="spinner-border spinner-border-sm me-2"></span>
+                            جاري الرفع...
+                          </>
+                        ) : (
+                          <>
+                            <FaUpload className="me-2" />
+                            رفع الملف
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {/* Delete Modal */}
       {showDeleteModal && (
         <>
@@ -931,6 +1182,66 @@ const lectureStyles = `
     background-clip: text;
     margin: 0;
   }
+
+.breadcrumb-custom {
+  display: flex;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-custom .breadcrumb-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-custom .breadcrumb-item::after {
+  content: '/';
+  margin: 0 0.5rem;
+  color: #78716c;
+}
+
+.breadcrumb-custom .breadcrumb-item:last-child::after {
+  content: '';
+  margin: 0;
+}
+
+.breadcrumb-custom .breadcrumb-item button {
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.breadcrumb-custom .breadcrumb-item button:hover {
+  color: #d97706;
+  text-decoration: underline !important;
+}
+
+.breadcrumb-custom .breadcrumb-item.active {
+  color: #78716c;
+  font-weight: 600;
+}
+
+.dark-mode .breadcrumb-custom .breadcrumb-item::after {
+  color: #a8a29e;
+}
+
+.dark-mode .breadcrumb-custom .breadcrumb-item button {
+  color: #fbbf24;
+}
+
+.dark-mode .breadcrumb-custom .breadcrumb-item button:hover {
+  color: #f59e0b;
+}
+
+.dark-mode .breadcrumb-custom .breadcrumb-item.active {
+  color: #a8a29e;
+}
 
   .dark-mode .page-title {
     background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
@@ -1176,6 +1487,17 @@ const lectureStyles = `
     cursor: pointer;
   }
 
+  .btn-upload {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-upload:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  }
+
   .btn-edit {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
@@ -1333,84 +1655,6 @@ const lectureStyles = `
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 0 1rem;
   }
-    /* Modal Overlay */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 1040; /* Lower than the modal */
-    display: none;
-  }
-
-  .modal-overlay.show {
-    display: block;
-  }
-
-  /* Modal Container */
-  .modal-custom {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 1050; /* Higher than the overlay and sidebar */
-    padding: 1rem;
-    overflow-y: auto;
-    pointer-events: none; /* Allows clicking overlay through gaps */
-  }
-
-  .modal-custom.show {
-    display: flex;
-  }
-
-  .modal-dialog {
-    width: 100%;
-    max-width: 600px;
-    pointer-events: auto; /* Re-enables interaction inside the modal */
-    animation: modalSlideUp 0.3s ease-out;
-  }
-
-  .modal-dialog-sm {
-    max-width: 400px;
-  }
-
-  @keyframes modalSlideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  /* Modal Styling */
-  .modal-content-custom {
-    background: white;
-    border-radius: 24px;
-    border: none;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-    overflow: hidden;
-  }
-
-  .dark-mode .modal-content-custom {
-    background: #1e293b;
-    color: #f1f5f9;
-  }
-
-  .modal-header-custom {
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-  }
-
-  .modal-body-custom {
-    padding: 1.5rem;
-  }
 
   .dark-mode .pagination-custom button,
   .dark-mode .pagination-custom span {
@@ -1437,66 +1681,69 @@ const lectureStyles = `
     cursor: not-allowed;
   }
 
-  /* Modal Styles */
+  /* Modal Overlay */
   .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
     z-index: 1040;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    display: none;
   }
 
   .modal-overlay.show {
-    opacity: 1;
+    display: block;
   }
 
+  /* Modal Container */
   .modal-custom {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1050;
-    display: flex;
+    width: 100%;
+    height: 100%;
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    z-index: 1050;
     padding: 1rem;
+    overflow-y: auto;
+    pointer-events: none;
   }
 
   .modal-custom.show {
-    opacity: 1;
+    display: flex;
   }
 
   .modal-dialog {
     width: 100%;
     max-width: 600px;
-    transform: scale(0.9);
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: auto;
+    animation: modalSlideUp 0.3s ease-out;
+  }
+
+  .modal-dialog-sm {
+    max-width: 500px;
   }
 
   .modal-dialog-lg {
     max-width: 800px;
   }
 
-  .modal-custom.show .modal-dialog {
-    transform: scale(1);
+  @keyframes modalSlideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 
-  .modal-dialog-sm {
-    max-width: 450px;
-  }
-
+  /* Modal Styling */
   .modal-content-custom {
     background: white;
     border-radius: 24px;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    border: none;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
     overflow: hidden;
     max-height: 90vh;
     display: flex;
@@ -1505,6 +1752,7 @@ const lectureStyles = `
 
   .dark-mode .modal-content-custom {
     background: #2d1b3d;
+    color: #f1f5f9;
   }
 
   .modal-header-custom {
@@ -1519,6 +1767,10 @@ const lectureStyles = `
 
   .modal-header-danger {
     background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  }
+
+  .modal-header-upload {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
   }
 
   .modal-title {
@@ -1553,6 +1805,123 @@ const lectureStyles = `
     padding: 2rem;
     overflow-y: auto;
     flex: 1;
+  }
+
+  .upload-lecture-info {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    border: 2px solid #3b82f6;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dark-mode .upload-lecture-info {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-color: #60a5fa;
+  }
+
+  .upload-lecture-label {
+    font-size: 0.9rem;
+    color: #1e40af;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .dark-mode .upload-lecture-label {
+    color: #93c5fd;
+  }
+
+  .upload-lecture-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin: 0;
+  }
+
+  .dark-mode .upload-lecture-title {
+    color: #dbeafe;
+  }
+
+  .file-upload-wrapper {
+    position: relative;
+  }
+
+  .file-input-custom {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border: 3px dashed #d6d3d1;
+    border-radius: 12px;
+    background: #fafaf9;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 150px;
+  }
+
+  .dark-mode .file-upload-label {
+    background: #1a1625;
+    border-color: #44403c;
+  }
+
+  .file-upload-label:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+
+  .dark-mode .file-upload-label:hover {
+    border-color: #60a5fa;
+    background: #1e3a8a;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+  }
+
+  .file-placeholder {
+    font-size: 1.1rem;
+    color: #78716c;
+    font-weight: 600;
+  }
+
+  .dark-mode .file-placeholder {
+    color: #a8a29e;
+  }
+
+  .file-name {
+    font-size: 1rem;
+    color: #3b82f6;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  .dark-mode .file-name {
+    color: #60a5fa;
+  }
+
+  .file-info {
+    margin-top: 0.75rem;
+    text-align: center;
+  }
+
+  .file-info small {
+    color: #78716c;
+    font-size: 0.9rem;
+  }
+
+  .dark-mode .file-info small {
+    color: #a8a29e;
   }
 
   .form-row {
@@ -1681,7 +2050,8 @@ const lectureStyles = `
 
   .btn-secondary-custom,
   .btn-primary-custom,
-  .btn-danger-custom {
+  .btn-danger-custom,
+  .btn-upload-custom {
     padding: 0.875rem 1.75rem;
     border-radius: 12px;
     border: none;
@@ -1719,6 +2089,17 @@ const lectureStyles = `
     box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
   }
 
+  .btn-upload-custom {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+
+  .btn-upload-custom:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+  }
+
   .btn-danger-custom {
     background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
     color: white;
@@ -1732,7 +2113,8 @@ const lectureStyles = `
 
   .btn-secondary-custom:disabled,
   .btn-primary-custom:disabled,
-  .btn-danger-custom:disabled {
+  .btn-danger-custom:disabled,
+  .btn-upload-custom:disabled {
     opacity: 0.6;
     cursor: not-allowed;
   }
@@ -1793,6 +2175,10 @@ const lectureStyles = `
 
     .form-row {
       grid-template-columns: 1fr;
+    }
+
+    .lecture-actions {
+      flex-wrap: wrap;
     }
   }
 `
